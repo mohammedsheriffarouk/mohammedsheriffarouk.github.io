@@ -30,10 +30,10 @@ const LINKS = {
   facebook:    "https://www.facebook.com/mrMohamedSherif",
 
   // Selected work — one link per project card (Behance project pages)
-  project1:    "[ADD PROJECT 1 URL]",
-  project2:    "[ADD PROJECT 2 URL]",
-  project3:    "[ADD PROJECT 3 URL]",
-  project4:    "[ADD PROJECT 4 URL]"
+  project1:    "https://www.behance.net/gallery/194038573/Arc-De-Sol-Brand-Identity",
+  project2:    "https://www.behance.net/gallery/196851463/Elite-Construction-Brand-Identity",
+  project3:    "https://www.behance.net/gallery/154844405/Comet-Group-Brand-Identity",
+  project4:    "https://www.behance.net/gallery/153881677/Mashariq-Brand-Identity"
 };
 
 const FORM_CONFIG = {
