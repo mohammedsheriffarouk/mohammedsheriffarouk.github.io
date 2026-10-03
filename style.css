@@ -13,7 +13,7 @@
   --ink:#151312; --muted:#6B6664; --body:#3A3533; --line:#E6E2DF; --soft:#F6F4F2;
 
   /* Fonts */
-  --serif:"EB Garamond","Palatino Linotype",Georgia,serif;
+  --serif:"Sorts Mill Goudy","Goudy Old Style","Palatino Linotype",Georgia,serif;  /* free stand-in for Californian FB */
   --ar:"Tajawal","Segoe UI",Tahoma,sans-serif;
   --num:"Roboto","Helvetica Neue",Arial,sans-serif;
 
@@ -105,7 +105,7 @@ html[lang=en] .btn__en{display:none}
 .band__sig{font-size:var(--t-xs);font-weight:500;text-align:left}
 .hero__body{position:relative;z-index:1;padding:0 var(--gutter) var(--s6)}
 .hero__name{font-family:var(--serif);font-weight:400;text-transform:uppercase;letter-spacing:.02em;font-size:var(--t-display);line-height:.86;text-align:left;direction:ltr}
-.hero__name .ln{display:block;overflow:hidden;padding-bottom:.04em}
+.hero__name .ln{display:block;overflow:hidden;padding:.08em 0 .04em;margin-top:-.08em}
 .hero__name .ln>span{display:inline-block}
 .hero__role{margin-top:var(--s3);font-size:var(--t-xs);letter-spacing:.12em;color:rgba(255,255,255,.82);text-align:left}
 .hero__lead{margin-top:var(--s5);max-width:26ch;font-size:var(--t-big);font-weight:500;line-height:1.55}
