@@ -16,7 +16,7 @@ const LINKS = {
   webinar:     "https://luma.com/user/MohamedSherif",
 
   // "Work With Me" — a Nzmly service page, a Tally inquiry form, or WhatsApp
-  workWithMe:  "[ADD WORK WITH ME URL]",
+  workWithMe:  "https://tally.so/r/VL2L5v?utm_source=website",
 
   // Studio & community
   idntik:      "https://www.instagram.com/idntikagency/",
@@ -38,7 +38,7 @@ const LINKS = {
 
 const FORM_CONFIG = {
   // Tally share link, e.g. "https://tally.so/r/abc123"
-  brandSetInterest: "[ADD TALLY FORM URL]"
+  brandSetInterest: "https://tally.so/r/KYbgVK?utm_source=website"
 };
 
 /* Default language when a visitor arrives for the first time: "ar" or "en" */
