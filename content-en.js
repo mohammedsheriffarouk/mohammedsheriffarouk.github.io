@@ -83,8 +83,14 @@ const EN = {
   "prog.note": "Payment and course access are handled on Nzmly.",
 
   "fb.lead": "More than 860 students have learned with me. Here are some of their words, as they sent them.",
-  "fb.alt": "Student feedback on BRAND-SET",
-  "fb.hint": "Tap any message to enlarge it.",
+  "fb.alt": "BRAND-SET student feedback",
+  "fb.s1": "rated the instructor's knowledge & skills \"excellent\"",
+  "fb.s2": "rated his ability to engage and explain \"excellent\"",
+  "fb.s3": "rated the training overall \"excellent\"",
+  "fb.src": "From a survey of 69 students after one BRAND-SET cohort.",
+  "fb.prev": "Previous",
+  "fb.next": "Next",
+  "fb.hint": "Swipe for more, tap any image to enlarge it.",
   "fb.zoom": "Enlarged student feedback",
 
   "web.lead": "Start free. An open webinar before any commitment.",

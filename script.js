@@ -181,7 +181,6 @@ const DEFAULT_LANG = "ar";
     };
     items.forEach((li) => {
       const img = li.querySelector("img");
-      img.loading = "eager"; // so we know quickly which files exist
       if (img.complete) { if (img.naturalWidth === 0) { li.dataset.missing = "1"; missing++; } done(); }
       else {
         img.addEventListener("load", done, { once: true });
@@ -230,7 +229,7 @@ const DEFAULT_LANG = "ar";
       const img = btn.querySelector("img");
       if (!img || img.naturalWidth === 0) return;
       const z = dialogs.zoom.querySelector(".zoom__img");
-      z.src = img.currentSrc || img.src;
+      z.src = btn.dataset.full || img.currentSrc || img.src;
       z.alt = img.alt;
       track("feedback_zoom");
       open("zoom", btn);
@@ -282,11 +281,13 @@ const DEFAULT_LANG = "ar";
         if (!en.isIntersecting) return;
         co.unobserve(en.target);
         const el = en.target, end = +el.dataset.count, from = +(el.dataset.from || 0);
-        const show = (n) => (el.hasAttribute("data-plain") ? String(n) : fmt(n));
+        const dec = +(el.dataset.decimals || 0);
+        const show = (n) => (el.hasAttribute("data-plain") ? String(n) : dec ? n.toFixed(dec) : fmt(n));
         const dur = 1400, t0 = performance.now();
         const step = (now) => {
           const p = Math.min(1, (now - t0) / dur), eased = 1 - Math.pow(1 - p, 3);
-          el.textContent = show(Math.round(from + (end - from) * eased));
+          const v = from + (end - from) * eased;
+          el.textContent = show(dec ? v : Math.round(v));
           if (p < 1) requestAnimationFrame(step);
         };
         el.textContent = show(from);
@@ -294,6 +295,15 @@ const DEFAULT_LANG = "ar";
       });
     }, { threshold: 0.5 });
     counters.forEach((c) => co.observe(c));
+  }
+
+  /* ---------- 7. Feedback slider arrows ---------- */
+  const track_ = document.querySelector("[data-proof]");
+  if (track_) {
+    const stepBy = () => { const li = track_.querySelector("li"); return li ? li.getBoundingClientRect().width + 16 : 300; };
+    const prev = document.querySelector("[data-proof-prev]"), next = document.querySelector("[data-proof-next]");
+    if (prev) prev.addEventListener("click", () => track_.scrollBy({ left: -stepBy(), behavior: reduce ? "auto" : "smooth" }));
+    if (next) next.addEventListener("click", () => track_.scrollBy({ left: stepBy(), behavior: reduce ? "auto" : "smooth" }));
   }
 
   /* ---------- Start ---------- */
