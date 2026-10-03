@@ -369,3 +369,43 @@ html[dir=ltr] .drawer[open]{transform:none}
   .process .btn{width:100%}
 }
 .step__p+.topics{margin-top:0}
+
+/* ---------- Portrait ---------- */
+.hero__photo{position:absolute;z-index:0;inset-block:0;right:0;width:min(46vw,760px);margin:0;pointer-events:none;
+  -webkit-mask-image:linear-gradient(to left,#000 55%,transparent),linear-gradient(to top,transparent 2%,#000 30%);
+  -webkit-mask-composite:source-in;mask-image:linear-gradient(to left,#000 55%,transparent),linear-gradient(to top,transparent 2%,#000 30%);mask-composite:intersect}
+.hero__photo img{width:100%;height:100%;object-fit:cover;object-position:center 30%;filter:saturate(.9)}
+.hero .band,.hero__body{position:relative;z-index:1}
+html[dir=ltr] .hero__photo{right:0;left:auto}
+@media (prefers-reduced-motion:no-preference){.hero__photo{animation:fade 1.6s ease .3s both}}
+.about__photo{display:none;margin:0 0 36px}
+.about__photo img{width:100%;aspect-ratio:1;object-fit:cover}
+@media (max-width:900px){
+  .hero__photo{display:none}
+  .about__photo{display:block}
+}
+@media (min-width:901px){
+  .hero__lead{max-width:min(26ch,52vw);margin-left:0;margin-right:auto}
+  html[dir=rtl] .hero__cta{width:max-content;margin-left:0;margin-right:auto}
+}
+@media (min-width:901px){
+  .hero__name{width:max-content;font-size:clamp(64px,10.4vw,160px)}
+}
+
+/* ---------- Clients marquee ---------- */
+.clients{background:var(--black);color:var(--white);padding:clamp(28px,5vh,48px) 0;overflow:hidden;border-bottom:1px solid #1d1b1a}
+.clients__t{padding:0 var(--m);margin-bottom:22px;color:rgba(255,255,255,.55)}
+.marquee{display:flex;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.marquee__track{list-style:none;display:flex;align-items:center;gap:clamp(40px,5vw,72px);padding-right:clamp(40px,5vw,72px);flex:none;min-width:100%}
+.marquee__track img{height:clamp(34px,4vw,48px);width:auto;opacity:.72;transition:opacity .3s}
+.marquee__track li:hover img{opacity:1}
+@media (prefers-reduced-motion:no-preference){
+  .marquee__track{animation:marquee 60s linear infinite}
+  .marquee:hover .marquee__track{animation-play-state:paused}
+}
+@keyframes marquee{to{transform:translateX(-100%)}}
+@media (prefers-reduced-motion:reduce){
+  .marquee{overflow-x:auto}
+  .marquee__track[aria-hidden]{display:none}
+}
+@media (min-width:901px){.hero__name{margin-left:0;margin-right:auto}}

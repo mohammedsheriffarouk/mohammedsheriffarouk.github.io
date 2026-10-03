@@ -26,6 +26,8 @@ const EN = {
   "cta.learn": "Learn With Me",
 
   "about.lead": "Brand identity designer and branding lecturer based in Cairo. I work with companies and brands across Egypt and the Gulf on their visual identities — from the logo to the brand guidelines. Alongside that, I pass the experience on to designers through practical programs and 1:1 mentoring.",
+  "clients.t": "Brands I've worked with",
+  "about.photoAlt": "Mohamed Sherif — brand identity designer",
   "about.taught": "Taught",
   "about.f5": "students & designers",
   "about.since": "Since",
