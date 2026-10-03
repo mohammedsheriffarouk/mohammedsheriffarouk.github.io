@@ -20,6 +20,7 @@ const EN = {
   "nav.work": "Work",
   "nav.mentoring": "Mentoring",
   "nav.connect": "Connect",
+  "nav.faq": "FAQ",
 
   "hero.lead": "I help companies build clear, consistent visual identities — and teach designers to design identity <em>beyond the logo.</em>",
   "cta.work": "Work With Me",
@@ -108,6 +109,7 @@ const EN = {
   "men.s1.cta": "Book a Free Session",
   "men.s2.k": "Then",
   "men.s2.t": "1:1 Mentoring",
+  "men.s2.meta": "90 minutes · online via Google Meet",
   "men.s2.p": "What you get from the sessions:",
   "men.b1": "An honest review of your work and portfolio",
   "men.b2": "A clear plan to level up your identity design",
@@ -115,6 +117,20 @@ const EN = {
   "men.b4": "Direct guidance on the projects you're working on now",
   "men.s2.cta": "Book a Mentoring Session",
   "men.s2.note": "Session choice, scheduling, payment and confirmation — all on Nzmly.",
+
+  "faq.lead": "Questions I often get before any project or session starts.",
+  "faq.q1": "How long does a visual identity project take?",
+  "faq.a1": "Usually 4 to 6 working weeks, starting from the first payment and once all the project inputs are complete.",
+  "faq.q2": "How does payment work?",
+  "faq.a2": "50% upfront to start, and 50% before the final files are delivered. Full usage rights transfer on full payment.",
+  "faq.q3": "How many revision rounds are included?",
+  "faq.a3": "Two revision rounds per item in the quotation; any extra revisions are agreed in advance.",
+  "faq.q4": "Do you work with companies outside Egypt?",
+  "faq.a4": "Yes — I work with companies and brands across Egypt and the Gulf, and communication and delivery are fully online.",
+  "faq.q5": "Who is BRAND-SET for?",
+  "faq.a5": "Designers who want to learn to build a complete visual identity following the steps of real projects — from handling the client to final delivery.",
+  "faq.q6": "How does a mentoring session work?",
+  "faq.a6": "A one-to-one, 90-minute online session on Google Meet. Scheduling, payment and confirmation are all handled on Nzmly.",
 
   "con.lead": "Where I share the work, the thinking, and what happens behind the scenes.",
 

@@ -409,3 +409,14 @@ html[dir=ltr] .hero__photo{right:0;left:auto}
   .marquee__track[aria-hidden]{display:none}
 }
 @media (min-width:901px){.hero__name{margin-left:0;margin-right:auto}}
+
+/* ---------- FAQ ---------- */
+.faq__list{border-top:1px solid var(--ink)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:22px 0;font-size:clamp(18px,1.8vw,22px);font-weight:700;line-height:1.4}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:none;font-family:var(--num);font-weight:400;font-size:26px;color:var(--red);transition:transform .3s var(--ease)}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq summary:hover{color:var(--red)}
+.faq details p{padding:0 0 24px;max-width:64ch;color:var(--body)}
+.mentoring .step__meta{margin-top:6px}

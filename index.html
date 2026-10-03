@@ -90,12 +90,12 @@
   <a class="nav__mark" href="#top" data-i18n-attr="aria-label:nav.top" aria-label="العودة للأعلى"><img src="assets/icons/logo-red-black.svg" alt="" width="36" height="25"></a>
   <ul class="nav__links">
     <li><a href="#about" data-i18n="nav.about">عنّي</a></li>
+    <li><a href="#work" data-i18n="nav.work">الأعمال</a></li>
     <li><a href="#process" data-i18n="nav.process">للشركات</a></li>
     <li><a href="#program" data-i18n="nav.program">البرنامج</a></li>
-    <li><a href="#webinar" data-i18n="nav.webinar">الويبينار</a></li>
-    <li><a href="#work" data-i18n="nav.work">الأعمال</a></li>
     <li><a href="#mentoring" data-i18n="nav.mentoring">Mentoring</a></li>
-    <li><a href="#connect" data-i18n="nav.connect">تواصل</a></li>
+    <li><a href="#webinar" data-i18n="nav.webinar">الويبينار</a></li>
+    <li><a href="#faq" data-i18n="nav.faq">أسئلة شائعة</a></li>
   </ul>
   <button type="button" class="lang" data-lang-toggle data-cta="lang_toggle_nav"><span class="lang__en">EN</span><span class="lang__ar">عربي</span></button>
   <a class="nav__cta" data-link="workWithMe" data-cta="nav_work_with_me" data-i18n="cta.work">اعمل معي</a>
@@ -103,7 +103,6 @@
 
 <main id="main">
 
-  <!-- SHORT INTRO -->
   <!-- CLIENTS — logos live in assets/clients/ (white PNG, 96px tall). Add one: copy an <li> in BOTH lists. -->
   <section class="clients" aria-labelledby="clients-title">
     <p id="clients-title" class="clients__t label" data-i18n="clients.t">علامات عملت معها</p>
@@ -155,6 +154,7 @@
     </div>
   </section>
 
+  <!-- ABOUT + STATS -->
   <section class="s" id="about" aria-labelledby="about-title">
     <div class="sh">
       <div><span class="sh__n">02</span><h2 id="about-title" class="sh__t" lang="en" dir="ltr">About</h2></div>
@@ -200,10 +200,46 @@
     </div>
   </section>
 
+  <!-- SELECTED WORK -->
+  <section class="s" id="work" aria-labelledby="work-title">
+    <div class="sh">
+      <div><span class="sh__n">04</span><h2 id="work-title" class="sh__t" lang="en" dir="ltr">Selected Work</h2></div>
+      <p class="sh__lead reveal" data-i18n="work.lead">مختارات قليلة، والأرشيف الكامل على Behance.</p>
+    </div>
+
+    <!-- Add up to 6 projects. Image goes in assets/projects/, link key goes in LINKS (script.js). -->
+    <div class="work">
+      <a class="card reveal" data-link="project1" data-cta="project_1">
+        <figure class="card__img"><img src="assets/projects/project-1.jpg" alt="Arc De Sol — brand identity by Mohamed Sherif" loading="lazy" width="1200" height="900"><figcaption class="ph">[ADD PROJECT IMAGE]</figcaption></figure>
+        <h3 class="card__t" lang="en" dir="ltr">Arc De Sol</h3>
+        <p class="card__c caps" lang="en" dir="ltr">Brand Identity</p>
+      </a>
+      <a class="card reveal" data-link="project2" data-cta="project_2">
+        <figure class="card__img"><img src="assets/projects/project-2.jpg" alt="Elite Construction — brand identity by Mohamed Sherif" loading="lazy" width="1200" height="900"><figcaption class="ph">[ADD PROJECT IMAGE]</figcaption></figure>
+        <h3 class="card__t" lang="en" dir="ltr">Elite Construction</h3>
+        <p class="card__c caps" lang="en" dir="ltr">Brand Identity</p>
+      </a>
+      <a class="card reveal" data-link="project3" data-cta="project_3">
+        <figure class="card__img"><img src="assets/projects/project-3.jpg" alt="Comet Group — brand identity by Mohamed Sherif" loading="lazy" width="1200" height="900"><figcaption class="ph">[ADD PROJECT IMAGE]</figcaption></figure>
+        <h3 class="card__t" lang="en" dir="ltr">Comet Group</h3>
+        <p class="card__c caps" lang="en" dir="ltr">Brand Identity</p>
+      </a>
+      <a class="card reveal" data-link="project4" data-cta="project_4">
+        <figure class="card__img"><img src="assets/projects/project-4.jpg" alt="Mashariq — brand identity by Mohamed Sherif" loading="lazy" width="1200" height="900"><figcaption class="ph">[ADD PROJECT IMAGE]</figcaption></figure>
+        <h3 class="card__t" lang="en" dir="ltr">Mashariq</h3>
+        <p class="card__c caps" lang="en" dir="ltr">Brand Identity</p>
+      </a>
+    </div>
+
+    <a class="btn btn--line" data-link="behance" data-cta="portfolio">
+      <span data-i18n="work.cta">شاهد ملف الأعمال كاملًا</span><span class="btn__en" lang="en">View Full Portfolio</span>
+    </a>
+  </section>
+
   <!-- WORK WITH ME (for companies) -->
   <section class="s process" id="process" aria-labelledby="process-title">
     <div class="sh">
-      <div><span class="sh__n">04</span><h2 id="process-title" class="sh__t" lang="en" dir="ltr">Work With Me</h2></div>
+      <div><span class="sh__n">05</span><h2 id="process-title" class="sh__t" lang="en" dir="ltr">Work With Me</h2></div>
       <p class="sh__lead reveal" data-i18n="proc.lead">للشركات والعلامات التي تريد هوية بصرية مبنية على فهم حقيقي لنشاطها وجمهورها، لا على الذوق الشخصي.</p>
     </div>
     <ol class="process__steps">
@@ -222,7 +258,7 @@
     <div class="atmos atmos--soft" aria-hidden="true"></div>
     <div class="program__in">
       <div class="sh">
-        <div><span class="sh__n">05</span><p class="sh__t sh__t--sm" lang="en" dir="ltr">Featured Program</p></div>
+        <div><span class="sh__n">06</span><p class="sh__t sh__t--sm" lang="en" dir="ltr">Featured Program</p></div>
         <div>
           <h2 id="program-title" class="program__name" lang="en" dir="ltr">BRAND-SET</h2>
           <p class="program__tag caps" lang="en" dir="ltr">Learn how to think &amp; build like a brand designer</p>
@@ -260,12 +296,49 @@
     </div>
   </section>
 
+  <!-- MENTORING: free intro session → paid 1:1 -->
+  <section class="s mentoring" id="mentoring" aria-labelledby="mentoring-title">
+    <div class="sh">
+      <div><span class="sh__n">07</span><h2 id="mentoring-title" class="sh__t" lang="en" dir="ltr">1:1 Mentoring</h2></div>
+      <p class="sh__lead reveal" data-i18n="men.lead">جلسات فردية للمصممين الذين يريدون أن يتطوروا بوضوح وبشكل أسرع. نراجع أعمالك معًا، ونحدد نقاط قوتك وما يحتاج إلى تطوير، وتخرج من كل جلسة بخطوات عملية تطبّقها مباشرة على مشاريعك وملف أعمالك.</p>
+    </div>
+    <ol class="steps">
+      <li class="step step--first reveal">
+        <span class="step__n">01</span>
+        <p class="label" data-i18n="men.s1.k">ابدأ من هنا</p>
+        <h3 class="step__t" data-i18n="men.s1.t">جلسة تعارف مجانية</h3>
+        <p class="step__meta"><span class="ph">[15 / 30]</span> <span data-i18n="men.s1.meta">دقيقة · مجانًا · أونلاين</span></p>
+        <p class="step__p" data-i18n="men.s1.p">نتحدث عن أعمالك ومستواك الحالي وما تطمح إليه، ونحدد معًا نقطة البداية المناسبة لك.</p>
+        <a class="btn btn--primary btn--lg" data-link="freeSession" data-cta="mentoring_free_session">
+          <span data-i18n="men.s1.cta">احجز جلستك المجانية</span><span class="btn__en" lang="en">Book a Free Session</span>
+        </a>
+      </li>
+      <li class="step reveal">
+        <span class="step__n">02</span>
+        <p class="label" data-i18n="men.s2.k">بعدها</p>
+        <h3 class="step__t" data-i18n="men.s2.t">جلسات Mentoring فردية</h3>
+        <p class="step__meta" data-i18n="men.s2.meta">90 دقيقة · أونلاين عبر Google Meet</p>
+        <p class="step__p" data-i18n="men.s2.p">ماذا ستستفيد من الجلسات:</p>
+        <ul class="topics">
+          <li data-i18n="men.b1">مراجعة صريحة لأعمالك وملف أعمالك (Portfolio)</li>
+          <li data-i18n="men.b2">خطة واضحة لتطوير مستواك في تصميم الهوية</li>
+          <li data-i18n="men.b3">إجابات عملية عن العملاء والتسعير وطريقة العمل</li>
+          <li data-i18n="men.b4">توجيه مباشر في المشاريع التي تعمل عليها الآن</li>
+        </ul>
+        <a class="btn btn--dark btn--lg" data-link="mentoring" data-cta="mentoring">
+          <span data-i18n="men.s2.cta">احجز جلسة Mentoring</span><span class="btn__en" lang="en">Book a Mentoring Session</span>
+        </a>
+        <p class="note" data-i18n="men.s2.note">اختيار الجلسة والموعد والدفع والتأكيد — كلها عبر نظملي (Nzmly).</p>
+      </li>
+    </ol>
+  </section>
+
   <!-- STUDENT FEEDBACK
        Drop screenshots in assets/testimonials/ as t-1.jpg … t-6.jpg (portrait works best).
        Missing files are hidden automatically. Add more by copying one <li>. -->
   <section class="s" id="feedback" aria-labelledby="feedback-title">
     <div class="sh">
-      <div><span class="sh__n">06</span><h2 id="feedback-title" class="sh__t" lang="en" dir="ltr">Student Feedback</h2></div>
+      <div><span class="sh__n">08</span><h2 id="feedback-title" class="sh__t" lang="en" dir="ltr">Student Feedback</h2></div>
       <p class="sh__lead reveal" data-i18n="fb.lead">أكثر من 860 طالبًا تعلّموا معي. هذه بعض كلماتهم، كما وصلتني.</p>
     </div>
     <ul class="proof" data-proof>
@@ -283,7 +356,7 @@
        To hide when there's no upcoming webinar: add the word hidden → <section hidden …> -->
   <section class="s webinar" id="webinar" aria-labelledby="webinar-title">
     <div class="sh">
-      <div><span class="sh__n">07</span><p class="sh__t" lang="en" dir="ltr">Free Webinar</p></div>
+      <div><span class="sh__n">09</span><p class="sh__t" lang="en" dir="ltr">Free Webinar</p></div>
       <p class="sh__lead reveal" data-i18n="web.lead">ابدأ مجانًا: ويبينار مفتوح قبل أي التزام.</p>
     </div>
     <div class="webinar__grid">
@@ -306,82 +379,26 @@
     </div>
   </section>
 
-  <!-- SELECTED WORK -->
-  <section class="s" id="work" aria-labelledby="work-title">
+  <!-- FAQ — add a question by copying one <details> block (Arabic here, English in content-en.js) -->
+  <section class="s faq" id="faq" aria-labelledby="faq-title">
     <div class="sh">
-      <div><span class="sh__n">08</span><h2 id="work-title" class="sh__t" lang="en" dir="ltr">Selected Work</h2></div>
-      <p class="sh__lead reveal" data-i18n="work.lead">مختارات قليلة، والأرشيف الكامل على Behance.</p>
+      <div><span class="sh__n">10</span><h2 id="faq-title" class="sh__t" lang="en" dir="ltr">FAQ</h2></div>
+      <p class="sh__lead reveal" data-i18n="faq.lead">أسئلة تصلني كثيرًا قبل بدء أي مشروع أو جلسة.</p>
     </div>
-
-    <!-- Add up to 6 projects. Image goes in assets/projects/, link key goes in LINKS (script.js). -->
-    <div class="work">
-      <a class="card reveal" data-link="project1" data-cta="project_1">
-        <figure class="card__img"><img src="assets/projects/project-1.jpg" alt="Arc De Sol — brand identity by Mohamed Sherif" loading="lazy" width="1200" height="900"><figcaption class="ph">[ADD PROJECT IMAGE]</figcaption></figure>
-        <h3 class="card__t" lang="en" dir="ltr">Arc De Sol</h3>
-        <p class="card__c caps" lang="en" dir="ltr">Brand Identity</p>
-      </a>
-      <a class="card reveal" data-link="project2" data-cta="project_2">
-        <figure class="card__img"><img src="assets/projects/project-2.jpg" alt="Elite Construction — brand identity by Mohamed Sherif" loading="lazy" width="1200" height="900"><figcaption class="ph">[ADD PROJECT IMAGE]</figcaption></figure>
-        <h3 class="card__t" lang="en" dir="ltr">Elite Construction</h3>
-        <p class="card__c caps" lang="en" dir="ltr">Brand Identity</p>
-      </a>
-      <a class="card reveal" data-link="project3" data-cta="project_3">
-        <figure class="card__img"><img src="assets/projects/project-3.jpg" alt="Comet Group — brand identity by Mohamed Sherif" loading="lazy" width="1200" height="900"><figcaption class="ph">[ADD PROJECT IMAGE]</figcaption></figure>
-        <h3 class="card__t" lang="en" dir="ltr">Comet Group</h3>
-        <p class="card__c caps" lang="en" dir="ltr">Brand Identity</p>
-      </a>
-      <a class="card reveal" data-link="project4" data-cta="project_4">
-        <figure class="card__img"><img src="assets/projects/project-4.jpg" alt="Mashariq — brand identity by Mohamed Sherif" loading="lazy" width="1200" height="900"><figcaption class="ph">[ADD PROJECT IMAGE]</figcaption></figure>
-        <h3 class="card__t" lang="en" dir="ltr">Mashariq</h3>
-        <p class="card__c caps" lang="en" dir="ltr">Brand Identity</p>
-      </a>
+    <div class="faq__list">
+      <details class="reveal"><summary data-i18n="faq.q1">كم يستغرق مشروع الهوية البصرية؟</summary><p data-i18n="faq.a1">عادةً من 4 إلى 6 أسابيع عمل، تبدأ من استلام الدفعة الأولى واكتمال المعلومات المطلوبة للمشروع.</p></details>
+      <details class="reveal"><summary data-i18n="faq.q2">كيف يتم الدفع؟</summary><p data-i18n="faq.a2">50% مقدّمًا لبدء العمل، و50% قبل تسليم الملفات النهائية. وتنتقل حقوق الاستخدام كاملة بعد السداد.</p></details>
+      <details class="reveal"><summary data-i18n="faq.q3">كم عدد جولات التعديل؟</summary><p data-i18n="faq.a3">جولتان من التعديلات لكل بند في عرض السعر، وأي تعديلات إضافية يتم الاتفاق عليها مسبقًا.</p></details>
+      <details class="reveal"><summary data-i18n="faq.q4">هل تعمل مع شركات خارج مصر؟</summary><p data-i18n="faq.a4">نعم، أعمل مع شركات وعلامات في مصر والخليج، والتواصل والتسليم يتمّان أونلاين بالكامل.</p></details>
+      <details class="reveal"><summary data-i18n="faq.q5">لمن برنامج BRAND-SET؟</summary><p data-i18n="faq.a5">للمصممين الذين يريدون تعلّم بناء هوية بصرية كاملة بنفس خطوات المشاريع الحقيقية، من التعامل مع العميل حتى التسليم.</p></details>
+      <details class="reveal"><summary data-i18n="faq.q6">كيف تتم جلسة الـ Mentoring؟</summary><p data-i18n="faq.a6">جلسة فردية مدتها 90 دقيقة أونلاين عبر Google Meet. اختيار الموعد والدفع والتأكيد كلها عبر منصة نظملي.</p></details>
     </div>
-
-    <a class="btn btn--line" data-link="behance" data-cta="portfolio">
-      <span data-i18n="work.cta">شاهد ملف الأعمال كاملًا</span><span class="btn__en" lang="en">View Full Portfolio</span>
-    </a>
-  </section>
-
-  <!-- MENTORING: free intro session → paid 1:1 -->
-  <section class="s mentoring" id="mentoring" aria-labelledby="mentoring-title">
-    <div class="sh">
-      <div><span class="sh__n">09</span><h2 id="mentoring-title" class="sh__t" lang="en" dir="ltr">1:1 Mentoring</h2></div>
-      <p class="sh__lead reveal" data-i18n="men.lead">جلسات فردية للمصممين الذين يريدون أن يتطوروا بوضوح وبشكل أسرع. نراجع أعمالك معًا، ونحدد نقاط قوتك وما يحتاج إلى تطوير، وتخرج من كل جلسة بخطوات عملية تطبّقها مباشرة على مشاريعك وملف أعمالك.</p>
-    </div>
-    <ol class="steps">
-      <li class="step step--first reveal">
-        <span class="step__n">01</span>
-        <p class="label" data-i18n="men.s1.k">ابدأ من هنا</p>
-        <h3 class="step__t" data-i18n="men.s1.t">جلسة تعارف مجانية</h3>
-        <p class="step__meta"><span class="ph">[15 / 30]</span> <span data-i18n="men.s1.meta">دقيقة · مجانًا · أونلاين</span></p>
-        <p class="step__p" data-i18n="men.s1.p">نتحدث عن أعمالك ومستواك الحالي وما تطمح إليه، ونحدد معًا نقطة البداية المناسبة لك.</p>
-        <a class="btn btn--primary btn--lg" data-link="freeSession" data-cta="mentoring_free_session">
-          <span data-i18n="men.s1.cta">احجز جلستك المجانية</span><span class="btn__en" lang="en">Book a Free Session</span>
-        </a>
-      </li>
-      <li class="step reveal">
-        <span class="step__n">02</span>
-        <p class="label" data-i18n="men.s2.k">بعدها</p>
-        <h3 class="step__t" data-i18n="men.s2.t">جلسات Mentoring فردية</h3>
-        <p class="step__p" data-i18n="men.s2.p">ماذا ستستفيد من الجلسات:</p>
-        <ul class="topics">
-          <li data-i18n="men.b1">مراجعة صريحة لأعمالك وملف أعمالك (Portfolio)</li>
-          <li data-i18n="men.b2">خطة واضحة لتطوير مستواك في تصميم الهوية</li>
-          <li data-i18n="men.b3">إجابات عملية عن العملاء والتسعير وطريقة العمل</li>
-          <li data-i18n="men.b4">توجيه مباشر في المشاريع التي تعمل عليها الآن</li>
-        </ul>
-        <a class="btn btn--dark btn--lg" data-link="mentoring" data-cta="mentoring">
-          <span data-i18n="men.s2.cta">احجز جلسة Mentoring</span><span class="btn__en" lang="en">Book a Mentoring Session</span>
-        </a>
-        <p class="note" data-i18n="men.s2.note">اختيار الجلسة والموعد والدفع والتأكيد — كلها عبر نظملي (Nzmly).</p>
-      </li>
-    </ol>
   </section>
 
   <!-- CONNECT -->
   <section class="s connect" id="connect" aria-labelledby="connect-title">
     <div class="sh">
-      <div><span class="sh__n">10</span><h2 id="connect-title" class="sh__t" lang="en" dir="ltr">Find Me Around<br>the Internet</h2></div>
+      <div><span class="sh__n">11</span><h2 id="connect-title" class="sh__t" lang="en" dir="ltr">Find Me Around<br>the Internet</h2></div>
       <p class="sh__lead reveal" data-i18n="con.lead">حيث أشارك الأعمال والأفكار، وما يحدث خلف الكواليس.</p>
     </div>
     <ul class="platforms" dir="ltr">
