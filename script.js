@@ -306,6 +306,14 @@ const DEFAULT_LANG = "ar";
     if (next) next.addEventListener("click", () => track_.scrollBy({ left: stepBy(), behavior: reduce ? "auto" : "smooth" }));
   }
 
+  /* ---------- 8. Nav: solid after leaving the top ---------- */
+  const navEl = document.querySelector(".nav");
+  if (navEl) {
+    const onScroll = () => navEl.classList.toggle("is-solid", window.scrollY > 40);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+  }
+
   /* ---------- Start ---------- */
   setLang(startLang, false);
 })();

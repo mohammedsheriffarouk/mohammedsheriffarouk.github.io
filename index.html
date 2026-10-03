@@ -56,14 +56,26 @@
      ========================================================= -->
 
 <!-- HERO -->
+<!-- Fixed top navigation (transparent over the hero, solid after scrolling) -->
+<nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="التنقل">
+  <a class="nav__mark" href="#top" data-i18n-attr="aria-label:nav.top" aria-label="العودة للأعلى"><img class="nav__logo nav__logo--light" src="assets/icons/logo-red-white.svg" alt="" width="36" height="25"><img class="nav__logo nav__logo--dark" src="assets/icons/logo-red-black.svg" alt="" width="36" height="25"></a>
+  <ul class="nav__links">
+    <li><a href="#about" data-i18n="nav.about">عنّي</a></li>
+    <li><a href="#work" data-i18n="nav.work">الأعمال</a></li>
+    <li><a href="#process" data-i18n="nav.process">للشركات</a></li>
+    <li><a href="#program" data-i18n="nav.program">البرنامج</a></li>
+    <li><a href="#mentoring" data-i18n="nav.mentoring">Mentoring</a></li>
+    <li><a href="#webinar" data-i18n="nav.webinar">الويبينار</a></li>
+    <li><a href="#faq" data-i18n="nav.faq">أسئلة شائعة</a></li>
+  </ul>
+  <button type="button" class="lang" data-lang-toggle data-cta="lang_toggle_nav"><span class="lang__en">EN</span><span class="lang__ar">عربي</span></button>
+  <a class="nav__cta" data-link="workWithMe" data-cta="nav_work_with_me" data-i18n="cta.work">اعمل معي</a>
+</nav>
+
 <header class="hero" id="top">
   <div class="atmos" aria-hidden="true"></div>
   <div class="band" dir="ltr">
-    <img class="band__logo" src="assets/icons/logo-red-white.svg" alt="Mohamed Sherif" width="84" height="58">
-    <div class="band__end">
-      <button type="button" class="lang lang--light" data-lang-toggle data-cta="lang_toggle_hero"><span class="lang__en">EN</span><span class="lang__ar">عربي</span></button>
-      <p class="band__sig caps">Mohamed Sherif<br>Original Content<br>© 2026</p>
-    </div>
+    <p class="band__sig caps">Mohamed Sherif<br>Original Content<br>© 2026</p>
   </div>
 
   <figure class="hero__photo" aria-hidden="true">
@@ -85,21 +97,6 @@
   </div>
 </header>
 
-<!-- Compact sticky navigation -->
-<nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="التنقل">
-  <a class="nav__mark" href="#top" data-i18n-attr="aria-label:nav.top" aria-label="العودة للأعلى"><img src="assets/icons/logo-red-black.svg" alt="" width="36" height="25"></a>
-  <ul class="nav__links">
-    <li><a href="#about" data-i18n="nav.about">عنّي</a></li>
-    <li><a href="#work" data-i18n="nav.work">الأعمال</a></li>
-    <li><a href="#process" data-i18n="nav.process">للشركات</a></li>
-    <li><a href="#program" data-i18n="nav.program">البرنامج</a></li>
-    <li><a href="#mentoring" data-i18n="nav.mentoring">Mentoring</a></li>
-    <li><a href="#webinar" data-i18n="nav.webinar">الويبينار</a></li>
-    <li><a href="#faq" data-i18n="nav.faq">أسئلة شائعة</a></li>
-  </ul>
-  <button type="button" class="lang" data-lang-toggle data-cta="lang_toggle_nav"><span class="lang__en">EN</span><span class="lang__ar">عربي</span></button>
-  <a class="nav__cta" data-link="workWithMe" data-cta="nav_work_with_me" data-i18n="cta.work">اعمل معي</a>
-</nav>
 
 <main id="main">
 
@@ -173,7 +170,7 @@
   </section>
 
   <!-- WHAT I DO -->
-  <section class="s" id="services" aria-labelledby="services-title">
+  <section class="s s--soft" id="services" aria-labelledby="services-title">
     <div class="sh">
       <div><span class="sh__n">03</span><h2 id="services-title" class="sh__t" lang="en" dir="ltr">What I Do</h2></div>
       <p class="sh__lead reveal" data-i18n="do.lead">ثلاثة مسارات، وطريقة تفكير واحدة: الهوية قرار، لا مجرد شكل.</p>
@@ -237,7 +234,7 @@
   </section>
 
   <!-- WORK WITH ME (for companies) -->
-  <section class="s process" id="process" aria-labelledby="process-title">
+  <section class="s s--soft process" id="process" aria-labelledby="process-title">
     <div class="sh">
       <div><span class="sh__n">05</span><h2 id="process-title" class="sh__t" lang="en" dir="ltr">Work With Me</h2></div>
       <p class="sh__lead reveal" data-i18n="proc.lead">للشركات والعلامات التي تريد هوية بصرية مبنية على فهم حقيقي لنشاطها وجمهورها، لا على الذوق الشخصي.</p>
@@ -336,7 +333,7 @@
   <!-- STUDENT FEEDBACK
        Drop screenshots in assets/testimonials/ as t-1.jpg … t-6.jpg (portrait works best).
        Missing files are hidden automatically. Add more by copying one <li>. -->
-  <section class="s" id="feedback" aria-labelledby="feedback-title">
+  <section class="s s--soft" id="feedback" aria-labelledby="feedback-title">
     <div class="sh">
       <div><span class="sh__n">08</span><h2 id="feedback-title" class="sh__t" lang="en" dir="ltr">Student Feedback</h2></div>
       <p class="sh__lead reveal" data-i18n="fb.lead">أكثر من 860 طالبًا تعلّموا معي. هذه بعض كلماتهم، كما وصلتني.</p>
@@ -384,8 +381,8 @@
     </div>
     <div class="webinar__grid">
       <div class="reveal">
-        <p class="label" data-i18n="web.next">الويبينار القادم</p>
-        <h2 id="webinar-title" class="webinar__t" lang="en" dir="ltr">Branding<br>The Big Picture</h2>
+        <figure class="webinar__cover"><img src="assets/images/webinar-big-picture.jpg" alt="Branding The Big Picture — Webinar by Mohamed Sherif" width="1600" height="902" loading="lazy"></figure>
+        <h2 id="webinar-title" class="webinar__t" lang="en" dir="ltr">Branding The Big Picture</h2>
         <p class="webinar__p" data-i18n="web.desc">ساعتان لتتجاوز النظر إلى العلامة كشعار وألوان، وتتعلّم كيف تقيّم أي علامة أبعد من مظهرها.</p>
       </div>
       <div class="reveal">
@@ -402,7 +399,7 @@
   </section>
 
   <!-- FAQ — add a question by copying one <details> block (Arabic here, English in content-en.js) -->
-  <section class="s faq" id="faq" aria-labelledby="faq-title">
+  <section class="s s--soft faq" id="faq" aria-labelledby="faq-title">
     <div class="sh">
       <div><span class="sh__n">10</span><h2 id="faq-title" class="sh__t" lang="en" dir="ltr">FAQ</h2></div>
       <p class="sh__lead reveal" data-i18n="faq.lead">أسئلة تصلني كثيرًا قبل بدء أي مشروع أو جلسة.</p>
