@@ -7,7 +7,7 @@
 const LINKS = {
   // Nzmly — commerce, booking, course delivery
   brandSet:    "[ADD NZMLY BRAND-SET URL]",
-  mentoring:   "[ADD NZMLY MENTORING URL]",
+  mentoring:   "https://mohamed-sherifco.nzmly.com/l/sRnheGhJRh",
 
   // Free intro session (Nzmly free product, Luma, or Calendly)
   freeSession: "[ADD FREE SESSION BOOKING URL]",
@@ -19,8 +19,8 @@ const LINKS = {
   workWithMe:  "[ADD WORK WITH ME URL]",
 
   // Studio & community
-  idntik:      "https://www.idntik.com",
-  branders:    "[ADD BRANDERS URL]",
+  idntik:      "https://www.instagram.com/idntikagency/",
+  branders:    "https://www.instagram.com/branderscircle/",
 
   // Portfolio & social
   portfolio:   "https://indd.adobe.com/view/7b41fda5-06d5-430d-9df3-cd05b6c73fb2",
