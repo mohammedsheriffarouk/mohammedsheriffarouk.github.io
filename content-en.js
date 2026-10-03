@@ -96,7 +96,7 @@ const EN = {
   "web.price": "Price",
   "web.priceV": "Free",
   "web.cta": "See Dates & Register",
-  "web.note": "All upcoming webinars are on my Luma page."
+  "web.note": "All upcoming webinars are on my Luma page.",
 
   "work.lead": "A small selection. The full archive lives on Behance.",
   "work.cta": "View Full Portfolio",
