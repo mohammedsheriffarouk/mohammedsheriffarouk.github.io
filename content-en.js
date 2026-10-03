@@ -95,8 +95,8 @@ const EN = {
   "web.durV": "2 hours · online",
   "web.price": "Price",
   "web.priceV": "Free",
-  "web.cta": "Reserve Your Spot",
-  "web.note": "Registration on Luma.",
+  "web.cta": "See Dates & Register",
+  "web.note": "All upcoming webinars are on my Luma page."
 
   "work.lead": "A small selection. The full archive lives on Behance.",
   "work.cta": "View Full Portfolio",

@@ -13,7 +13,7 @@ const LINKS = {
   freeSession: "[ADD FREE SESSION BOOKING URL]",
 
   // Upcoming webinar — Luma event page (lu.ma/…)
-  webinar:     "[ADD LUMA WEBINAR URL]",
+  webinar:     "https://luma.com/user/MohamedSherif",
 
   // "Work With Me" — a Nzmly service page, a Tally inquiry form, or WhatsApp
   workWithMe:  "[ADD WORK WITH ME URL]",
