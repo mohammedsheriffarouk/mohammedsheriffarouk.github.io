@@ -33,7 +33,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy:ital@0;1&family=Tajawal:wght@400;500;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy:ital@0;1&family=Markazi+Text:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <script>
   /* set language before first paint to avoid a flash */
   (function(){var q=new URLSearchParams(location.search).get("lang"),l=q;
@@ -160,13 +160,25 @@
     <figure class="about__photo reveal">
       <img src="assets/images/mohamed-sherif-sm.jpg" alt="محمد شريف — مصمم هويات بصرية" data-i18n-attr="alt:about.photoAlt" width="640" height="640" loading="lazy">
     </figure>
-    <dl class="facts reveal">
-      <div class="facts__lead"><dt data-i18n="about.taught">علّمت</dt><dd><span class="num" dir="ltr">+<span data-count="860">860</span></span><span data-i18n="about.f5">طالب ومصمم</span></dd></div>
-      <div><dt data-i18n="about.since">منذ</dt><dd><span class="num" data-count="2016" data-from="2000" data-plain>2016</span><span data-i18n="about.f1">في التصميم</span></dd></div>
-      <div><dt data-i18n="about.since">منذ</dt><dd><span class="num" data-count="2020" data-from="2000" data-plain>2020</span><span data-i18n="about.f2">متخصص في الهوية البصرية</span></dd></div>
-      <div><dt data-i18n="about.founder">مؤسس</dt><dd><a class="facts__link" data-link="idntik" data-cta="about_idntik"><span class="caps" lang="en">Idntik</span><span class="arrow" aria-hidden="true">↗</span></a><span data-i18n="about.f3">استوديو هويات بصرية</span></dd></div>
-      <div><dt data-i18n="about.partner">شريك ومدير</dt><dd><a class="facts__link" data-link="branders" data-cta="about_branders"><span class="caps" lang="en">Branders</span><span class="arrow" aria-hidden="true">↗</span></a><span data-i18n="about.f4">مجتمع ومنصة لتعليم التصميم</span></dd></div>
+    <dl class="stats reveal">
+      <div class="stats__item stats__item--lead"><dt class="stat" dir="ltr">+<span data-count="860">860</span></dt><dd data-i18n="about.f5">طالب ومصمم تعلّموا معي</dd></div>
+      <div class="stats__item"><dt class="stat" dir="ltr"><span data-count="2016" data-from="2000" data-plain>2016</span></dt><dd data-i18n="about.f1">بدأت العمل في التصميم</dd></div>
+      <div class="stats__item"><dt class="stat" dir="ltr"><span data-count="2020" data-from="2000" data-plain>2020</span></dt><dd data-i18n="about.f2">تخصصت في الهوية البصرية</dd></div>
     </dl>
+    <ul class="roles reveal">
+      <li><a class="role" data-link="idntik" data-cta="about_idntik">
+        <span class="role__k" data-i18n="about.founder">مؤسس</span>
+        <span class="role__name caps" lang="en" dir="ltr">Idntik</span>
+        <span class="role__d" data-i18n="about.f3">استوديو هويات بصرية</span>
+        <span class="role__arrow" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="role" data-link="branders" data-cta="about_branders">
+        <span class="role__k" data-i18n="about.partner">شريك ومدير</span>
+        <span class="role__name caps" lang="en" dir="ltr">Branders</span>
+        <span class="role__d" data-i18n="about.f4">مجتمع ومنصة لتعليم التصميم</span>
+        <span class="role__arrow" aria-hidden="true">↗</span>
+      </a></li>
+    </ul>
   </section>
 
   <!-- WHAT I DO -->
@@ -339,9 +351,9 @@
       <p class="sh__lead reveal" data-i18n="fb.lead">أكثر من 860 طالبًا تعلّموا معي. هذه بعض كلماتهم، كما وصلتني.</p>
     </div>
     <dl class="fbstats reveal">
-      <div><dt><span class="num"><span data-count="98.6" data-decimals="1">98.6</span>%</span></dt><dd data-i18n="fb.s1">قيّموا معرفة ومهارات المدرب بـ «ممتاز»</dd></div>
-      <div><dt><span class="num"><span data-count="97.1" data-decimals="1">97.1</span>%</span></dt><dd data-i18n="fb.s2">قيّموا قدرته على التفاعل والشرح بـ «ممتاز»</dd></div>
-      <div><dt><span class="num"><span data-count="95.7" data-decimals="1">95.7</span>%</span></dt><dd data-i18n="fb.s3">قيّموا التدريب بشكل عام بـ «ممتاز»</dd></div>
+      <div><dt class="stat" dir="ltr"><span data-count="98.6" data-decimals="1">98.6</span>%</dt><dd data-i18n="fb.s1">قيّموا معرفة ومهارات المدرب بـ «ممتاز»</dd></div>
+      <div><dt class="stat" dir="ltr"><span data-count="97.1" data-decimals="1">97.1</span>%</dt><dd data-i18n="fb.s2">قيّموا قدرته على التفاعل والشرح بـ «ممتاز»</dd></div>
+      <div><dt class="stat" dir="ltr"><span data-count="95.7" data-decimals="1">95.7</span>%</dt><dd data-i18n="fb.s3">قيّموا التدريب بشكل عام بـ «ممتاز»</dd></div>
     </dl>
     <p class="note fbstats__src" data-i18n="fb.src">من استبيان 69 طالبًا بعد إحدى دفعات BRAND-SET.</p>
 
