@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mohamed Sherif — Brand Identity Designer &amp; Branding Educator</title>
-  <meta name="description" content="محمد شريف، مصمم هويات بصرية ومحاضر في البراندنج من القاهرة. أساعد الشركات على بناء هويات بصرية واضحة، وأدرّب المصممين عبر برنامج BRAND-SET وجلسات Mentoring فردية.">
+  <meta name="description" content="محمد شريف، مصمم هويات بصرية ومحاضر في البراندنج من القاهرة. أساعد الشركات على بناء هويات بصرية واضحة، وأدرّب المصممين عبر كورس BRAND-SET وجلسات Mentoring فردية.">
   <meta name="author" content="Mohamed Sherif">
   <meta name="theme-color" content="#000000">
   <!-- https://mohammedsheriffarouk.github.io/ e.g. https://username.github.io/ or your custom domain -->
@@ -61,19 +61,45 @@
 <!-- HERO -->
 <!-- Fixed top navigation (transparent over the hero, solid after scrolling) -->
 <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="التنقل">
-  <a class="nav__mark" href="#top" data-i18n-attr="aria-label:nav.top" aria-label="العودة للأعلى"><img class="nav__logo nav__logo--light" src="assets/icons/logo-red-white.svg" alt="" width="36" height="25"><img class="nav__logo nav__logo--dark" src="assets/icons/logo-red-black.svg" alt="" width="36" height="25"></a>
-  <ul class="nav__links">
-    <li><a href="#about" data-i18n="nav.about">عنّي</a></li>
-    <li><a href="#work" data-i18n="nav.work">الأعمال</a></li>
-    <li><a href="#process" data-i18n="nav.process">للشركات</a></li>
-    <li><a href="#program" data-i18n="nav.program">البرنامج</a></li>
-    <li><a href="#mentoring" data-i18n="nav.mentoring">Mentoring</a></li>
-    <li><a href="#webinar" data-i18n="nav.webinar">الويبينار</a></li>
-    <li><a href="#faq" data-i18n="nav.faq">أسئلة شائعة</a></li>
+  <a class="nav__mark" href="#top" data-i18n-attr="aria-label:nav.top" aria-label="العودة للأعلى"><img class="nav__logo nav__logo--light" src="assets/icons/logo-red-white.svg" alt="" width="36" height="25"><img class="nav__logo nav__logo--dark" src="assets/icons/logo-red-black.svg" alt="" width="36" height="25"><span class="nav__name caps" lang="en" dir="ltr">Mohamed Sherif</span></a>
+  <ul class="nav__social" dir="ltr">
+    <li><a data-link="instagram" data-cta="nav_instagram">Instagram</a></li>
+    <li><a data-link="behance" data-cta="nav_behance">Behance</a></li>
+    <li><a data-link="linkedin" data-cta="nav_linkedin">LinkedIn</a></li>
   </ul>
-  <button type="button" class="lang" data-lang-toggle data-cta="lang_toggle_nav"><span class="lang__en">EN</span><span class="lang__ar">عربي</span></button>
-  <a class="nav__cta" data-link="workWithMe" data-cta="nav_work_with_me" data-i18n="cta.work">اعمل معي</a>
+  <div class="nav__end">
+    <button type="button" class="lang" data-lang-toggle data-cta="lang_toggle_nav"><span class="lang__en">EN</span><span class="lang__ar">عربي</span></button>
+    <button type="button" class="nav__menu" data-menu-open aria-controls="menu" aria-expanded="false" data-cta="nav_menu"><span class="nav__burger" aria-hidden="true"></span><span class="nav__menu-t" data-i18n="nav.menu">القائمة</span></button>
+    <a class="nav__cta" data-link="workWithMe" data-cta="nav_work_with_me" data-i18n="cta.work">اعمل معي</a>
+  </div>
 </nav>
+
+<!-- Full-screen menu (opened by the Menu button) -->
+<div class="menu" id="menu" hidden>
+  <div class="atmos atmos--soft" aria-hidden="true"></div>
+  <div class="menu__top">
+    <img src="assets/icons/logo-red-white.svg" alt="" width="36" height="25">
+    <button type="button" class="menu__x" data-menu-close data-i18n-attr="aria-label:close" aria-label="إغلاق">×</button>
+  </div>
+  <ol class="menu__links">
+    <li><a href="#about" data-menu-close><span class="menu__n">01</span><span data-i18n="nav.about">عنّي</span></a></li>
+    <li><a href="#services" data-menu-close><span class="menu__n">02</span><span data-i18n="nav.services">الخدمات</span></a></li>
+    <li><a href="#work" data-menu-close><span class="menu__n">03</span><span data-i18n="nav.work">الأعمال</span></a></li>
+    <li><a href="#program" data-menu-close><span class="menu__n">04</span><span lang="en" dir="ltr">BRAND-SET</span></a></li>
+    <li><a href="#mentoring" data-menu-close><span class="menu__n">05</span><span lang="en" dir="ltr">Mentoring</span></a></li>
+    <li><a href="#feedback" data-menu-close><span class="menu__n">06</span><span data-i18n="nav.feedback">آراء الطلاب</span></a></li>
+    <li><a href="#webinar" data-menu-close><span class="menu__n">07</span><span data-i18n="nav.webinar">الويبينار</span></a></li>
+    <li><a href="#resume" data-menu-close><span class="menu__n">08</span><span data-i18n="nav.resume">الخبرات</span></a></li>
+    <li><a href="#faq" data-menu-close><span class="menu__n">09</span><span data-i18n="nav.faq">أسئلة شائعة</span></a></li>
+    <li><a href="#contact" data-menu-close><span class="menu__n">10</span><span data-i18n="nav.connect">تواصل</span></a></li>
+  </ol>
+  <ul class="menu__social" dir="ltr">
+    <li><a data-link="instagram" data-cta="menu_instagram">Instagram</a></li>
+    <li><a data-link="behance" data-cta="menu_behance">Behance</a></li>
+    <li><a data-link="linkedin" data-cta="menu_linkedin">LinkedIn</a></li>
+    <li><a data-link="facebook" data-cta="menu_facebook">Facebook</a></li>
+  </ul>
+</div>
 
 <header class="hero" id="top">
   <div class="atmos" aria-hidden="true"></div>
@@ -85,7 +111,7 @@
   <div class="hero__body">
     <h1 class="hero__name" lang="en" dir="ltr"><span class="ln"><span>Mohamed</span></span><span class="ln"><span>Sherif</span></span></h1>
     <p class="hero__role caps" lang="en" dir="ltr">Brand Identity Designer · Branding Educator</p>
-    <p class="hero__lead" data-i18n="hero.lead">أساعد الشركات على بناء هويات بصرية واضحة ومتّسقة، وأعلّم المصممين كيف يصمّمون هوية <em>أبعد من الشعار.</em></em></p>
+    <p class="hero__lead" data-i18n="hero.lead">أساعد الشركات على بناء هويات بصرية واضحة ومتّسقة، وأعلّم المصممين كيف يصمّمون هوية <em>أبعد من الشعار.</em></p>
     <div class="hero__cta">
       <a class="btn btn--primary" data-link="workWithMe" data-cta="hero_work_with_me">
         <span data-i18n="cta.work">اعمل معي</span><span class="btn__en" lang="en">Work With Me</span>
@@ -153,9 +179,11 @@
 
   <!-- ABOUT + STATS -->
   <section class="s" id="about" aria-labelledby="about-title">
-    <div class="sh">
-      <div><span class="sh__n">02</span><h2 id="about-title" class="sh__t" lang="en" dir="ltr">About</h2></div>
-      <p class="sh__lead reveal" data-i18n="about.lead">مصمم هويات بصرية ومحاضر في تصميم العلامات (Branding) من القاهرة. أعمل مع شركات وعلامات في مصر والخليج على تصميم هوياتها البصرية، من الشعار حتى دليل الهوية. وبالتوازي، أنقل هذه الخبرة للمصممين في برامج عملية وجلسات Mentoring فردية.</p>
+    <div class="about__head">
+      <span class="sh__n">01</span>
+      <h2 id="about-title" class="about__label caps" lang="en" dir="ltr">About</h2>
+      <p class="about__big reveal" data-i18n="about.big1">أنا محمد شريف، مصمم هويات بصرية ومحاضر في البراندنج (Branding) من القاهرة. أعمل مع شركات وعلامات في مصر والخليج على بناء هوياتها البصرية، من الشعار حتى دليل الهوية.</p>
+      <p class="about__big about__big--2 reveal" data-i18n="about.big2">وإلى جانب ذلك، أشارك هذه الخبرة مع المصممين من خلال كورسات عملية وجلسات Mentoring فردية.</p>
     </div>
     <figure class="about__photo reveal">
       <img src="assets/images/mohamed-sherif-sm.jpg" alt="محمد شريف — مصمم هويات بصرية" data-i18n-attr="alt:about.photoAlt" width="640" height="640" loading="lazy">
@@ -163,17 +191,17 @@
     <dl class="stats reveal">
       <div class="stats__item stats__item--lead"><dt class="stat" dir="ltr">+<span data-count="850">850</span></dt><dd data-i18n="about.f5">طالب ومصمم تعلّموا معي</dd></div>
       <div class="stats__item"><dt class="stat" dir="ltr">+<span data-count="10">10</span></dt><dd data-i18n="about.f1">سنوات خبرة في التصميم</dd></div>
-      <div class="stats__item"><dt class="stat" dir="ltr">+<span data-count="90">90</span></dt><dd data-i18n="about.f2">عميل وعلامة عملت معهم</dd></div>
+      <div class="stats__item"><dt class="stat" dir="ltr">+<span data-count="90">90</span></dt><dd data-i18n="about.f2">عميل وعلامة تجارية عملت معهم</dd></div>
     </dl>
     <ul class="roles reveal">
       <li><a class="role" data-link="idntik" data-cta="about_idntik">
         <span class="role__k" data-i18n="about.founder">مؤسس</span>
         <span class="role__name caps" lang="en" dir="ltr">Idntik</span>
-        <span class="role__d" data-i18n="about.f3">استوديو هويات بصرية</span>
+        <span class="role__d" data-i18n="about.f3">استوديو متخصص في الهوية البصرية</span>
         <span class="role__arrow" aria-hidden="true">↗</span>
       </a></li>
       <li><a class="role" data-link="branders" data-cta="about_branders">
-        <span class="role__k" data-i18n="about.partner">شريك ومدير</span>
+        <span class="role__k" data-i18n="about.partner">شريك ومدير تنفيذي</span>
         <span class="role__name caps" lang="en" dir="ltr">Branders</span>
         <span class="role__d" data-i18n="about.f4">مجتمع ومنصة لتعليم التصميم</span>
         <span class="role__arrow" aria-hidden="true">↗</span>
@@ -181,30 +209,46 @@
     </ul>
   </section>
 
-  <!-- WHAT I DO -->
+  <!-- SERVICES -->
   <section class="s s--soft" id="services" aria-labelledby="services-title">
     <div class="sh">
-      <div><span class="sh__n">03</span><h2 id="services-title" class="sh__t" lang="en" dir="ltr">What I Do</h2></div>
-      <p class="sh__lead reveal" data-i18n="do.lead">ثلاثة مسارات، وطريقة تفكير واحدة: الهوية قرار، لا مجرد شكل.</p>
+      <div><span class="sh__n">02</span><h2 id="services-title" class="sh__t" lang="en" dir="ltr">Services<br>That I Do</h2></div>
+      <div class="sh__side reveal">
+        <p class="sh__lead" data-i18n="do.lead">خدمة للشركات، وثلاث طرق للتعلّم، وفكرة واحدة تجمعها: الهوية قرار، لا مجرد شكل.</p>
+        <div class="sh__cta">
+          <a class="btn btn--primary" data-link="workWithMe" data-cta="services_work_with_me"><span data-i18n="cta.work">اعمل معي</span><span class="btn__en" lang="en">Work With Me</span></a>
+          <a class="txtlink" data-link="freeSession" data-cta="services_free_session"><span data-i18n="men.s1.cta">احجز جلستك المجانية</span><span class="arrow" aria-hidden="true">←</span></a>
+        </div>
+      </div>
     </div>
-    <div class="areas">
+    <div class="areas areas--4">
       <article class="area reveal">
         <span class="area__n">01</span>
-        <h3 class="area__t"><span class="caps" lang="en">Brand Identity</span><span data-i18n="do.a1.t">تصميم الهويات البصرية</span></h3>
-        <p data-i18n="do.a1.p">أصمّم للشركات هوية بصرية كاملة تعبّر عن نشاطها وجمهورها، وتعمل بنفس الوضوح في كل نقطة تواصل.</p>
+        <h3 class="area__t"><span class="caps" lang="en" dir="ltr">Brand Identity</span><span data-i18n="svc.1t">تصميم الهوية</span></h3>
+        <p data-i18n="do.a1.p">هوية بصرية متكاملة تنطلق من نشاطك وجمهورك، وتحافظ على وضوحها في كل نقطة تواصل مع عملائك.</p>
         <ul><li data-i18n="do.a1.l1">تصميم الشعار (Logo Design)</li><li data-i18n="do.a1.l2">نظام الهوية البصرية (Visual Identity System)</li><li data-i18n="do.a1.l3">دليل استخدام الهوية (Brand Guidelines)</li></ul>
+        <div class="area__cta"><a class="txtlink" data-link="workWithMe" data-cta="svc_identity"><span data-i18n="proc.cta">ابدأ مشروعك</span><span class="arrow" aria-hidden="true">←</span></a></div>
       </article>
       <article class="area reveal">
         <span class="area__n">02</span>
-        <h3 class="area__t"><span class="caps" lang="en">Education</span><span data-i18n="do.a2.t">التعليم</span></h3>
-        <p data-i18n="do.a2.p">برامج عملية مبنية على مشاريع حقيقية، من ملخص المشروع (Brief) حتى ملفات التسليم النهائية.</p>
-        <ul><li data-i18n="do.a2.l1">دورات تدريبية</li><li data-i18n="do.a2.l2">ورش عمل (Workshops)</li><li data-i18n="do.a2.l3">ويبينارات مجانية</li></ul>
+        <h3 class="area__t"><span class="caps" lang="en" dir="ltr">BRAND-SET</span><span data-i18n="svc.2t">كورس الهوية البصرية</span></h3>
+        <p data-i18n="svc.2p">كورس عملي من 6 محاضرات تبني فيه هوية بصرية كاملة، بنفس خطوات المشاريع الحقيقية.</p>
+        <ul><li data-i18n="svc.2l1">من ملخص المشروع (Brief) حتى التسليم</li><li data-i18n="svc.2l2">مشروع تطبيقي في كل محاضرة</li><li data-i18n="svc.2l3">التسجيل مفتوح طوال العام</li></ul>
+        <div class="area__cta"><a class="txtlink" href="#program" data-cta="svc_brandset"><span data-i18n="svc.2cta">تفاصيل الكورس</span><span class="arrow" aria-hidden="true">←</span></a></div>
       </article>
       <article class="area reveal">
         <span class="area__n">03</span>
-        <h3 class="area__t"><span class="caps" lang="en">Mentoring</span><span data-i18n="do.a3.t">جلسات Mentoring فردية</span></h3>
-        <p data-i18n="do.a3.p">جلسات فردية على أعمالك أنت: أين تقف الآن، وما خطوتك التالية تحديدًا.</p>
-        <ul><li data-i18n="do.a3.l1">جلسة تعارف مجانية</li><li data-i18n="do.a3.l2">Mentoring فردي 1:1</li><li data-i18n="do.a3.l3">مراجعة ملف الأعمال (Portfolio)</li></ul>
+        <h3 class="area__t"><span class="caps" lang="en" dir="ltr">One : One Session</span><span data-i18n="svc.3t">جلسات Mentoring فردية</span></h3>
+        <p data-i18n="svc.3p">جلسة فردية مدتها 90 دقيقة نركّز فيها على أعمالك ومشاريعك، ونبدأ بجلسة تعارف مجانية.</p>
+        <ul><li data-i18n="men.b1">مراجعة صادقة وبنّاءة لأعمالك وملف أعمالك (Portfolio)</li><li data-i18n="men.b2">خطة واضحة لتطوير مستواك في تصميم الهوية</li><li data-i18n="men.b3">إجابات عملية عن التعامل مع العملاء والتسعير وطريقة العمل</li></ul>
+        <div class="area__cta"><a class="txtlink" href="#mentoring" data-cta="svc_mentoring"><span data-i18n="men.s2.cta">احجز جلسة Mentoring</span><span class="arrow" aria-hidden="true">←</span></a></div>
+      </article>
+      <article class="area reveal">
+        <span class="area__n">04</span>
+        <h3 class="area__t"><span class="caps" lang="en" dir="ltr">Webinars</span><span data-i18n="svc.4t">ويبينارات مجانية</span></h3>
+        <p data-i18n="web.desc">ساعتان تنتقل فيهما من رؤية العلامة كشعار وألوان، إلى فهم ما يصنع قيمتها فعلًا.</p>
+        <ul><li data-i18n="web.durV">ساعتان · أونلاين</li><li data-i18n="web.priceV">مجاني</li><li data-i18n="svc.4l3">المواعيد الجديدة على Luma</li></ul>
+        <div class="area__cta"><a class="txtlink" href="#webinar" data-cta="svc_webinar"><span data-i18n="web.cta">اعرض المواعيد وسجّل</span><span class="arrow" aria-hidden="true">←</span></a></div>
       </article>
     </div>
   </section>
@@ -212,8 +256,8 @@
   <!-- SELECTED WORK -->
   <section class="s" id="work" aria-labelledby="work-title">
     <div class="sh">
-      <div><span class="sh__n">04</span><h2 id="work-title" class="sh__t" lang="en" dir="ltr">Selected Work</h2></div>
-      <p class="sh__lead reveal" data-i18n="work.lead">مختارات قليلة، والأرشيف الكامل على Behance.</p>
+      <div><span class="sh__n">03</span><h2 id="work-title" class="sh__t" lang="en" dir="ltr">Selected Work</h2></div>
+      <p class="sh__lead reveal" data-i18n="work.lead">مختارات من هويات صمّمتها لشركات في قطاعات مختلفة، والأرشيف الكامل على Behance.</p>
     </div>
 
     <!-- Add up to 6 projects. Image goes in assets/projects/, link key goes in LINKS (script.js). -->
@@ -245,29 +289,15 @@
     </a>
   </section>
 
-  <!-- WORK WITH ME (for companies) -->
-  <section class="s s--soft process" id="process" aria-labelledby="process-title">
-    <div class="sh">
-      <div><span class="sh__n">05</span><h2 id="process-title" class="sh__t" lang="en" dir="ltr">Work With Me</h2></div>
-      <p class="sh__lead reveal" data-i18n="proc.lead">للشركات والعلامات التي تريد هوية بصرية مبنية على فهم حقيقي لنشاطها وجمهورها، لا على الذوق الشخصي.</p>
-    </div>
-    <ol class="process__steps">
-      <li class="reveal"><span class="process__n">01</span><h3 data-i18n="proc.s1.t">تواصل معي</h3><p data-i18n="proc.s1.p">أرسل فكرة مشروعك ونبذة عن نشاطك، وأرد عليك بالخطوة التالية.</p></li>
-      <li class="reveal"><span class="process__n">02</span><h3 data-i18n="proc.s2.t">فهم المشروع</h3><p data-i18n="proc.s2.p">نجلس معًا لفهم نشاطك وجمهورك وأهدافك، ونكتب ملخص المشروع (Brief).</p></li>
-      <li class="reveal"><span class="process__n">03</span><h3 data-i18n="proc.s3.t">عرض السعر والخطة</h3><p data-i18n="proc.s3.p">تستلم عرض سعر واضحًا بالمخرجات والمدة الزمنية، قبل أن نبدأ أي تصميم.</p></li>
-      <li class="reveal"><span class="process__n">04</span><h3 data-i18n="proc.s4.t">التصميم والتسليم</h3><p data-i18n="proc.s4.p">من الأفكار الأولى حتى الهوية الكاملة والملفات النهائية ودليل الاستخدام.</p></li>
-    </ol>
-    <a class="btn btn--primary btn--lg" data-link="workWithMe" data-cta="process_start_project">
-      <span data-i18n="proc.cta">ابدأ مشروعك</span><span class="btn__en" lang="en">Start Your Project</span>
-    </a>
-  </section>
+  <!-- (process moved into contact) WORK WITH ME (for companies) -->
+  
 
   <!-- FEATURED PROGRAM -->
   <section class="s s--dark program" id="program" aria-labelledby="program-title">
     <div class="atmos atmos--soft" aria-hidden="true"></div>
     <div class="program__in">
       <div class="sh">
-        <div><span class="sh__n">06</span><p class="sh__t sh__t--sm" lang="en" dir="ltr">Featured Program</p></div>
+        <div><span class="sh__n">04</span><p class="sh__t sh__t--sm" lang="en" dir="ltr">The Course</p></div>
         <div>
           <h2 id="program-title" class="program__name" lang="en" dir="ltr">BRAND-SET</h2>
           <p class="program__tag caps" lang="en" dir="ltr">Learn how to think &amp; build like a brand designer</p>
@@ -276,70 +306,72 @@
 
       <div class="program__grid">
         <div class="reveal">
-          <p class="program__desc" data-i18n="prog.desc">برنامج عملي في الهوية البصرية، يرافقك خطوة بخطوة في مشروع علامة كامل، بنفس الترتيب الذي يمر به أي مشروع حقيقي.</p>
+          <p class="program__desc" data-i18n="prog.desc">كورس عملي في الهوية البصرية، يأخذك خطوة بخطوة في مشروع علامة كامل، بنفس الترتيب الذي تمر به المشاريع الحقيقية.</p>
           <dl class="program__meta">
             <div><dt data-i18n="prog.format">الصيغة</dt><dd><span class="num" data-count="6">6</span> <span data-i18n="prog.formatV">محاضرات · مشروع تطبيقي في كل محاضرة</span></dd></div>
             <!-- [ADD FORMAT DETAILS] e.g. recorded / live, duration, language -->
-            <div><dt data-i18n="prog.enroll">التسجيل</dt><dd><span data-i18n="prog.enrollV">مفتوح باستمرار · الدفعة القادمة:</span> <span class="ph">[ADD NEXT COHORT DATE]</span></dd></div>
+            <div><dt data-i18n="prog.enroll">التسجيل</dt><dd><span data-i18n="prog.enrollV">مفتوح طوال العام · الدفعة القادمة:</span> <span class="ph">[ADD NEXT COHORT DATE]</span></dd></div>
           </dl>
         </div>
         <div class="reveal">
           <p class="label" data-i18n="prog.learn">ماذا ستتعلّم</p>
           <ol class="outcomes">
-            <li data-i18n="prog.o1">تدير مشروع الهوية بمراحله الأربع: الاكتشاف، ثم التفكير، ثم التصميم، ثم التنفيذ والتسليم.</li>
+            <li data-i18n="prog.o1">تدير مشروع الهوية بمراحله الأربع: الاكتشاف (Discovery)، والتفكير (Thinking)، والتصميم (Design)، والإنتاج (Production).</li>
             <li data-i18n="prog.o2">تتعامل مع العميل باحتراف، وتكتب ملخص المشروع (Creative Brief)، وتسعّر عملك بعرض سعر واضح.</li>
             <li data-i18n="prog.o3">تحوّل البحث والكلمات المفتاحية إلى فكرة تصميمية (Concept) باستخدام الخرائط الذهنية (Mind-mapping).</li>
-            <li data-i18n="prog.o4">تبني لوحة إلهام (Moodboard) قائمة على سيكولوجية الشكل واللون والخط.</li>
-            <li data-i18n="prog.o5">تستكشف الشعار وتختبره، ثم تقدّم عرض الهوية (Brand Proposal) وتسلّم الملفات النهائية.</li>
+            <li data-i18n="prog.o4">تبني لوحة إلهام (Moodboard) مبنية على سيكولوجية الشكل واللون والخط.</li>
+            <li data-i18n="prog.o5">تطوّر الشعار وتختبره، ثم تقدّم عرض الهوية (Brand Proposal) وتسلّم الملفات النهائية.</li>
           </ol>
         </div>
       </div>
 
       <div class="program__cta">
         <a class="btn btn--primary btn--lg" data-link="brandSet" data-cta="brandset">
-          <span><span data-i18n="prog.join">انضم إلى</span> <span lang="en">BRAND-SET</span></span><span class="btn__en" lang="en">Join BRAND-SET</span>
+          <span><span data-i18n="prog.join">سجّل في كورس</span> <span lang="en">BRAND-SET</span></span><span class="btn__en" lang="en">Enroll in BRAND-SET</span>
         </a>
-        <button type="button" class="link-btn" data-open="interest" data-cta="brandset_interest" data-i18n="prog.interest">لست مستعدًا بعد؟ انضم إلى قائمة الاهتمام</button>
+        <button type="button" class="link-btn" data-open="interest" data-cta="brandset_interest" data-i18n="prog.interest">لست مستعدًا الآن؟ انضم إلى قائمة الاهتمام</button>
       </div>
-      <p class="note" data-i18n="prog.note">الدفع والوصول إلى المحتوى عبر منصة نظملي (Nzmly).</p>
+      <p class="note" data-i18n="prog.note">الدفع والوصول إلى محتوى الكورس يتمّان عبر منصة نظملي (Nzmly).</p>
     </div>
   </section>
 
   <!-- MENTORING: free intro session → paid 1:1 -->
   <section class="s mentoring" id="mentoring" aria-labelledby="mentoring-title">
     <div class="sh">
-      <div><span class="sh__n">07</span><h2 id="mentoring-title" class="sh__t" lang="en" dir="ltr">1:1 Mentoring</h2></div>
-      <p class="sh__lead reveal" data-i18n="men.lead">جلسات فردية للمصممين الذين يريدون أن يتطوروا بوضوح وبشكل أسرع. نراجع أعمالك معًا، ونحدد نقاط قوتك وما يحتاج إلى تطوير، وتخرج من كل جلسة بخطوات عملية تطبّقها مباشرة على مشاريعك وملف أعمالك.</p>
+      <div><span class="sh__n">05</span><h2 id="mentoring-title" class="sh__t" lang="en" dir="ltr">One : One Session</h2></div>
+      <p class="sh__lead reveal" data-i18n="men.lead">جلسات فردية للمصممين الذين يريدون أن يتطوروا بخطوات أوضح وأسرع. نراجع أعمالك معًا، ونحدد نقاط قوتك وما يحتاج إلى تطوير، لتخرج من كل جلسة بخطوات عملية تطبّقها مباشرة على مشاريعك وملف أعمالك.</p>
     </div>
     <ol class="steps">
       <li class="step step--first reveal">
         <span class="step__n">01</span>
         <p class="label" data-i18n="men.s1.k">ابدأ من هنا</p>
         <h3 class="step__t" data-i18n="men.s1.t">جلسة تعارف مجانية</h3>
-        <p class="step__meta"><span class="ph">[15 / 30]</span> <span data-i18n="men.s1.meta">دقيقة · مجانًا · أونلاين</span></p>
-        <p class="step__p" data-i18n="men.s1.p">نتحدث عن أعمالك ومستواك الحالي وما تطمح إليه، ونحدد معًا نقطة البداية المناسبة لك.</p>
+        <p class="step__meta"><span class="num">30</span> <span data-i18n="men.s1.meta">دقيقة · مجانًا · أونلاين</span></p>
+        <p class="step__p" data-i18n="men.s1.p">نتحدث عن أعمالك ومستواك الحالي وما تطمح إليه، ونحدد معًا نقطة البداية الأنسب لك.</p>
         <a class="btn btn--primary btn--lg" data-link="freeSession" data-cta="mentoring_free_session">
           <span data-i18n="men.s1.cta">احجز جلستك المجانية</span><span class="btn__en" lang="en">Book a Free Session</span>
         </a>
+        <p class="note" data-i18n="men.s1.note">الحجز عبر Google Calendar، ويصلك رابط الجلسة بعد التأكيد.</p>
       </li>
       <li class="step reveal">
         <span class="step__n">02</span>
         <p class="label" data-i18n="men.s2.k">بعدها</p>
         <h3 class="step__t" data-i18n="men.s2.t">جلسات Mentoring فردية</h3>
         <p class="step__meta" data-i18n="men.s2.meta">90 دقيقة · أونلاين عبر Google Meet</p>
-        <p class="step__p" data-i18n="men.s2.p">ماذا ستستفيد من الجلسات:</p>
+        <p class="step__p" data-i18n="men.s2.p">ما الذي ستحصل عليه من الجلسات:</p>
         <ul class="topics">
-          <li data-i18n="men.b1">مراجعة صريحة لأعمالك وملف أعمالك (Portfolio)</li>
+          <li data-i18n="men.b1">مراجعة صادقة وبنّاءة لأعمالك وملف أعمالك (Portfolio)</li>
           <li data-i18n="men.b2">خطة واضحة لتطوير مستواك في تصميم الهوية</li>
-          <li data-i18n="men.b3">إجابات عملية عن العملاء والتسعير وطريقة العمل</li>
-          <li data-i18n="men.b4">توجيه مباشر في المشاريع التي تعمل عليها الآن</li>
+          <li data-i18n="men.b3">إجابات عملية عن التعامل مع العملاء والتسعير وطريقة العمل</li>
+          <li data-i18n="men.b4">توجيه مباشر في المشاريع التي تعمل عليها حاليًا</li>
         </ul>
         <a class="btn btn--dark btn--lg" data-link="mentoring" data-cta="mentoring">
           <span data-i18n="men.s2.cta">احجز جلسة Mentoring</span><span class="btn__en" lang="en">Book a Mentoring Session</span>
         </a>
-        <p class="note" data-i18n="men.s2.note">اختيار الجلسة والموعد والدفع والتأكيد — كلها عبر نظملي (Nzmly).</p>
+        <p class="note" data-i18n="men.s2.note">اختيار الجلسة والموعد والدفع والتأكيد، كلها عبر منصة نظملي (Nzmly).</p>
       </li>
     </ol>
+
   </section>
 
   <!-- STUDENT FEEDBACK
@@ -347,15 +379,15 @@
        Missing files are hidden automatically. Add more by copying one <li>. -->
   <section class="s s--soft" id="feedback" aria-labelledby="feedback-title">
     <div class="sh">
-      <div><span class="sh__n">08</span><h2 id="feedback-title" class="sh__t" lang="en" dir="ltr">Student Feedback</h2></div>
-      <p class="sh__lead reveal" data-i18n="fb.lead">أكثر من 850 طالبًا تعلّموا معي. هذه بعض كلماتهم، كما وصلتني.</p>
+      <div><span class="sh__n">06</span><h2 id="feedback-title" class="sh__t" lang="en" dir="ltr">Student Feedback</h2></div>
+      <p class="sh__lead reveal" data-i18n="fb.lead">أكثر من 850 طالبًا تعلّموا معي. هذه بعض كلماتهم كما وصلتني.</p>
     </div>
     <dl class="fbstats reveal">
-      <div><dt class="stat" dir="ltr"><span data-count="98.6" data-decimals="1">98.6</span>%</dt><dd data-i18n="fb.s1">قيّموا معرفة ومهارات المدرب بـ «ممتاز»</dd></div>
-      <div><dt class="stat" dir="ltr"><span data-count="97.1" data-decimals="1">97.1</span>%</dt><dd data-i18n="fb.s2">قيّموا قدرته على التفاعل والشرح بـ «ممتاز»</dd></div>
-      <div><dt class="stat" dir="ltr"><span data-count="95.7" data-decimals="1">95.7</span>%</dt><dd data-i18n="fb.s3">قيّموا التدريب بشكل عام بـ «ممتاز»</dd></div>
+      <div><dt class="stat" dir="ltr"><span data-count="98.6" data-decimals="1">98.6</span>%</dt><dd data-i18n="fb.s1">قيّموا معرفة المحاضر ومهاراته بـ «ممتاز»</dd></div>
+      <div><dt class="stat" dir="ltr"><span data-count="97.1" data-decimals="1">97.1</span>%</dt><dd data-i18n="fb.s2">قيّموا أسلوبه في الشرح والتفاعل بـ «ممتاز»</dd></div>
+      <div><dt class="stat" dir="ltr"><span data-count="95.7" data-decimals="1">95.7</span>%</dt><dd data-i18n="fb.s3">قيّموا التجربة التدريبية ككل بـ «ممتاز»</dd></div>
     </dl>
-    <p class="note fbstats__src" data-i18n="fb.src">من استبيان 69 طالبًا بعد إحدى دفعات BRAND-SET.</p>
+    <p class="note fbstats__src" data-i18n="fb.src">من استبيان 69 طالبًا بعد إحدى دفعات كورس BRAND-SET.</p>
 
     <div class="proof-wrap">
       <ul class="proof" data-proof dir="ltr">
@@ -381,21 +413,21 @@
         <button type="button" class="proof__btn" data-proof-next data-i18n-attr="aria-label:fb.next" aria-label="التالي">→</button>
       </div>
     </div>
-    <p class="note" data-i18n="fb.hint">اسحب لرؤية المزيد، واضغط على أي صورة لتكبيرها.</p>
+    <p class="note" data-i18n="fb.hint">اسحب لعرض المزيد، واضغط على أي صورة لتكبيرها.</p>
   </section>
 
   <!-- UPCOMING WEBINAR (registration on Luma)
        To hide when there's no upcoming webinar: add the word hidden → <section hidden …> -->
   <section class="s webinar" id="webinar" aria-labelledby="webinar-title">
     <div class="sh">
-      <div><span class="sh__n">09</span><p class="sh__t" lang="en" dir="ltr">Free Webinar</p></div>
-      <p class="sh__lead reveal" data-i18n="web.lead">ابدأ مجانًا: ويبينار مفتوح قبل أي التزام.</p>
+      <div><span class="sh__n">07</span><p class="sh__t" lang="en" dir="ltr">Free Webinar</p></div>
+      <p class="sh__lead reveal" data-i18n="web.lead">ابدأ مجانًا بويبينار مفتوح، قبل أي التزام.</p>
     </div>
     <div class="webinar__grid">
       <div class="reveal">
         <figure class="webinar__cover"><img src="assets/images/webinar-big-picture.jpg" alt="Branding The Big Picture — Webinar by Mohamed Sherif" width="1600" height="902" loading="lazy"></figure>
         <h2 id="webinar-title" class="webinar__t" lang="en" dir="ltr">Branding The Big Picture</h2>
-        <p class="webinar__p" data-i18n="web.desc">ساعتان لتتجاوز النظر إلى العلامة كشعار وألوان، وتتعلّم كيف تقيّم أي علامة أبعد من مظهرها.</p>
+        <p class="webinar__p" data-i18n="web.desc">ساعتان تنتقل فيهما من رؤية العلامة كشعار وألوان، إلى فهم ما يصنع قيمتها فعلًا.</p>
       </div>
       <div class="reveal">
         <dl class="webinar__meta">
@@ -403,44 +435,83 @@
           <div><dt data-i18n="web.price">السعر</dt><dd data-i18n="web.priceV">مجاني</dd></div>
         </dl>
         <a class="btn btn--dark btn--lg" data-link="webinar" data-cta="webinar_register">
-          <span data-i18n="web.cta">شوف المواعيد واحجز</span><span class="btn__en" lang="en">See Dates &amp; Register</span>
+          <span data-i18n="web.cta">اعرض المواعيد وسجّل</span><span class="btn__en" lang="en">See Dates &amp; Register</span>
         </a>
-        <p class="note" data-i18n="web.note">كل الويبينارات القادمة على صفحتي في Luma.</p>
+        <p class="note" data-i18n="web.note">جميع الويبينارات القادمة متاحة على صفحتي في Luma.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESUME -->
+  <section class="s s--soft resume" id="resume" aria-labelledby="resume-title">
+    <div class="resume__grid">
+      <div class="resume__head">
+        <span class="sh__n">08</span>
+        <h2 id="resume-title" class="sh__t" lang="en" dir="ltr">Resume,<br>My Story</h2>
+        <p class="sh__lead reveal" data-i18n="res.lead">أعمل في التصميم منذ 2016، ومتخصص في الهوية البصرية منذ 2020، لأنها المجال الذي أحبه وأقدّم فيه أفضل ما لدي.</p>
+        <div class="sh__cta">
+          <a class="btn btn--dark" data-link="workWithMe" data-cta="resume_work_with_me"><span data-i18n="cta.work">اعمل معي</span><span class="btn__en" lang="en">Work With Me</span></a>
+          <a class="txtlink" data-link="linkedin" data-cta="resume_linkedin"><span lang="en" dir="ltr">LinkedIn</span><span class="arrow arrow--out" aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="resume__list">
+        <details class="job"><summary><span class="job__t" lang="en" dir="ltr">Founder &amp; Creative Director</span><span class="job__co caps" lang="en" dir="ltr">Idntik</span></summary><p data-i18n="res.r0">استوديو أسسته لتصميم الهويات البصرية للشركات في مصر والخليج.</p></details>
+        <details class="job"><summary><span class="job__t" lang="en" dir="ltr">Art Director</span><span class="job__co caps" lang="en" dir="ltr">Level A Agency</span></summary><p data-i18n="res.r1">إدارة الاتجاه الفني (Art Direction) للمشاريع، من الفكرة حتى التسليم.</p></details>
+        <details class="job"><summary><span class="job__t" lang="en" dir="ltr">Sr. Branding Designer</span><span class="job__co caps" lang="en" dir="ltr">The Generator</span></summary><p data-i18n="res.r2">تصميم هويات بصرية لعلامات تجارية، أغلبها لعملاء في الخليج.</p></details>
+        <details class="job"><summary><span class="job__t" lang="en" dir="ltr">Sr. Branding Designer</span><span class="job__co caps" lang="en" dir="ltr">Iconic Branding</span></summary><p data-i18n="res.r3">تصميم هويات بصرية ومطبوعات لعلامات في قطاعات متنوعة.</p></details>
+        <details class="job"><summary><span class="job__t" lang="en" dir="ltr">Sr. Graphic Designer</span><span class="job__co caps" lang="en" dir="ltr">Social Nuts</span></summary><p data-i18n="res.r4">تصميمات السوشيال ميديا والحملات الإعلانية والمطبوعات.</p></details>
       </div>
     </div>
   </section>
 
   <!-- FAQ — add a question by copying one <details> block (Arabic here, English in content-en.js) -->
-  <section class="s s--soft faq" id="faq" aria-labelledby="faq-title">
+  <section class="s faq" id="faq" aria-labelledby="faq-title">
     <div class="sh">
-      <div><span class="sh__n">10</span><h2 id="faq-title" class="sh__t" lang="en" dir="ltr">FAQ</h2></div>
+      <div><span class="sh__n">09</span><h2 id="faq-title" class="sh__t" lang="en" dir="ltr">FAQ</h2></div>
       <p class="sh__lead reveal" data-i18n="faq.lead">أسئلة تصلني كثيرًا قبل بدء أي مشروع أو جلسة.</p>
     </div>
     <div class="faq__list">
       <details class="reveal"><summary data-i18n="faq.q1">كم يستغرق مشروع الهوية البصرية؟</summary><p data-i18n="faq.a1">عادةً من 4 إلى 6 أسابيع عمل، تبدأ من استلام الدفعة الأولى واكتمال المعلومات المطلوبة للمشروع.</p></details>
-      <details class="reveal"><summary data-i18n="faq.q2">كيف يتم الدفع؟</summary><p data-i18n="faq.a2">50% مقدّمًا لبدء العمل، و50% قبل تسليم الملفات النهائية. وتنتقل حقوق الاستخدام كاملة بعد السداد.</p></details>
-      <details class="reveal"><summary data-i18n="faq.q3">كم عدد جولات التعديل؟</summary><p data-i18n="faq.a3">جولتان من التعديلات لكل بند في عرض السعر، وأي تعديلات إضافية يتم الاتفاق عليها مسبقًا.</p></details>
-      <details class="reveal"><summary data-i18n="faq.q4">هل تعمل مع شركات خارج مصر؟</summary><p data-i18n="faq.a4">نعم، أعمل مع شركات وعلامات في مصر والخليج، والتواصل والتسليم يتمّان أونلاين بالكامل.</p></details>
-      <details class="reveal"><summary data-i18n="faq.q5">لمن برنامج BRAND-SET؟</summary><p data-i18n="faq.a5">للمصممين الذين يريدون تعلّم بناء هوية بصرية كاملة بنفس خطوات المشاريع الحقيقية، من التعامل مع العميل حتى التسليم.</p></details>
-      <details class="reveal"><summary data-i18n="faq.q6">كيف تتم جلسة الـ Mentoring؟</summary><p data-i18n="faq.a6">جلسة فردية مدتها 90 دقيقة أونلاين عبر Google Meet. اختيار الموعد والدفع والتأكيد كلها عبر منصة نظملي.</p></details>
+      <details class="reveal"><summary data-i18n="faq.q2">كيف يتم الدفع؟</summary><p data-i18n="faq.a2">50% مقدّمًا لبدء العمل، و50% قبل تسليم الملفات النهائية، وتنتقل حقوق الاستخدام كاملة بعد إتمام السداد.</p></details>
+      <details class="reveal"><summary data-i18n="faq.q3">كم عدد جولات التعديل؟</summary><p data-i18n="faq.a3">جولتان من التعديلات لكل بند في عرض السعر، وأي تعديلات إضافية نتفق عليها مسبقًا.</p></details>
+      <details class="reveal"><summary data-i18n="faq.q4">هل تعمل مع شركات خارج مصر؟</summary><p data-i18n="faq.a4">نعم، أعمل مع شركات وعلامات في مصر والخليج، ويتم التواصل والتسليم أونلاين بالكامل.</p></details>
+      <details class="reveal"><summary data-i18n="faq.q5">لمن كورس BRAND-SET؟</summary><p data-i18n="faq.a5">للمصممين الذين يريدون تعلّم بناء هوية بصرية كاملة بنفس خطوات المشاريع الحقيقية، من التعامل مع العميل حتى التسليم النهائي.</p></details>
+      <details class="reveal"><summary data-i18n="faq.q6">كيف تتم جلسة الـ Mentoring؟</summary><p data-i18n="faq.a6">جلسة فردية مدتها 90 دقيقة أونلاين عبر Google Meet، ويتم اختيار الموعد والدفع والتأكيد عبر منصة نظملي (Nzmly).</p></details>
     </div>
   </section>
 
-  <!-- CONNECT -->
-  <section class="s connect" id="connect" aria-labelledby="connect-title">
-    <div class="sh">
-      <div><span class="sh__n">11</span><h2 id="connect-title" class="sh__t" lang="en" dir="ltr">Find Me Around<br>the Internet</h2></div>
-      <p class="sh__lead reveal" data-i18n="con.lead">حيث أشارك الأعمال والأفكار، وما يحدث خلف الكواليس.</p>
+  <!-- CONTACT: let's work together + site map + socials -->
+  <section class="s s--soft contact" id="contact" aria-labelledby="contact-title">
+    <div class="contact__grid">
+      <div class="contact__main">
+        <span class="sh__n">10</span>
+        <h2 id="contact-title" class="contact__t" lang="en" dir="ltr">Let’s Work<br>Together.</h2>
+        <p class="sh__lead reveal" data-i18n="proc.lead">إذا كنت تبحث عن هوية بصرية تنطلق من فهم حقيقي لنشاطك وجمهورك، فهنا نبدأ.</p>
+        <ol class="process__steps contact__steps"><li><span class="process__n">01</span><h3 data-i18n="proc.s1.t">تواصل معي</h3><p data-i18n="proc.s1.p">أرسل فكرة مشروعك ونبذة عن نشاطك، وسأعود إليك بالخطوة التالية.</p></li><li><span class="process__n">02</span><h3 data-i18n="proc.s2.t">فهم المشروع</h3><p data-i18n="proc.s2.p">نتعرّف معًا على نشاطك وجمهورك وأهدافك، ونكتب ملخص المشروع (Brief).</p></li><li><span class="process__n">03</span><h3 data-i18n="proc.s3.t">عرض السعر والخطة</h3><p data-i18n="proc.s3.p">تستلم عرض سعر واضحًا بالمخرجات والمدة الزمنية، قبل البدء في أي تصميم.</p></li><li><span class="process__n">04</span><h3 data-i18n="proc.s4.t">التصميم والتسليم</h3><p data-i18n="proc.s4.p">من الأفكار الأولى حتى الهوية الكاملة، مع الملفات النهائية ودليل الاستخدام.</p></li></ol>
+        <div class="sh__cta">
+          <a class="btn btn--primary btn--lg" data-link="workWithMe" data-cta="contact_start_project"><span data-i18n="proc.cta">ابدأ مشروعك</span><span class="btn__en" lang="en">Start Your Project</span></a>
+          <a class="txtlink" data-link="email" data-cta="contact_email"><span class="txtlink__ic" aria-hidden="true">✉</span><span data-i18n="cta.email">راسلني بالبريد</span></a>
+        </div>
+      </div>
+      <div class="contact__side">
+        <ul class="contact__nav">
+          <li><a href="#work" data-i18n="nav.work">الأعمال</a></li>
+          <li><a href="#services" data-i18n="nav.services">الخدمات</a></li>
+          <li><a href="#program"><span lang="en" dir="ltr">BRAND-SET</span></a></li>
+          <li><a href="#resume" data-i18n="nav.resume">الخبرات</a></li>
+          <li><a href="#faq" data-i18n="nav.faq">أسئلة شائعة</a></li>
+        </ul>
+        <ul class="contact__social" dir="ltr">
+          <li><a data-link="instagram" data-cta="contact_instagram">Instagram</a></li>
+          <li><a data-link="behance" data-cta="contact_behance">Behance</a></li>
+          <li><a data-link="linkedin" data-cta="contact_linkedin">LinkedIn</a></li>
+          <li><a data-link="facebook" data-cta="contact_facebook">Facebook</a></li>
+          <li><a data-link="portfolio" data-cta="contact_portfolio">Portfolio</a></li>
+          <li><a data-link="idntik" data-cta="contact_idntik">Idntik</a></li>
+          <li><a data-link="branders" data-cta="contact_branders">Branders</a></li>
+        </ul>
+      </div>
     </div>
-    <ul class="platforms" dir="ltr">
-      <li><a data-link="instagram" data-cta="social_instagram"><span class="caps">Instagram</span><span class="platforms__h">Ideas &amp; reels</span><span class="arrow" aria-hidden="true">↗</span></a></li>
-      <li><a data-link="behance" data-cta="social_behance"><span class="caps">Behance</span><span class="platforms__h">Case work</span><span class="arrow" aria-hidden="true">↗</span></a></li>
-      <li><a data-link="linkedin" data-cta="social_linkedin"><span class="caps">LinkedIn</span><span class="platforms__h">Professional</span><span class="arrow" aria-hidden="true">↗</span></a></li>
-      <li><a data-link="portfolio" data-cta="social_portfolio"><span class="caps">Portfolio</span><span class="platforms__h">Full PDF portfolio</span><span class="arrow" aria-hidden="true">↗</span></a></li>
-      <li><a data-link="idntik" data-cta="social_idntik"><span class="caps">Idntik</span><span class="platforms__h">Branding studio</span><span class="arrow" aria-hidden="true">↗</span></a></li>
-      <li><a data-link="branders" data-cta="social_branders"><span class="caps">Branders</span><span class="platforms__h">Design community</span><span class="arrow" aria-hidden="true">↗</span></a></li>
-      <li><a data-link="facebook" data-cta="social_facebook"><span class="caps">Facebook</span><span class="platforms__h">Community</span><span class="arrow" aria-hidden="true">↗</span></a></li>
-    </ul>
   </section>
 </main>
 
@@ -448,33 +519,25 @@
 <footer class="foot" dir="ltr">
   <div class="foot__id">
     <img src="assets/icons/logo-white.svg" alt="" width="44" height="30">
-    <div>
-      <p class="caps foot__name">Mohamed Sherif</p>
-      <p class="foot__role">Brand Identity Designer · Branding Educator</p>
-    </div>
+    <p class="caps foot__name">Mohamed Sherif</p>
   </div>
-  <ul class="foot__links">
-    <li><a data-link="instagram" data-cta="footer_instagram">Instagram</a></li>
-    <li><a data-link="linkedin" data-cta="footer_linkedin">LinkedIn</a></li>
-    <li><a data-link="behance" data-cta="footer_behance">Behance</a></li>
-    <li><a data-link="facebook" data-cta="footer_facebook">Facebook</a></li>
-  </ul>
-  <p class="caps foot__copy">© 2026 Mohamed Sherif</p>
+  <p class="foot__role">Brand Identity Designer · Branding Educator</p>
+  <p class="caps foot__copy">© 2026</p>
 </footer>
 
 <!-- OPTIONAL INTEREST FORM (drawer). Form URL lives in FORM_CONFIG (script.js). -->
 <dialog class="drawer" id="interest" aria-labelledby="interest-title">
   <div class="drawer__in">
     <button type="button" class="drawer__x" data-close data-i18n-attr="aria-label:close" aria-label="إغلاق">×</button>
-    <p class="label" lang="en" dir="ltr">BRAND-SET · Interest List</p>
+    <p class="label" lang="en" dir="ltr">BRAND-SET Course · Interest List</p>
     <h2 id="interest-title" class="drawer__t" data-i18n="int.t">قائمة الاهتمام</h2>
-    <p class="drawer__p" data-i18n="int.p">سجّل اهتمامك لتصلك تفاصيل الدفعة القادمة قبل غيرك، دون أي التزام بالدفع.</p>
+    <p class="drawer__p" data-i18n="int.p">سجّل اهتمامك لتصلك تفاصيل الدفعة القادمة أولًا، دون أي التزام بالدفع.</p>
     <div class="drawer__form" data-form="brandSetInterest">
       <!-- Filled by script.js: Tally embed if FORM_CONFIG.brandSetInterest is set, placeholder otherwise. -->
       <div class="form-ph">
         <p class="ph">[ADD TALLY FORM URL]</p>
         <p data-i18n="int.ph">الفورم سيظهر هنا بعد ربط Tally. الحقول المقترحة:</p>
-        <ul><li data-i18n="int.f1">الاسم</li><li data-i18n="int.f2">البريد الإلكتروني</li><li data-i18n="int.f3">واتساب</li><li data-i18n="int.f4">مستوى الخبرة</li><li data-i18n="int.f5">البرنامج الذي يهمّك</li></ul>
+        <ul><li data-i18n="int.f1">الاسم</li><li data-i18n="int.f2">البريد الإلكتروني</li><li data-i18n="int.f3">واتساب</li><li data-i18n="int.f4">مستوى الخبرة</li><li data-i18n="int.f5">الكورس الذي يهمّك</li></ul>
       </div>
     </div>
   </div>

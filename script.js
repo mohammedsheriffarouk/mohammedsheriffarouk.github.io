@@ -10,7 +10,7 @@ const LINKS = {
   mentoring:   "https://mohamed-sherifco.nzmly.com/l/sRnheGhJRh",
 
   // Free intro session (Nzmly free product, Luma, or Calendly)
-  freeSession: "[ADD FREE SESSION BOOKING URL]",
+  freeSession: "https://calendar.app.google/H2Ncc1gTvNGskbZp8",
 
   // Upcoming webinar — Luma event page (lu.ma/…)
   webinar:     "https://luma.com/user/MohamedSherif",
@@ -28,6 +28,7 @@ const LINKS = {
   instagram:   "https://www.instagram.com/mohamedsherif.co/",
   linkedin:    "https://www.linkedin.com/in/mohamed-sherif-611483202/",
   facebook:    "https://www.facebook.com/mrMohamedSherif",
+  email:       "mailto:Mohammed.sherif.farouk@gmail.com",
 
   // Selected work — one link per project card (Behance project pages)
   project1:    "https://www.behance.net/gallery/194038573/Arc-De-Sol-Brand-Identity",
@@ -38,7 +39,9 @@ const LINKS = {
 
 const FORM_CONFIG = {
   // Tally share link, e.g. "https://tally.so/r/abc123"
-  brandSetInterest: "https://tally.so/r/KYbgVK?utm_source=website"
+  brandSetInterest: "https://tally.so/r/KYbgVK?utm_source=website",
+  // Google Calendar appointment page (full calendar.google.com/…/appointments/schedules/… link)
+  freeSession: "https://calendar.google.com/calendar/appointments/schedules/AcZssZ2DYfZ-8teaCs9oasZnVM-_VsUoynvEuqXBt8l035o6eVY_wRx9P5thzRvybefXsZYeBL8fsnqs"
 };
 
 /* Default language when a visitor arrives for the first time: "ar" or "en" */
@@ -136,9 +139,11 @@ const DEFAULT_LANG = "ar";
     const url = LINKS[key];
     if (isReal(url)) {
       el.href = url;
-      el.target = "_blank";
-      el.rel = "noopener";
-      el.setAttribute("aria-describedby", "newtab-note");
+      if (/^https?:/i.test(url)) {
+        el.target = "_blank";
+        el.rel = "noopener";
+        el.setAttribute("aria-describedby", "newtab-note");
+      }
     } else {
       el.href = "#";
       el.classList.add("is-placeholder");
@@ -199,11 +204,16 @@ const DEFAULT_LANG = "ar";
     if (!slot || slot.dataset.loaded) return;
     const url = FORM_CONFIG[slot.dataset.form];
     if (!isReal(url)) return; // keep the marked placeholder
-    const embed = url.replace("tally.so/r/", "tally.so/embed/");
-    const sep = embed.includes("?") ? "&" : "?";
     const iframe = document.createElement("iframe");
-    iframe.src = `${embed}${sep}alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1`;
-    iframe.title = "BRAND-SET interest form";
+    if (url.includes("calendar.google.com")) {
+      iframe.src = url + (url.includes("?") ? "&" : "?") + "gv=true";
+      iframe.title = "Book a free intro session";
+    } else {
+      const embed = url.replace("tally.so/r/", "tally.so/embed/");
+      const sep = embed.includes("?") ? "&" : "?";
+      iframe.src = `${embed}${sep}alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1`;
+      iframe.title = "BRAND-SET interest form";
+    }
     iframe.loading = "lazy";
     slot.innerHTML = "";
     slot.appendChild(iframe);
@@ -312,6 +322,21 @@ const DEFAULT_LANG = "ar";
     const onScroll = () => navEl.classList.toggle("is-solid", window.scrollY > 40);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
+  }
+
+  /* ---------- 9. Full-screen menu ---------- */
+  const menuEl = document.getElementById("menu");
+  const openBtn = document.querySelector("[data-menu-open]");
+  if (menuEl && openBtn) {
+    const setMenu = (open) => {
+      menuEl.hidden = !open;
+      openBtn.setAttribute("aria-expanded", String(open));
+      document.body.style.overflow = open ? "hidden" : "";
+      if (open) { const x = menuEl.querySelector(".menu__x"); if (x) x.focus(); } else openBtn.focus({ preventScroll: true });
+    };
+    openBtn.addEventListener("click", () => setMenu(true));
+    menuEl.querySelectorAll("[data-menu-close]").forEach((el) => el.addEventListener("click", () => setMenu(false)));
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !menuEl.hidden) setMenu(false); });
   }
 
   /* ---------- Start ---------- */
