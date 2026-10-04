@@ -103,12 +103,12 @@ html[lang=en] .btn__en{display:none}
 .link-btn:hover{text-decoration-color:var(--red)}
 
 /* ---------- Hero ---------- */
-.hero{position:relative;min-height:100svh;color:var(--white);display:flex;flex-direction:column;justify-content:space-between;isolation:isolate}
+.hero{position:relative;min-height:100svh;color:var(--white);display:flex;flex-direction:column;justify-content:flex-end;padding-top:96px;isolation:isolate}
 .hero .atmos{z-index:-1}
-.band{position:relative;z-index:1;display:flex;justify-content:flex-end;align-items:flex-start;padding:calc(64px + var(--s4)) var(--gutter) 0}
-.band__logo{width:clamp(52px,5vw,76px)}
-.band__end{display:flex;align-items:flex-start;gap:var(--s3)}
-.band__sig{font-size:var(--t-xs);font-weight:500;text-align:left}
+
+
+
+
 .hero__body{position:relative;z-index:1;padding:0 var(--gutter) var(--s6)}
 .hero__name{font-family:var(--serif);font-weight:400;text-transform:uppercase;letter-spacing:.02em;font-size:var(--t-display);line-height:.86;text-align:left;direction:ltr}
 .hero__name .ln{display:block;overflow:hidden;padding:.08em 0 .04em;margin-top:-.08em}
@@ -164,7 +164,7 @@ html[lang=en] .btn__en{display:none}
 .lang__ar{font-family:var(--ar);font-size:16px;letter-spacing:0;display:none}
 html[lang=en] .lang__en{display:none}
 html[lang=en] .lang__ar{display:inline}
-@media (max-width:640px){.nav,.nav.is-solid{gap:14px;height:56px}.nav__cta{display:none}.nav__links a{font-size:14px;padding:18px 0}.band{padding-top:calc(56px + var(--s3))}}
+@media (max-width:640px){.nav,.nav.is-solid{gap:14px;height:56px}.nav__cta{display:none}.nav__links a{font-size:14px;padding:18px 0}}
 
 /* ---------- Sections: one rhythm ----------
    Every section: same top/bottom padding, same column, same header.
@@ -425,7 +425,6 @@ html[dir=ltr] .drawer[open]{transform:none}
   .hero__role{animation:fadeUp .9s var(--ease) .45s both}
   .hero__lead{animation:fadeUp .9s var(--ease) .6s both}
   .hero__cta{animation:fadeUp .9s var(--ease) .75s both}
-  .band{animation:fade 1.2s ease .2s both}
   .hero__photo{animation:fade 1.6s ease .3s both}
   .hero .atmos::before{animation:drift 18s ease-in-out infinite alternate}
   .program .atmos::before{animation:drift2 22s ease-in-out infinite alternate}
