@@ -4,7 +4,7 @@
    data-i18n="key" in index.html. Edit the text, keep the key.
    ========================================================= */
 const EN = {
-  "prog.date": "Friday, 16 October 2026",
+  "prog.date": "Friday, 23 October 2026",
   "men.s1.note": "Booking is through Google Calendar; you'll receive the meeting link once it's confirmed.",
   "book.t": "Book Your Free Intro Session",
   "book.p": "30 minutes online via Google Meet. Pick the day and time that suit you, and you'll receive the meeting link once you book.",
