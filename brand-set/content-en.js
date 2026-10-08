@@ -3,8 +3,13 @@
    Arabic copy lives in brand-set/index.html. Same keys.
    ========================================================= */
 const EN = {
+  "faq.a7": "You can register and pay from any country with a Visa card through Nzmly; the price is in Egyptian pounds. Lectures are online on Cairo time: the first weekend at 6:30 pm Saudi time (7:30 pm UAE), and from the second weekend at 7:30 pm Saudi time (8:30 pm UAE), after Egypt’s daylight saving time ends. Every lecture is recorded if you miss one.",
+  "faq.q7": "I’m outside Egypt — how do I pay and attend?",
+  "faq.a6": "Yes. In the lectures we review students’ work together at every stage of the project, and on your final project you get individual feedback on your own work.",
+  "faq.q6": "Will I get feedback on my project?",
+  "seats.only": "seats only",
   "meta.title": "BRAND-SET — The Visual Identity Course with Mohamed Sherif",
-  "meta.desc": "BRAND-SET: a six-lecture online course where you build a complete visual identity the way real projects run — from client brief to final delivery files. Next cohort starts Friday, 23 October 2026. 20 seats only.",
+  "meta.desc": "BRAND-SET: a six-lecture online course where you build a complete visual identity the way real projects run — from client brief to final delivery files. Limited seats.",
   "skip": "Skip to content",
   "close": "Close",
   "newtab": "(opens in a new tab)",
@@ -12,7 +17,7 @@ const EN = {
 
   "nav.label": "Navigation",
   "nav.home": "Home",
-  "nav.start": "Starts 23 Oct",
+  "nav.start": "Starts",
 
   "cta.register": "Register Now",
   "cta.curriculum": "See the Curriculum",
@@ -20,15 +25,13 @@ const EN = {
   "hero.promise": "Build a complete visual identity — <em>the way real projects run.</em>",
   "hero.lead": "A six-lecture online course with Mohamed Sherif: from the client brief to the brand proposal and final delivery files.",
   "fact.start.k": "Starts",
-  "fact.start.v": "Friday, 23 October",
   "fact.format.k": "Format",
   "fact.format.v": "6 lectures × 3 hours",
   "fact.where.k": "Where",
   "fact.where.v": "Online + recordings",
   "fact.seats.k": "Seats",
-  "fact.seats.v": "20 seats only",
   "price.cur": "EGP",
-  "price.until": "· Launch price until Friday, 16 October",
+  "price.until": "Launch price until",
 
   "prob.lead": "Many designers can draw a beautiful logo. But clients don't just need a logo — they need a complete identity built on an understanding of their business.",
   "prob.1t": "You deliver a logo, not an identity",
@@ -44,19 +47,13 @@ const EN = {
 
   "cur.lead": "6 lectures over 3 weekends, 3 hours each — Fridays and Saturdays at 6:30 pm Cairo time.",
   "cur.1": "Core branding vocabulary, the seven logo types and when to choose each, and four tests every logo must pass: clarity, differentiation, concept and alignment.",
-  "cur.1d": "Fri 23 Oct",
   "cur.2": "Working with different client types, writing the creative brief, preparing a quotation — and starting your final project from the brief.",
-  "cur.2d": "Sat 24 Oct",
   "cur.3": "Turning the brief into keywords, mind-mapping and market research — and from there into a design concept with real meaning.",
-  "cur.3d": "Fri 30 Oct",
   "cur.4": "The psychology of shape, color and type, and how to build a moodboard that sets the identity's visual direction.",
-  "cur.4d": "Sat 31 Oct",
   "cur.5": "From style-scape to sketches and logo exploration techniques, then vectorizing, refining ratios and testing the logo before sign-off.",
-  "cur.5d": "Fri 6 Nov",
   "cur.6": "Building graphic elements and the visual system, then preparing the brand proposal and final delivery files for the client.",
-  "cur.6d": "Sat 7 Nov",
 
-  "fit.lead": "There are only 20 seats, so make sure the course is right for you before you register.",
+  "fit.lead": "Seats are limited, so make sure the course is right for you before you register.",
   "fit.yes": "It's for you if you",
   "fit.y1": "Have previous design experience and work in Illustrator and Photoshop",
   "fit.y2": "Want to move from designing a logo to building a complete visual identity",
@@ -88,7 +85,7 @@ const EN = {
 
   "det.lead": "Everything you need to know before you register.",
   "det.when.k": "Schedule",
-  "det.when.v": "Fridays and Saturdays, 6:30 pm Cairo time — 3 weekends, 23 October to 7 November 2026",
+  "det.when.v": "Fridays and Saturdays, 6:30 pm Cairo time — 3 weekends:",
   "det.len.k": "Length",
   "det.len.v": "6 lectures, 3 hours (180 minutes) each",
   "det.rec.k": "Online + recordings",
@@ -99,9 +96,9 @@ const EN = {
   "det.be.k": "Your work, shown",
   "det.be.v": "The best student projects are featured on my Behance",
   "det.seats.k": "Seats",
-  "det.seats.v": "20 seats only for this cohort",
+  "det.seats.v": "seats only for this cohort",
 
-  "pr.lead": "Your seat in the cohort starting Friday, 23 October 2026.",
+  "pr.lead": "Your seat in the cohort starting",
   "pr.i1": "6 online lectures × 3 hours",
   "pr.i2": "Recordings of every lecture",
   "pr.i3": "A complete identity project for your portfolio",
@@ -109,8 +106,7 @@ const EN = {
   "pr.i5": "A chance to have your project featured on Behance",
   "pr.tag": "Launch price — this cohort only",
   "pr.instead": "instead of",
-  "pr.until": "Until Friday, 16 October 2026",
-  "pr.seats": "20 seats only",
+  "pr.until": "Until",
   "pr.note": "Registration and payment are handled through Nzmly.",
 
   "faq.lead": "The questions I'm asked most before people register.",
@@ -125,7 +121,7 @@ const EN = {
   "faq.q5": "Is there a certificate?",
   "faq.a5": "Yes — a certificate of completion once you submit your final project. The best student projects are also featured on my Behance.",
 
-  "fin.t": "Only 20 seats in this cohort.",
+  "fin.t": "seats only in this cohort.",
   "fin.p": "Start the identity project you'll be proud to show in your portfolio.",
-  "fin.early": "— launch price until 16 October"
+  "fin.early": "launch price until"
 };

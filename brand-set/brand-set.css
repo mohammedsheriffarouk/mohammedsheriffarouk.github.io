@@ -138,3 +138,6 @@ html[lang=en] .bs-pricing__lead{font-weight:500}
 .bs-bar__was{color:rgba(255,255,255,.55);font-size:13px;margin-inline-start:6px;text-decoration-color:var(--red)}
 .bs-bar .btn{min-height:48px;padding-inline:22px}
 @media (max-width:820px){.bs-bar{display:flex}.bs .foot{padding-bottom:calc(var(--s4) + 76px)}}
+
+/* early-bird lines: always hide when switched off, whatever their display rule */
+[data-early-only][hidden]{display:none!important}

@@ -11,6 +11,35 @@
        InitiateCheckout on every "Register" button (data-register).
        ========================================================= -->
   <script>window.META_PIXEL_ID = "";</script>
+
+  <!-- =========================================================
+       COHORT CONFIG — the ONLY place price, dates and seats live.
+       Every price/date on this page (AR + EN, hero, enroll card,
+       final CTA, mobile bar, curriculum, Pixel value) reads from here.
+       earlyBird: "auto" switches to the regular price by itself
+                  after earlyBirdEnds. "on"/"off" force it.
+       ========================================================= -->
+  <script>
+  window.BRANDSET = {
+    earlyBird: "auto",
+    earlyBirdEnds: "2026-10-16T23:59:59+03:00",
+    priceEarly: 5000,
+    priceRegular: 9000,
+    seats: 20,
+    earlyUntil: { ar: "الجمعة 16 أكتوبر", en: "Friday, 16 October" },
+    start:      { ar: "الجمعة 23 أكتوبر", en: "Friday, 23 October" },
+    startShort: { ar: "23 أكتوبر",        en: "23 Oct" },
+    end:        { ar: "7 نوفمبر 2026",    en: "7 November 2026" },
+    lectures: [
+      { ar: "الجمعة 23 أكتوبر", en: "Fri 23 Oct" },
+      { ar: "السبت 24 أكتوبر",  en: "Sat 24 Oct" },
+      { ar: "الجمعة 30 أكتوبر", en: "Fri 30 Oct" },
+      { ar: "السبت 31 أكتوبر",  en: "Sat 31 Oct" },
+      { ar: "الجمعة 6 نوفمبر",  en: "Fri 6 Nov" },
+      { ar: "السبت 7 نوفمبر",   en: "Sat 7 Nov" }
+    ]
+  };
+  </script>
   <script>
   (function(id){if(!id)return;
   !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -24,7 +53,7 @@
   </script>
 
   <title>BRAND-SET — كورس الهوية البصرية مع محمد شريف</title>
-  <meta name="description" content="BRAND-SET: كورس أونلاين من 6 محاضرات تبني فيه هوية بصرية كاملة بنفس خطوات المشاريع الحقيقية، من ملخص العميل حتى ملفات التسليم. الدفعة تبدأ الجمعة 23 أكتوبر 2026 — 20 مقعدًا فقط.">
+  <meta name="description" content="BRAND-SET: كورس أونلاين من 6 محاضرات تبني فيه هوية بصرية كاملة بنفس خطوات المشاريع الحقيقية، من ملخص العميل حتى ملفات التسليم. مقاعد محدودة.">
   <meta name="author" content="Mohamed Sherif">
   <meta name="theme-color" content="#000000">
   <link rel="canonical" href="https://mohamed-sherif.com/brand-set/">
@@ -34,13 +63,13 @@
   <meta property="og:locale:alternate" content="en_US">
   <meta property="og:site_name" content="Mohamed Sherif">
   <meta property="og:title" content="BRAND-SET — كورس الهوية البصرية مع محمد شريف">
-  <meta property="og:description" content="تبني هوية بصرية كاملة بخطوات المشاريع الحقيقية. 6 محاضرات أونلاين — تبدأ الجمعة 23 أكتوبر — 20 مقعدًا فقط.">
+  <meta property="og:description" content="تبني هوية بصرية كاملة بخطوات المشاريع الحقيقية. 6 محاضرات أونلاين مع محمد شريف — مقاعد محدودة.">
   <meta property="og:url" content="https://mohamed-sherif.com/brand-set/">
-  <meta property="og:image" content="https://mohamed-sherif.com/assets/images/og-image.jpg">
+  <meta property="og:image" content="https://mohamed-sherif.com/assets/images/og-brand-set-early.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://mohamed-sherif.com/assets/images/og-image.jpg">
+  <meta name="twitter:image" content="https://mohamed-sherif.com/assets/images/og-brand-set-early.jpg">
 
   <link rel="icon" href="../favicon.ico" sizes="48x48">
   <link rel="icon" href="../assets/icons/favicon-32.png" type="image/png" sizes="32x32">
@@ -58,24 +87,17 @@
   <link rel="stylesheet" href="brand-set.css">
 
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Course","name":"BRAND-SET","description":"A hands-on visual identity course: build a complete brand identity following the steps of real projects.","inLanguage":"ar","provider":{"@type":"Person","name":"Mohamed Sherif","url":"https://mohamed-sherif.com/"},
-   "offers":{"@type":"Offer","price":"5000","priceCurrency":"EGP","url":"https://mohamed-sherif.com/brand-set/","availability":"https://schema.org/LimitedAvailability"},
-   "hasCourseInstance":{"@type":"CourseInstance","courseMode":"online","startDate":"2026-10-23","endDate":"2026-11-07"}}
+  {"@context":"https://schema.org","@type":"Course","name":"BRAND-SET","description":"A hands-on visual identity course: build a complete brand identity following the steps of real projects.","inLanguage":"ar","provider":{"@type":"Person","name":"Mohamed Sherif","url":"https://mohamed-sherif.com/"}}
   </script>
 </head>
 <body class="bs">
 <a class="skip" href="#main" data-i18n="skip">تخطَّ إلى المحتوى</a>
 
-<!-- =========================================================
-     PRICE — manual switch.
-     After Fri 16 Oct: change data-early="on" to data-early="off"
-     on the <main> tag below. Early-bird lines hide, 9,000 shows alone.
-     Arabic copy lives here; English in brand-set/content-en.js.
-     ========================================================= -->
+<!-- Arabic copy lives here; English in brand-set/content-en.js. Price/dates: see COHORT CONFIG in <head>. -->
 
 <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="التنقل">
   <a class="nav__mark" href="../" data-i18n-attr="aria-label:nav.home" aria-label="الصفحة الرئيسية"><img class="nav__logo nav__logo--light" src="../assets/icons/logo-red-white.svg" alt="" width="36" height="25"><img class="nav__logo nav__logo--dark" src="../assets/icons/logo-red-black.svg" alt="" width="36" height="25"><span class="nav__name caps" lang="en" dir="ltr">Mohamed Sherif</span></a>
-  <p class="nav__course caps" lang="en" dir="ltr">BRAND-SET · <span data-i18n="nav.start">يبدأ 23 أكتوبر</span></p>
+  <p class="nav__course caps" lang="en" dir="ltr">BRAND-SET · <span data-i18n="nav.start">يبدأ</span> <span data-bs="startShort"></span></p>
   <div class="nav__end">
     <button type="button" class="lang" data-lang-toggle data-cta="lang_toggle_nav"><span class="lang__en">EN</span><span class="lang__ar">عربي</span></button>
     <a class="nav__cta" data-link="brandSet" data-register data-cta="bs_register_nav" data-i18n="cta.register">سجّل الآن</a>
@@ -91,16 +113,16 @@
     <p class="bs-hero__lead" data-i18n="hero.lead">كورس أونلاين من 6 محاضرات مع محمد شريف: من ملخص العميل (Brief) حتى عرض الهوية وملفات التسليم.</p>
 
     <ul class="bs-facts">
-      <li><span class="bs-facts__k" data-i18n="fact.start.k">يبدأ</span><span class="bs-facts__v" data-i18n="fact.start.v">الجمعة 23 أكتوبر</span></li>
+      <li><span class="bs-facts__k" data-i18n="fact.start.k">يبدأ</span><span class="bs-facts__v" data-bs="start"></span></li>
       <li><span class="bs-facts__k" data-i18n="fact.format.k">المدة</span><span class="bs-facts__v" data-i18n="fact.format.v">6 محاضرات × 3 ساعات</span></li>
       <li><span class="bs-facts__k" data-i18n="fact.where.k">المكان</span><span class="bs-facts__v" data-i18n="fact.where.v">أونلاين + تسجيلات</span></li>
-      <li><span class="bs-facts__k" data-i18n="fact.seats.k">المقاعد</span><span class="bs-facts__v" data-i18n="fact.seats.v">20 مقعدًا فقط</span></li>
+      <li><span class="bs-facts__k" data-i18n="fact.seats.k">المقاعد</span><span class="bs-facts__v"><span class="num" data-bs="seats"></span> <span data-i18n="seats.only">مقعدًا فقط</span></span></li>
     </ul>
 
     <div class="bs-hero__buy">
       <div class="bs-price">
-        <p class="bs-price__now"><span class="num" dir="ltr" data-price-now>5,000</span> <span data-i18n="price.cur">جنيه</span></p>
-        <p class="bs-price__was" data-early-only><s><span class="num" dir="ltr">9,000</span> <span data-i18n="price.cur">جنيه</span></s> <span data-i18n="price.until">· سعر الإطلاق حتى الجمعة 16 أكتوبر</span></p>
+        <p class="bs-price__now"><span class="num" dir="ltr" data-bs="price"></span> <span data-i18n="price.cur">جنيه</span></p>
+        <p class="bs-price__was" data-early-only><s><span class="num" dir="ltr" data-bs="priceRegular"></span> <span data-i18n="price.cur">جنيه</span></s> · <span data-i18n="price.until">سعر الإطلاق حتى</span> <span data-bs="earlyUntil"></span></p>
       </div>
       <a class="btn btn--primary btn--lg" data-link="brandSet" data-register data-cta="bs_register_hero">
         <span data-i18n="cta.register">سجّل الآن</span><span class="btn__en" lang="en">Register Now</span>
@@ -112,7 +134,7 @@
   </div>
 </header>
 
-<main id="main" data-early="on">
+<main id="main">
 
   <!-- 01 THE PROBLEM -->
   <section class="s" id="problem" aria-labelledby="problem-title">
@@ -164,32 +186,32 @@
       <li class="bs-cur__item reveal">
         <span class="bs-cur__n num" dir="ltr">01</span>
         <div class="bs-cur__body"><h3 class="bs-cur__t" lang="en" dir="ltr">Brand &amp; Logo Foundations</h3><p data-i18n="cur.1">تفهم مصطلحات البراندنج الأساسية، وأنواع الشعارات السبعة ومتى تختار كل نوع، وتختبر أي شعار بأربعة اختبارات: الوضوح، والتميّز، والفكرة، والتوافق.</p></div>
-        <p class="bs-cur__date" data-i18n="cur.1d">الجمعة 23 أكتوبر</p>
+        <p class="bs-cur__date" data-bs="lec1"></p>
       </li>
       <li class="bs-cur__item reveal">
         <span class="bs-cur__n num" dir="ltr">02</span>
         <div class="bs-cur__body"><h3 class="bs-cur__t" lang="en" dir="ltr">From Client Brief to Design Direction</h3><p data-i18n="cur.2">تتعامل مع أنماط العملاء المختلفة، وتكتب ملخص المشروع (Creative Brief)، وتجهّز عرض السعر — وتبدأ مشروعك النهائي من البريف.</p></div>
-        <p class="bs-cur__date" data-i18n="cur.2d">السبت 24 أكتوبر</p>
+        <p class="bs-cur__date" data-bs="lec2"></p>
       </li>
       <li class="bs-cur__item reveal">
         <span class="bs-cur__n num" dir="ltr">03</span>
         <div class="bs-cur__body"><h3 class="bs-cur__t" lang="en" dir="ltr">From Brief to Concept</h3><p data-i18n="cur.3">تحوّل البريف إلى كلمات مفتاحية وخريطة ذهنية (Mind-mapping) وبحث عن السوق، ومنها إلى فكرة تصميمية (Concept) لها معنى.</p></div>
-        <p class="bs-cur__date" data-i18n="cur.3d">الجمعة 30 أكتوبر</p>
+        <p class="bs-cur__date" data-bs="lec3"></p>
       </li>
       <li class="bs-cur__item reveal">
         <span class="bs-cur__n num" dir="ltr">04</span>
         <div class="bs-cur__body"><h3 class="bs-cur__t" lang="en" dir="ltr">Design Psychology &amp; Visual Direction</h3><p data-i18n="cur.4">سيكولوجية الأشكال والألوان والخطوط، وكيف تبني لوحة إلهام (Moodboard) تحدد الاتجاه البصري للهوية.</p></div>
-        <p class="bs-cur__date" data-i18n="cur.4d">السبت 31 أكتوبر</p>
+        <p class="bs-cur__date" data-bs="lec4"></p>
       </li>
       <li class="bs-cur__item reveal">
         <span class="bs-cur__n num" dir="ltr">05</span>
         <div class="bs-cur__body"><h3 class="bs-cur__t" lang="en" dir="ltr">From Style-Scape to Final Logo</h3><p data-i18n="cur.5">من الـ Style-Scape إلى الاسكتشات وتقنيات استكشاف الشعار، ثم تحويله إلى Vector وضبط النسب واختباره قبل الاعتماد.</p></div>
-        <p class="bs-cur__date" data-i18n="cur.5d">الجمعة 6 نوفمبر</p>
+        <p class="bs-cur__date" data-bs="lec5"></p>
       </li>
       <li class="bs-cur__item reveal">
         <span class="bs-cur__n num" dir="ltr">06</span>
         <div class="bs-cur__body"><h3 class="bs-cur__t" lang="en" dir="ltr">Building the Visual Brand System</h3><p data-i18n="cur.6">تبني العناصر الجرافيكية والنظام البصري للهوية، ثم تجهّز عرض الهوية (Brand Proposal) وملفات التسليم النهائية للعميل.</p></div>
-        <p class="bs-cur__date" data-i18n="cur.6d">السبت 7 نوفمبر</p>
+        <p class="bs-cur__date" data-bs="lec6"></p>
       </li>
     </ol>
   </section>
@@ -198,7 +220,7 @@
   <section class="s s--soft" id="fit" aria-labelledby="fit-title">
     <div class="sh">
       <div><span class="sh__n">04</span><h2 id="fit-title" class="sh__t" lang="en" dir="ltr">Is It For You?</h2></div>
-      <p class="sh__lead reveal" data-i18n="fit.lead">عشرون مقعدًا فقط، فالأفضل أن تتأكد أن الكورس مناسب لك قبل التسجيل.</p>
+      <p class="sh__lead reveal" data-i18n="fit.lead">المقاعد محدودة، فالأفضل أن تتأكد أن الكورس مناسب لك قبل التسجيل.</p>
     </div>
     <div class="bs-two">
       <div class="bs-fit reveal">
@@ -294,13 +316,13 @@
       <p class="sh__lead reveal" data-i18n="det.lead">كل ما تحتاج معرفته قبل التسجيل.</p>
     </div>
     <dl class="bs-det">
-      <div class="reveal"><dt data-i18n="det.when.k">المواعيد</dt><dd data-i18n="det.when.v">الجمعة والسبت، 6:30 مساءً بتوقيت القاهرة — 3 ويك إندات، من 23 أكتوبر إلى 7 نوفمبر 2026</dd></div>
+      <div class="reveal"><dt data-i18n="det.when.k">المواعيد</dt><dd><span data-i18n="det.when.v">الجمعة والسبت، 6:30 مساءً بتوقيت القاهرة — 3 ويك إندات:</span> <span data-bs="start"></span> – <span data-bs="end"></span></dd></div>
       <div class="reveal"><dt data-i18n="det.len.k">المدة</dt><dd data-i18n="det.len.v">6 محاضرات، كل محاضرة 3 ساعات (180 دقيقة)</dd></div>
       <div class="reveal"><dt data-i18n="det.rec.k">أونلاين + تسجيلات</dt><dd data-i18n="det.rec.v">المحاضرات أونلاين، وكل محاضرة مسجّلة — لو فاتتك محاضرة تقدر تشاهدها بعدها</dd></div>
       <div class="reveal"><dt data-i18n="det.tools.k">البرامج</dt><dd lang="en" dir="ltr">Adobe Illustrator + Adobe Photoshop</dd></div>
       <div class="reveal"><dt data-i18n="det.cert.k">الشهادة</dt><dd data-i18n="det.cert.v">شهادة إتمام بعد تسليم المشروع النهائي</dd></div>
       <div class="reveal"><dt data-i18n="det.be.k">عرض شغلك</dt><dd data-i18n="det.be.v">أفضل مشاريع الطلاب تُعرض على حسابي على Behance</dd></div>
-      <div class="reveal"><dt data-i18n="det.seats.k">المقاعد</dt><dd data-i18n="det.seats.v">20 مقعدًا فقط لهذه الدفعة</dd></div>
+      <div class="reveal"><dt data-i18n="det.seats.k">المقاعد</dt><dd><span class="num" data-bs="seats"></span> <span data-i18n="det.seats.v">مقعدًا فقط لهذه الدفعة</span></dd></div>
     </dl>
   </section>
 
@@ -311,7 +333,7 @@
       <div>
         <span class="sh__n">08</span>
         <h2 id="price-title" class="sh__t" lang="en" dir="ltr">Enroll</h2>
-        <p class="bs-pricing__lead" data-i18n="pr.lead">مقعدك في الدفعة التي تبدأ الجمعة 23 أكتوبر 2026.</p>
+        <p class="bs-pricing__lead"><span data-i18n="pr.lead">مقعدك في الدفعة التي تبدأ</span> <span data-bs="start"></span>.</p>
         <ul class="bs-incl">
           <li data-i18n="pr.i1">6 محاضرات أونلاين × 3 ساعات</li>
           <li data-i18n="pr.i2">تسجيلات كل المحاضرات</li>
@@ -322,10 +344,10 @@
       </div>
       <div class="bs-pricecard">
         <p class="bs-pricecard__tag" data-early-only data-i18n="pr.tag">سعر الإطلاق — لهذه الدفعة فقط</p>
-        <p class="bs-pricecard__now"><span class="num" dir="ltr" data-price-now>5,000</span> <span data-i18n="price.cur">جنيه</span></p>
-        <p class="bs-pricecard__was" data-early-only><span data-i18n="pr.instead">بدلًا من</span> <s><span class="num" dir="ltr">9,000</span> <span data-i18n="price.cur">جنيه</span></s></p>
-        <p class="bs-pricecard__until" data-early-only data-i18n="pr.until">حتى الجمعة 16 أكتوبر 2026</p>
-        <p class="bs-pricecard__seats" data-i18n="pr.seats">20 مقعدًا فقط</p>
+        <p class="bs-pricecard__now"><span class="num" dir="ltr" data-bs="price"></span> <span data-i18n="price.cur">جنيه</span></p>
+        <p class="bs-pricecard__was" data-early-only><span data-i18n="pr.instead">بدلًا من</span> <s><span class="num" dir="ltr" data-bs="priceRegular"></span> <span data-i18n="price.cur">جنيه</span></s></p>
+        <p class="bs-pricecard__until" data-early-only><span data-i18n="pr.until">حتى</span> <span data-bs="earlyUntil"></span></p>
+        <p class="bs-pricecard__seats"><span class="num" data-bs="seats"></span> <span data-i18n="seats.only">مقعدًا فقط</span></p>
         <a class="btn btn--primary btn--lg bs-pricecard__btn" data-link="brandSet" data-register data-cta="bs_register_price">
           <span data-i18n="cta.register">سجّل الآن</span><span class="btn__en" lang="en">Register Now</span>
         </a>
@@ -343,7 +365,9 @@
     <div class="faq__list">
       <details class="reveal"><summary data-i18n="faq.q1">ما مستوى الخبرة المطلوب؟</summary><p data-i18n="faq.a1">الكورس للمصممين الذين لديهم خبرة سابقة في التصميم ويعملون على Illustrator وPhotoshop. إذا كنت تبدأ في التصميم من الصفر، فالأفضل أن تبني أساسياتك أولًا.</p></details>
       <details class="reveal"><summary data-i18n="faq.q2">ماذا لو فاتتني محاضرة؟</summary><p data-i18n="faq.a2">كل المحاضرات مسجّلة، فتقدر تشاهد أي محاضرة فاتتك وتكمل مشروعك مع الدفعة.</p></details>
+      <details class="reveal"><summary data-i18n="faq.q6">هل أحصل على تقييم (Feedback) على مشروعي؟</summary><p data-i18n="faq.a6">نعم. في المحاضرات نراجع شغل الطلاب معًا في كل مرحلة من مراحل المشروع، وعلى المشروع النهائي تحصل على تقييم فردي على مشروعك أنت.</p></details>
       <details class="reveal"><summary data-i18n="faq.q3">كيف أدفع؟</summary><p data-i18n="faq.a3">التسجيل والدفع أونلاين عبر منصة نظملي (Nzmly) من خلال زر «سجّل الآن»، وبعد الدفع يتم تأكيد مقعدك.</p></details>
+      <details class="reveal"><summary data-i18n="faq.q7">أنا من خارج مصر، كيف أدفع وأحضر؟</summary><p data-i18n="faq.a7">تقدر تسجّل وتدفع من أي دولة ببطاقة Visa عبر منصة نظملي، والسعر بالجنيه المصري. المحاضرات أونلاين بتوقيت القاهرة: في أول ويك إند 6:30 مساءً بتوقيت السعودية (7:30 الإمارات)، ومن الويك إند الثاني 7:30 مساءً بتوقيت السعودية (8:30 الإمارات) بعد انتهاء التوقيت الصيفي في مصر. ولو فاتتك محاضرة، كلها مسجّلة.</p></details>
       <details class="reveal"><summary data-i18n="faq.q4">ما البرامج المطلوبة؟</summary><p data-i18n="faq.a4">Adobe Illustrator وAdobe Photoshop.</p></details>
       <details class="reveal"><summary data-i18n="faq.q5">هل توجد شهادة؟</summary><p data-i18n="faq.a5">نعم، شهادة إتمام بعد تسليم المشروع النهائي. وأفضل مشاريع الطلاب تُعرض على حسابي على Behance.</p></details>
     </div>
@@ -352,9 +376,9 @@
   <!-- 10 FINAL CTA -->
   <section class="s s--dark bs-final" aria-labelledby="final-title">
     <div class="atmos atmos--soft" aria-hidden="true"></div>
-    <p class="bs-hero__kicker caps" lang="en" dir="ltr">Cohort starts Friday, 23 October</p>
-    <h2 id="final-title" class="bs-final__t" data-i18n="fin.t">20 مقعدًا فقط في هذه الدفعة.</h2>
-    <p class="bs-final__p"><span data-i18n="fin.p">ابدأ مشروع الهوية الذي تعرضه بثقة في ملف أعمالك.</span> <span class="bs-final__price"><span class="num" dir="ltr" data-price-now>5,000</span> <span data-i18n="price.cur">جنيه</span><span data-early-only> <span data-i18n="fin.early">— سعر الإطلاق حتى 16 أكتوبر</span></span></span></p>
+    <p class="bs-hero__kicker caps" lang="en" dir="ltr">Cohort starts <span data-bs="start" data-bs-lang="en"></span></p>
+    <h2 id="final-title" class="bs-final__t"><span class="num" data-bs="seats"></span> <span data-i18n="fin.t">مقعدًا فقط في هذه الدفعة.</span></h2>
+    <p class="bs-final__p"><span data-i18n="fin.p">ابدأ مشروع الهوية الذي تعرضه بثقة في ملف أعمالك.</span> <span class="bs-final__price"><span class="num" dir="ltr" data-bs="price"></span> <span data-i18n="price.cur">جنيه</span><span data-early-only> — <span data-i18n="fin.early">سعر الإطلاق حتى</span> <span data-bs="earlyUntil"></span></span></span></p>
     <a class="btn btn--primary btn--lg" data-link="brandSet" data-register data-cta="bs_register_final">
       <span data-i18n="cta.register">سجّل الآن</span><span class="btn__en" lang="en">Register Now</span>
     </a>
@@ -363,7 +387,7 @@
 
 <!-- Mobile sticky register bar -->
 <div class="bs-bar" aria-hidden="true">
-  <p class="bs-bar__price"><span class="num" dir="ltr" data-price-now>5,000</span> <span data-i18n="price.cur">جنيه</span> <s class="bs-bar__was" data-early-only><span class="num" dir="ltr">9,000</span></s></p>
+  <p class="bs-bar__price"><span class="num" dir="ltr" data-bs="price"></span> <span data-i18n="price.cur">جنيه</span> <s class="bs-bar__was" data-early-only><span class="num" dir="ltr" data-bs="priceRegular"></span></s></p>
   <a class="btn btn--primary" data-link="brandSet" data-register data-cta="bs_register_bar" tabindex="-1"><span data-i18n="cta.register">سجّل الآن</span></a>
 </div>
 
@@ -386,28 +410,46 @@
 <script src="content-en.js" defer></script>
 <script src="../script.js" defer></script>
 <script defer>
-/* BRAND-SET page: price switch + Meta Pixel InitiateCheckout on every register button + mobile bar */
+/* BRAND-SET page: renders price/dates/seats from window.BRANDSET (AR/EN),
+   Meta Pixel InitiateCheckout on every register button, mobile register bar. */
 document.addEventListener("DOMContentLoaded", function () {
-  var main = document.getElementById("main");
-  var early = main && main.getAttribute("data-early") === "on";
-  document.querySelectorAll("[data-early-only]").forEach(function (el) { el.hidden = !early; });
-  document.querySelectorAll("[data-price-now]").forEach(function (el) { el.textContent = early ? "5,000" : "9,000"; });
-  var value = early ? 5000 : 9000;
+  var C = window.BRANDSET || {};
+  var early = C.earlyBird === "on" || (C.earlyBird === "auto" && Date.now() <= Date.parse(C.earlyBirdEnds));
+  var price = early ? C.priceEarly : C.priceRegular;
+  var fmt = function (n) { return Number(n).toLocaleString("en-US"); };
+
+  var render = function () {
+    var lang = document.documentElement.lang === "en" ? "en" : "ar";
+    var val = function (key, l) {
+      if (key === "price") return fmt(price);
+      if (key === "priceRegular") return fmt(C.priceRegular);
+      if (key === "seats") return String(C.seats);
+      var m = /^lec(\d)$/.exec(key);
+      var v = m ? (C.lectures || [])[m[1] - 1] : C[key];
+      return v && typeof v === "object" ? (v[l] || v.ar) : (v == null ? "" : String(v));
+    };
+    document.querySelectorAll("[data-bs]").forEach(function (el) {
+      el.textContent = val(el.getAttribute("data-bs"), el.getAttribute("data-bs-lang") || lang);
+    });
+    document.querySelectorAll("[data-early-only]").forEach(function (el) { el.hidden = !early; });
+  };
+  render();
+  new MutationObserver(render).observe(document.documentElement, { attributes: true, attributeFilter: ["lang"] });
 
   document.querySelectorAll("[data-register]").forEach(function (a) {
     a.addEventListener("click", function () {
       if (typeof window.fbq === "function") {
-        window.fbq("track", "InitiateCheckout", { content_name: "BRAND-SET", content_category: "Course", value: value, currency: "EGP" });
+        window.fbq("track", "InitiateCheckout", { content_name: "BRAND-SET", content_category: "Course", value: price, currency: "EGP" });
       }
     });
   });
 
-  var bar = document.querySelector(".bs-bar"), hero = document.querySelector(".bs-hero"), price = document.getElementById("price");
+  var bar = document.querySelector(".bs-bar"), hero = document.querySelector(".bs-hero"), priceSec = document.getElementById("price");
   if (bar && hero && "IntersectionObserver" in window) {
     var heroOut = false, priceIn = false;
     var upd = function () { var on = heroOut && !priceIn; bar.classList.toggle("is-on", on); bar.setAttribute("aria-hidden", on ? "false" : "true"); bar.querySelector("a").tabIndex = on ? 0 : -1; };
     new IntersectionObserver(function (e) { heroOut = !e[0].isIntersecting; upd(); }).observe(hero);
-    if (price) new IntersectionObserver(function (e) { priceIn = e[0].isIntersecting; upd(); }).observe(price);
+    if (priceSec) new IntersectionObserver(function (e) { priceIn = e[0].isIntersecting; upd(); }).observe(priceSec);
   }
 });
 </script>
