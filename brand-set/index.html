@@ -30,14 +30,7 @@
     start:      { ar: "الجمعة 23 أكتوبر", en: "Friday, 23 October" },
     startShort: { ar: "23 أكتوبر",        en: "23 Oct" },
     end:        { ar: "7 نوفمبر 2026",    en: "7 November 2026" },
-    lectures: [
-      { ar: "الجمعة 23 أكتوبر", en: "Fri 23 Oct" },
-      { ar: "السبت 24 أكتوبر",  en: "Sat 24 Oct" },
-      { ar: "الجمعة 30 أكتوبر", en: "Fri 30 Oct" },
-      { ar: "السبت 31 أكتوبر",  en: "Sat 31 Oct" },
-      { ar: "الجمعة 6 نوفمبر",  en: "Fri 6 Nov" },
-      { ar: "السبت 7 نوفمبر",   en: "Sat 7 Nov" }
-    ]
+    schedule:   { ar: "الجمعة والسبت، 6:30 مساءً بتوقيت القاهرة", en: "Fridays & Saturdays, 6:30 pm Cairo time" }
   };
   </script>
   <script>
@@ -92,8 +85,9 @@
 </head>
 <body class="bs">
 <a class="skip" href="#main" data-i18n="skip">تخطَّ إلى المحتوى</a>
-
-<!-- Arabic copy lives here; English in brand-set/content-en.js. Price/dates: see COHORT CONFIG in <head>. -->
+<!-- Arabic copy lives here; English in brand-set/content-en.js.
+     Price, dates, seats and schedule: COHORT CONFIG (window.BRANDSET) in <head>.
+     The curriculum has no dates on purpose — it stays the same every cohort. -->
 
 <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="التنقل">
   <a class="nav__mark" href="../" data-i18n-attr="aria-label:nav.home" aria-label="الصفحة الرئيسية"><img class="nav__logo nav__logo--light" src="../assets/icons/logo-red-white.svg" alt="" width="36" height="25"><img class="nav__logo nav__logo--dark" src="../assets/icons/logo-red-black.svg" alt="" width="36" height="25"><span class="nav__name caps" lang="en" dir="ltr">Mohamed Sherif</span></a>
@@ -104,284 +98,253 @@
   </div>
 </nav>
 
-<header class="hero bs-hero" id="top">
+<!-- HERO: promise on one side, course "ticket" on the other -->
+<header class="bs-hero" id="top">
   <div class="atmos" aria-hidden="true"></div>
-  <div class="hero__body">
-    <p class="bs-hero__kicker caps" lang="en" dir="ltr">The Visual Identity Course</p>
-    <h1 class="bs-hero__name" lang="en" dir="ltr">BRAND-SET.</h1>
-    <p class="bs-hero__promise" data-i18n="hero.promise">تبني هوية بصرية كاملة، <em>بنفس خطوات المشاريع الحقيقية.</em></p>
-    <p class="bs-hero__lead" data-i18n="hero.lead">كورس أونلاين من 6 محاضرات مع محمد شريف: من ملخص العميل (Brief) حتى عرض الهوية وملفات التسليم.</p>
+  <div class="bs-wrap bs-hero__grid">
+    <div class="bs-hero__text">
+      <p class="bs-kicker caps" lang="en" dir="ltr">The Visual Identity Course</p>
+      <h1 class="bs-hero__name" lang="en" dir="ltr">BRAND-SET.</h1>
+      <p class="bs-hero__promise" data-i18n="hero.promise">تبني هوية بصرية كاملة، <em>بنفس خطوات المشاريع الحقيقية.</em></p>
+      <p class="bs-hero__lead" data-i18n="hero.lead">كورس أونلاين من 6 محاضرات مع محمد شريف: من ملخص العميل (Brief) حتى عرض الهوية وملفات التسليم.</p>
+    </div>
 
-    <ul class="bs-facts">
-      <li><span class="bs-facts__k" data-i18n="fact.start.k">يبدأ</span><span class="bs-facts__v" data-bs="start"></span></li>
-      <li><span class="bs-facts__k" data-i18n="fact.format.k">المدة</span><span class="bs-facts__v" data-i18n="fact.format.v">6 محاضرات × 3 ساعات</span></li>
-      <li><span class="bs-facts__k" data-i18n="fact.where.k">المكان</span><span class="bs-facts__v" data-i18n="fact.where.v">أونلاين + تسجيلات</span></li>
-      <li><span class="bs-facts__k" data-i18n="fact.seats.k">المقاعد</span><span class="bs-facts__v"><span class="num" data-bs="seats"></span> <span data-i18n="seats.only">مقعدًا فقط</span></span></li>
-    </ul>
-
-    <div class="bs-hero__buy">
-      <div class="bs-price">
-        <p class="bs-price__now"><span class="num" dir="ltr" data-bs="price"></span> <span data-i18n="price.cur">جنيه</span></p>
-        <p class="bs-price__was" data-early-only><s><span class="num" dir="ltr" data-bs="priceRegular"></span> <span data-i18n="price.cur">جنيه</span></s> · <span data-i18n="price.until">سعر الإطلاق حتى</span> <span data-bs="earlyUntil"></span></p>
+    <aside class="bs-ticket" aria-label="BRAND-SET">
+      <dl class="bs-ticket__facts">
+        <div><dt data-i18n="fact.start.k">يبدأ</dt><dd data-bs="start"></dd></div>
+        <div><dt data-i18n="fact.format.k">المدة</dt><dd data-i18n="fact.format.v">6 محاضرات × 3 ساعات</dd></div>
+        <div><dt data-i18n="fact.where.k">المكان</dt><dd data-i18n="fact.where.v">أونلاين + تسجيلات</dd></div>
+        <div><dt data-i18n="fact.seats.k">المقاعد</dt><dd><span class="num" data-bs="seats"></span> <span data-i18n="seats.only">مقعدًا فقط</span></dd></div>
+      </dl>
+      <div class="bs-ticket__price">
+        <p class="bs-ticket__tag" data-early-only data-i18n="pr.tag">سعر الإطلاق — لهذه الدفعة فقط</p>
+        <p class="bs-ticket__now"><span class="num" dir="ltr" data-bs="price"></span> <span data-i18n="price.cur">جنيه</span></p>
+        <p class="bs-ticket__was" data-early-only><span data-i18n="pr.instead">بدلًا من</span> <s><span class="num" dir="ltr" data-bs="priceRegular"></span></s> · <span data-i18n="pr.until">حتى</span> <span data-bs="earlyUntil"></span></p>
       </div>
-      <a class="btn btn--primary btn--lg" data-link="brandSet" data-register data-cta="bs_register_hero">
+      <a class="btn btn--primary btn--lg bs-ticket__btn" data-link="brandSet" data-register data-cta="bs_register_hero">
         <span data-i18n="cta.register">سجّل الآن</span><span class="btn__en" lang="en">Register Now</span>
       </a>
-      <a class="btn btn--ghost btn--lg" href="#curriculum" data-cta="bs_see_curriculum">
-        <span data-i18n="cta.curriculum">شاهد المنهج</span><span class="btn__en" lang="en">See the Curriculum</span>
-      </a>
-    </div>
+      <a class="bs-ticket__link" href="#curriculum" data-cta="bs_see_curriculum" data-i18n="cta.curriculum">شاهد المنهج</a>
+    </aside>
   </div>
 </header>
 
 <main id="main">
 
-  <!-- 01 THE PROBLEM -->
-  <section class="s" id="problem" aria-labelledby="problem-title">
-    <div class="sh">
-      <div><span class="sh__n">01</span><h2 id="problem-title" class="sh__t" lang="en" dir="ltr">The Problem</h2></div>
-      <p class="sh__lead bs-big reveal" data-i18n="prob.lead">كثير من المصممين يجيدون رسم شعار جميل، لكن العميل لا يحتاج شعارًا فقط، بل يحتاج هوية كاملة مبنية على فهم نشاطه.</p>
-    </div>
-    <div class="bs-two">
-      <article class="bs-card reveal">
-        <span class="area__n">01</span>
-        <h3 class="bs-card__t" data-i18n="prob.1t">تسلّم شعارًا، لا هوية</h3>
-        <p data-i18n="prob.1p">ينتهي المشروع عند اللوجو: لا ألوان مدروسة، ولا عناصر جرافيكية، ولا نظام بصري يعمل في كل نقطة تواصل. فيبدو الشغل أصغر من قيمته، ويصعب تسعيره.</p>
-      </article>
-      <article class="bs-card reveal">
-        <span class="area__n">02</span>
-        <h3 class="bs-card__t" data-i18n="prob.2t">لا تعرف كيف تمشي بالمشروع من البداية للنهاية</h3>
-        <p data-i18n="prob.2p">من أين تبدأ مع العميل؟ ماذا تسأله؟ كيف تتحول الإجابات إلى فكرة، والفكرة إلى شعار، والشعار إلى عرض هوية وملفات تسليم؟ بدون منهجية واضحة، كل مشروع يبدأ من الصفر.</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- 02 OUTCOMES -->
-  <section class="s s--soft" id="outcomes" aria-labelledby="outcomes-title">
-    <div class="sh">
-      <div><span class="sh__n">02</span><h2 id="outcomes-title" class="sh__t" lang="en" dir="ltr">What You Walk<br>Away With</h2></div>
-      <p class="sh__lead reveal" data-i18n="out.lead">في كل محاضرة تتقدم خطوة في مشروعك النهائي، فتنهي الكورس ومعك شيئان:</p>
-    </div>
-    <div class="bs-two">
-      <article class="bs-card bs-card--line reveal">
-        <span class="area__n">01</span>
-        <h3 class="bs-card__t" data-i18n="out.1t">مشروع هوية كامل في ملف أعمالك</h3>
-        <p data-i18n="out.1p">من البريف حتى عرض الهوية (Brand Proposal): الشعار، والألوان، والعناصر الجرافيكية، والتطبيقات، وملفات التسليم النهائية — مشروع تعرضه بثقة في الـ Portfolio.</p>
-      </article>
-      <article class="bs-card bs-card--line reveal">
-        <span class="area__n">02</span>
-        <h3 class="bs-card__t" data-i18n="out.2t">منهجية تشتغل بها مع أي عميل</h3>
-        <p data-i18n="out.2p">أربع مراحل واضحة تطبّقها في كل مشروع: الاكتشاف (Discovery)، والتفكير (Thinking)، والتصميم (Design)، والإنتاج (Production) — مع طريقة للتعامل مع العملاء وتسعير شغلك بعرض سعر واضح.</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- 03 CURRICULUM -->
-  <section class="s" id="curriculum" aria-labelledby="curriculum-title">
-    <div class="sh">
-      <div><span class="sh__n">03</span><h2 id="curriculum-title" class="sh__t" lang="en" dir="ltr">Curriculum</h2></div>
-      <p class="sh__lead reveal" data-i18n="cur.lead">6 محاضرات على 3 ويك إندات، كل محاضرة 3 ساعات — الجمعة والسبت 6:30 مساءً بتوقيت القاهرة.</p>
-    </div>
-    <ol class="bs-cur">
-      <li class="bs-cur__item reveal">
-        <span class="bs-cur__n num" dir="ltr">01</span>
-        <div class="bs-cur__body"><h3 class="bs-cur__t" lang="en" dir="ltr">Brand &amp; Logo Foundations</h3><p data-i18n="cur.1">تفهم مصطلحات البراندنج الأساسية، وأنواع الشعارات السبعة ومتى تختار كل نوع، وتختبر أي شعار بأربعة اختبارات: الوضوح، والتميّز، والفكرة، والتوافق.</p></div>
-        <p class="bs-cur__date" data-bs="lec1"></p>
-      </li>
-      <li class="bs-cur__item reveal">
-        <span class="bs-cur__n num" dir="ltr">02</span>
-        <div class="bs-cur__body"><h3 class="bs-cur__t" lang="en" dir="ltr">From Client Brief to Design Direction</h3><p data-i18n="cur.2">تتعامل مع أنماط العملاء المختلفة، وتكتب ملخص المشروع (Creative Brief)، وتجهّز عرض السعر — وتبدأ مشروعك النهائي من البريف.</p></div>
-        <p class="bs-cur__date" data-bs="lec2"></p>
-      </li>
-      <li class="bs-cur__item reveal">
-        <span class="bs-cur__n num" dir="ltr">03</span>
-        <div class="bs-cur__body"><h3 class="bs-cur__t" lang="en" dir="ltr">From Brief to Concept</h3><p data-i18n="cur.3">تحوّل البريف إلى كلمات مفتاحية وخريطة ذهنية (Mind-mapping) وبحث عن السوق، ومنها إلى فكرة تصميمية (Concept) لها معنى.</p></div>
-        <p class="bs-cur__date" data-bs="lec3"></p>
-      </li>
-      <li class="bs-cur__item reveal">
-        <span class="bs-cur__n num" dir="ltr">04</span>
-        <div class="bs-cur__body"><h3 class="bs-cur__t" lang="en" dir="ltr">Design Psychology &amp; Visual Direction</h3><p data-i18n="cur.4">سيكولوجية الأشكال والألوان والخطوط، وكيف تبني لوحة إلهام (Moodboard) تحدد الاتجاه البصري للهوية.</p></div>
-        <p class="bs-cur__date" data-bs="lec4"></p>
-      </li>
-      <li class="bs-cur__item reveal">
-        <span class="bs-cur__n num" dir="ltr">05</span>
-        <div class="bs-cur__body"><h3 class="bs-cur__t" lang="en" dir="ltr">From Style-Scape to Final Logo</h3><p data-i18n="cur.5">من الـ Style-Scape إلى الاسكتشات وتقنيات استكشاف الشعار، ثم تحويله إلى Vector وضبط النسب واختباره قبل الاعتماد.</p></div>
-        <p class="bs-cur__date" data-bs="lec5"></p>
-      </li>
-      <li class="bs-cur__item reveal">
-        <span class="bs-cur__n num" dir="ltr">06</span>
-        <div class="bs-cur__body"><h3 class="bs-cur__t" lang="en" dir="ltr">Building the Visual Brand System</h3><p data-i18n="cur.6">تبني العناصر الجرافيكية والنظام البصري للهوية، ثم تجهّز عرض الهوية (Brand Proposal) وملفات التسليم النهائية للعميل.</p></div>
-        <p class="bs-cur__date" data-bs="lec6"></p>
-      </li>
-    </ol>
-  </section>
-
-  <!-- 04 WHO IT'S FOR -->
-  <section class="s s--soft" id="fit" aria-labelledby="fit-title">
-    <div class="sh">
-      <div><span class="sh__n">04</span><h2 id="fit-title" class="sh__t" lang="en" dir="ltr">Is It For You?</h2></div>
-      <p class="sh__lead reveal" data-i18n="fit.lead">المقاعد محدودة، فالأفضل أن تتأكد أن الكورس مناسب لك قبل التسجيل.</p>
-    </div>
-    <div class="bs-two">
-      <div class="bs-fit reveal">
-        <h3 class="bs-fit__t"><span class="bs-fit__ic" aria-hidden="true">+</span><span data-i18n="fit.yes">مناسب لك إذا كنت</span></h3>
-        <ul class="topics">
-          <li data-i18n="fit.y1">مصممًا لديك خبرة سابقة في التصميم، وتعمل على Illustrator وPhotoshop</li>
-          <li data-i18n="fit.y2">تريد الانتقال من تصميم شعار إلى بناء هوية بصرية كاملة</li>
-          <li data-i18n="fit.y3">تعمل فريلانس وتريد منهجية واضحة مع العملاء والتسعير</li>
-          <li data-i18n="fit.y4">تريد مشروع هوية قويًا في ملف أعمالك (Portfolio)</li>
-        </ul>
-      </div>
-      <div class="bs-fit bs-fit--no reveal">
-        <h3 class="bs-fit__t"><span class="bs-fit__ic" aria-hidden="true">−</span><span data-i18n="fit.no">غير مناسب لك إذا كنت</span></h3>
-        <ul class="topics">
-          <li data-i18n="fit.n1">تبدأ في التصميم من الصفر أو لم تستخدم برامج التصميم بعد</li>
-          <li data-i18n="fit.n2">تبحث عن قوالب جاهزة أو نتيجة سريعة بدون تطبيق</li>
-          <li data-i18n="fit.n3">لن تستطيع تخصيص وقت للعمل على مشروعك بين المحاضرات</li>
-        </ul>
+  <!-- 01 BEFORE / AFTER -->
+  <section class="bs-sec" id="why" aria-labelledby="why-title">
+    <div class="bs-wrap">
+      <header class="bs-head">
+        <p class="bs-head__n">01</p>
+        <h2 id="why-title" class="bs-head__t" lang="en" dir="ltr">Logo → Identity</h2>
+        <p class="bs-head__lead" data-i18n="prob.lead">كثير من المصممين يجيدون رسم شعار جميل، لكن العميل لا يحتاج شعارًا فقط، بل يحتاج هوية كاملة مبنية على فهم نشاطه.</p>
+      </header>
+      <div class="bs-ba">
+        <div class="bs-ba__col">
+          <p class="bs-ba__label" data-i18n="ba.before">قبل الكورس</p>
+          <article class="bs-cell">
+            <h3 class="bs-cell__t" data-i18n="prob.1t">تسلّم شعارًا، لا هوية</h3>
+            <p data-i18n="prob.1p">ينتهي المشروع عند اللوجو: لا ألوان مدروسة، ولا عناصر جرافيكية، ولا نظام بصري يعمل في كل نقطة تواصل. فيبدو الشغل أصغر من قيمته، ويصعب تسعيره.</p>
+          </article>
+          <article class="bs-cell">
+            <h3 class="bs-cell__t" data-i18n="prob.2t">لا تعرف كيف تمشي بالمشروع من البداية للنهاية</h3>
+            <p data-i18n="prob.2p">من أين تبدأ مع العميل؟ ماذا تسأله؟ كيف تتحول الإجابات إلى فكرة، والفكرة إلى شعار، والشعار إلى عرض هوية وملفات تسليم؟ بدون منهجية واضحة، كل مشروع يبدأ من الصفر.</p>
+          </article>
+        </div>
+        <div class="bs-ba__col bs-ba__col--after">
+          <p class="bs-ba__label" data-i18n="ba.after">بعد الكورس</p>
+          <article class="bs-cell">
+            <h3 class="bs-cell__t" data-i18n="out.1t">مشروع هوية كامل في ملف أعمالك</h3>
+            <p data-i18n="out.1p">من البريف حتى عرض الهوية (Brand Proposal): الشعار، والألوان، والعناصر الجرافيكية، والتطبيقات، وملفات التسليم النهائية — مشروع تعرضه بثقة في الـ Portfolio.</p>
+          </article>
+          <article class="bs-cell">
+            <h3 class="bs-cell__t" data-i18n="out.2t">منهجية تشتغل بها مع أي عميل</h3>
+            <p data-i18n="out.2p">أربع مراحل واضحة تطبّقها في كل مشروع: الاكتشاف (Discovery)، والتفكير (Thinking)، والتصميم (Design)، والإنتاج (Production) — مع طريقة للتعامل مع العملاء وتسعير شغلك بعرض سعر واضح.</p>
+          </article>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 05 INSTRUCTOR -->
-  <section class="s" id="instructor" aria-labelledby="instructor-title">
-    <div class="bs-inst">
-      <figure class="bs-inst__photo reveal"><img src="../assets/images/mohamed-sherif-sm.jpg" alt="محمد شريف" data-i18n-attr="alt:inst.alt" width="640" height="640" loading="lazy"></figure>
+  <!-- 02 CURRICULUM (no dates — fixed for every cohort) -->
+  <section class="bs-sec bs-sec--soft" id="curriculum" aria-labelledby="curriculum-title">
+    <div class="bs-wrap">
+      <header class="bs-head">
+        <p class="bs-head__n">02</p>
+        <h2 id="curriculum-title" class="bs-head__t" lang="en" dir="ltr">Curriculum</h2>
+        <p class="bs-head__lead" data-i18n="cur.lead">6 محاضرات، كل محاضرة 3 ساعات، وفي كل محاضرة خطوة جديدة في مشروعك النهائي.</p>
+      </header>
+      <ol class="bs-cur">
+        <li class="bs-cur__item"><div class="bs-cur__top"><span class="bs-cur__n num" dir="ltr">01</span><span class="bs-cur__phase caps" lang="en" dir="ltr">Foundations</span></div><h3 class="bs-cur__t" lang="en" dir="ltr">Brand &amp; Logo Foundations</h3><p data-i18n="cur.1">تفهم مصطلحات البراندنج الأساسية، وأنواع الشعارات السبعة ومتى تختار كل نوع، وتختبر أي شعار بأربعة اختبارات: الوضوح، والتميّز، والفكرة، والتوافق.</p></li>
+        <li class="bs-cur__item"><div class="bs-cur__top"><span class="bs-cur__n num" dir="ltr">02</span><span class="bs-cur__phase caps" lang="en" dir="ltr">Discovery</span></div><h3 class="bs-cur__t" lang="en" dir="ltr">From Client Brief to Design Direction</h3><p data-i18n="cur.2">تتعامل مع أنماط العملاء المختلفة، وتكتب ملخص المشروع (Creative Brief)، وتجهّز عرض السعر — وتبدأ مشروعك النهائي من البريف.</p></li>
+        <li class="bs-cur__item"><div class="bs-cur__top"><span class="bs-cur__n num" dir="ltr">03</span><span class="bs-cur__phase caps" lang="en" dir="ltr">Thinking</span></div><h3 class="bs-cur__t" lang="en" dir="ltr">From Brief to Concept</h3><p data-i18n="cur.3">تحوّل البريف إلى كلمات مفتاحية وخريطة ذهنية (Mind-mapping) وبحث عن السوق، ومنها إلى فكرة تصميمية (Concept) لها معنى.</p></li>
+        <li class="bs-cur__item"><div class="bs-cur__top"><span class="bs-cur__n num" dir="ltr">04</span><span class="bs-cur__phase caps" lang="en" dir="ltr">Thinking</span></div><h3 class="bs-cur__t" lang="en" dir="ltr">Design Psychology &amp; Visual Direction</h3><p data-i18n="cur.4">سيكولوجية الأشكال والألوان والخطوط، وكيف تبني لوحة إلهام (Moodboard) تحدد الاتجاه البصري للهوية.</p></li>
+        <li class="bs-cur__item"><div class="bs-cur__top"><span class="bs-cur__n num" dir="ltr">05</span><span class="bs-cur__phase caps" lang="en" dir="ltr">Design</span></div><h3 class="bs-cur__t" lang="en" dir="ltr">From Style-Scape to Final Logo</h3><p data-i18n="cur.5">من الـ Style-Scape إلى الاسكتشات وتقنيات استكشاف الشعار، ثم تحويله إلى Vector وضبط النسب واختباره قبل الاعتماد.</p></li>
+        <li class="bs-cur__item"><div class="bs-cur__top"><span class="bs-cur__n num" dir="ltr">06</span><span class="bs-cur__phase caps" lang="en" dir="ltr">Production</span></div><h3 class="bs-cur__t" lang="en" dir="ltr">Building the Visual Brand System</h3><p data-i18n="cur.6">تبني العناصر الجرافيكية والنظام البصري للهوية، ثم تجهّز عرض الهوية (Brand Proposal) وملفات التسليم النهائية للعميل.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 03 FIT -->
+  <section class="bs-sec" id="fit" aria-labelledby="fit-title">
+    <div class="bs-wrap">
+      <header class="bs-head">
+        <p class="bs-head__n">03</p>
+        <h2 id="fit-title" class="bs-head__t" lang="en" dir="ltr">Is It For You?</h2>
+        <p class="bs-head__lead" data-i18n="fit.lead">المقاعد محدودة، فالأفضل أن تتأكد أن الكورس مناسب لك قبل التسجيل.</p>
+      </header>
+      <div class="bs-fit">
+        <div class="bs-fit__col">
+          <h3 class="bs-fit__t"><span class="bs-fit__ic" aria-hidden="true">+</span><span data-i18n="fit.yes">مناسب لك إذا كنت</span></h3>
+          <ul class="bs-list">
+            <li data-i18n="fit.y1">مصممًا لديك خبرة سابقة في التصميم، وتعمل على Illustrator وPhotoshop</li>
+            <li data-i18n="fit.y2">تريد الانتقال من تصميم شعار إلى بناء هوية بصرية كاملة</li>
+            <li data-i18n="fit.y3">تعمل فريلانس وتريد منهجية واضحة مع العملاء والتسعير</li>
+            <li data-i18n="fit.y4">تريد مشروع هوية قويًا في ملف أعمالك (Portfolio)</li>
+          </ul>
+        </div>
+        <div class="bs-fit__col bs-fit__col--no">
+          <h3 class="bs-fit__t"><span class="bs-fit__ic" aria-hidden="true">−</span><span data-i18n="fit.no">غير مناسب لك إذا كنت</span></h3>
+          <ul class="bs-list">
+            <li data-i18n="fit.n1">تبدأ في التصميم من الصفر أو لم تستخدم برامج التصميم بعد</li>
+            <li data-i18n="fit.n2">تبحث عن قوالب جاهزة أو نتيجة سريعة بدون تطبيق</li>
+            <li data-i18n="fit.n3">لن تستطيع تخصيص وقت للعمل على مشروعك بين المحاضرات</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 INSTRUCTOR -->
+  <section class="bs-sec bs-sec--soft" id="instructor" aria-labelledby="instructor-title">
+    <div class="bs-wrap bs-inst">
+      <figure class="bs-inst__photo"><img src="../assets/images/mohamed-sherif-sm.jpg" alt="محمد شريف" data-i18n-attr="alt:inst.alt" width="640" height="640" loading="lazy"></figure>
       <div class="bs-inst__body">
-        <span class="sh__n">05</span>
-        <h2 id="instructor-title" class="sh__t" lang="en" dir="ltr">Your Instructor</h2>
+        <header class="bs-head bs-head--tight">
+          <p class="bs-head__n">04</p>
+          <h2 id="instructor-title" class="bs-head__t" lang="en" dir="ltr">Your Instructor</h2>
+        </header>
         <p class="bs-inst__name" data-i18n="inst.name">محمد شريف</p>
-        <p class="sh__lead reveal" data-i18n="inst.p">مصمم هويات بصرية ومحاضر في البراندنج من القاهرة، يعمل في التصميم منذ 2016. صمّم هويات لشركات وعلامات في مصر والخليج، ويدرّس نفس المنهجية التي يعمل بها مع عملائه.</p>
-        <dl class="stats bs-inst__stats reveal">
-          <div class="stats__item stats__item--lead"><dt class="stat" dir="ltr">+<span data-count="850">850</span></dt><dd data-i18n="inst.s1">طالب ومصمم تعلّموا معه</dd></div>
-          <div class="stats__item"><dt class="stat" dir="ltr"><span data-count="98.6" data-decimals="1">98.6</span>%</dt><dd data-i18n="inst.s2">قيّموا معرفة المحاضر ومهاراته بـ «ممتاز»*</dd></div>
-          <div class="stats__item"><dt class="stat" dir="ltr">+<span data-count="90">90</span></dt><dd data-i18n="inst.s3">عميل وعلامة تجارية</dd></div>
+        <p class="bs-inst__p" data-i18n="inst.p">مصمم هويات بصرية ومحاضر في البراندنج من القاهرة، يعمل في التصميم منذ 2016. صمّم هويات لشركات وعلامات في مصر والخليج، ويدرّس نفس المنهجية التي يعمل بها مع عملائه.</p>
+        <dl class="bs-stats">
+          <div><dt class="stat" dir="ltr">+<span data-count="850">850</span></dt><dd data-i18n="inst.s1">طالب ومصمم تعلّموا معه</dd></div>
+          <div><dt class="stat" dir="ltr"><span data-count="98.6" data-decimals="1">98.6</span>%</dt><dd data-i18n="inst.s2">قيّموا معرفة المحاضر ومهاراته بـ «ممتاز»*</dd></div>
+          <div><dt class="stat" dir="ltr">+<span data-count="90">90</span></dt><dd data-i18n="inst.s3">عميل وعلامة تجارية</dd></div>
         </dl>
         <p class="note" data-i18n="inst.src">* من استبيان 69 طالبًا بعد إحدى دفعات BRAND-SET.</p>
-        <ul class="roles reveal">
-          <li><a class="role" data-link="idntik" data-cta="bs_idntik">
-            <span class="role__k" data-i18n="inst.founder">مؤسس</span>
-            <span class="role__name caps" lang="en" dir="ltr">Idntik</span>
-            <span class="role__d" data-i18n="inst.idntik">استوديو متخصص في الهوية البصرية</span>
-            <span class="role__arrow" aria-hidden="true">↗</span>
-          </a></li>
-          <li><a class="role" data-link="branders" data-cta="bs_branders">
-            <span class="role__k" data-i18n="inst.partner">شريك ومدير تنفيذي</span>
-            <span class="role__name caps" lang="en" dir="ltr">Branders</span>
-            <span class="role__d" data-i18n="inst.branders">مجتمع ومنصة لتعليم التصميم</span>
-            <span class="role__arrow" aria-hidden="true">↗</span>
-          </a></li>
+        <ul class="bs-roles">
+          <li><a data-link="idntik" data-cta="bs_idntik"><span class="caps" lang="en" dir="ltr">Idntik</span><span data-i18n="inst.idntikR">مؤسس · استوديو هوية بصرية</span><span aria-hidden="true">↗</span></a></li>
+          <li><a data-link="branders" data-cta="bs_branders"><span class="caps" lang="en" dir="ltr">Branders</span><span data-i18n="inst.brandersR">شريك ومدير تنفيذي · مجتمع تعليم التصميم</span><span aria-hidden="true">↗</span></a></li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- 06 STUDENT FEEDBACK (same images as the homepage) -->
-  <section class="s s--soft" id="feedback" aria-labelledby="feedback-title">
-    <div class="sh">
-      <div><span class="sh__n">06</span><h2 id="feedback-title" class="sh__t" lang="en" dir="ltr">Student Feedback</h2></div>
-      <p class="sh__lead reveal" data-i18n="fb.lead">كلمات طلاب الدفعات السابقة، كما وصلتني.</p>
-    </div>
-    <div class="proof-wrap">
-      <ul class="proof" data-proof dir="ltr">
-        <li><button type="button" class="proof__item" data-zoom data-full="../assets/testimonials/t-1-full.jpg"><img src="../assets/testimonials/t-1.jpg" alt="رأي طلاب BRAND-SET" data-i18n-attr="alt:fb.alt" width="640" height="800" loading="lazy"></button></li>
-        <li><button type="button" class="proof__item" data-zoom data-full="../assets/testimonials/t-2-full.jpg"><img src="../assets/testimonials/t-2.jpg" alt="رأي طلاب BRAND-SET" data-i18n-attr="alt:fb.alt" width="640" height="800" loading="lazy"></button></li>
-        <li><button type="button" class="proof__item" data-zoom data-full="../assets/testimonials/t-3-full.jpg"><img src="../assets/testimonials/t-3.jpg" alt="رأي طلاب BRAND-SET" data-i18n-attr="alt:fb.alt" width="640" height="800" loading="lazy"></button></li>
-        <li><button type="button" class="proof__item" data-zoom data-full="../assets/testimonials/t-4-full.jpg"><img src="../assets/testimonials/t-4.jpg" alt="رأي طلاب BRAND-SET" data-i18n-attr="alt:fb.alt" width="640" height="800" loading="lazy"></button></li>
-        <li><button type="button" class="proof__item" data-zoom data-full="../assets/testimonials/t-5-full.jpg"><img src="../assets/testimonials/t-5.jpg" alt="رأي طلاب BRAND-SET" data-i18n-attr="alt:fb.alt" width="640" height="800" loading="lazy"></button></li>
-        <li><button type="button" class="proof__item" data-zoom data-full="../assets/testimonials/t-6-full.jpg"><img src="../assets/testimonials/t-6.jpg" alt="رأي طلاب BRAND-SET" data-i18n-attr="alt:fb.alt" width="640" height="800" loading="lazy"></button></li>
-        <li><button type="button" class="proof__item" data-zoom data-full="../assets/testimonials/t-7-full.jpg"><img src="../assets/testimonials/t-7.jpg" alt="رأي طلاب BRAND-SET" data-i18n-attr="alt:fb.alt" width="640" height="800" loading="lazy"></button></li>
-        <li><button type="button" class="proof__item" data-zoom data-full="../assets/testimonials/t-8-full.jpg"><img src="../assets/testimonials/t-8.jpg" alt="رأي طلاب BRAND-SET" data-i18n-attr="alt:fb.alt" width="640" height="800" loading="lazy"></button></li>
-        <li><button type="button" class="proof__item" data-zoom data-full="../assets/testimonials/t-9-full.jpg"><img src="../assets/testimonials/t-9.jpg" alt="رأي طلاب BRAND-SET" data-i18n-attr="alt:fb.alt" width="640" height="800" loading="lazy"></button></li>
-        <li><button type="button" class="proof__item" data-zoom data-full="../assets/testimonials/t-10-full.jpg"><img src="../assets/testimonials/t-10.jpg" alt="رأي طلاب BRAND-SET" data-i18n-attr="alt:fb.alt" width="640" height="800" loading="lazy"></button></li>
-        <li><button type="button" class="proof__item" data-zoom data-full="../assets/testimonials/t-11-full.jpg"><img src="../assets/testimonials/t-11.jpg" alt="رأي طلاب BRAND-SET" data-i18n-attr="alt:fb.alt" width="640" height="800" loading="lazy"></button></li>
-        <li><button type="button" class="proof__item" data-zoom data-full="../assets/testimonials/t-12-full.jpg"><img src="../assets/testimonials/t-12.jpg" alt="رأي طلاب BRAND-SET" data-i18n-attr="alt:fb.alt" width="640" height="800" loading="lazy"></button></li>
-        <li><button type="button" class="proof__item" data-zoom data-full="../assets/testimonials/t-13-full.jpg"><img src="../assets/testimonials/t-13.jpg" alt="رأي طلاب BRAND-SET" data-i18n-attr="alt:fb.alt" width="640" height="800" loading="lazy"></button></li>
-        <li><button type="button" class="proof__item" data-zoom data-full="../assets/testimonials/t-14-full.jpg"><img src="../assets/testimonials/t-14.jpg" alt="رأي طلاب BRAND-SET" data-i18n-attr="alt:fb.alt" width="640" height="800" loading="lazy"></button></li>
-        <li><button type="button" class="proof__item" data-zoom data-full="../assets/testimonials/t-15-full.jpg"><img src="../assets/testimonials/t-15.jpg" alt="رأي طلاب BRAND-SET" data-i18n-attr="alt:fb.alt" width="640" height="800" loading="lazy"></button></li>
-        <li><button type="button" class="proof__item" data-zoom data-full="../assets/testimonials/t-16-full.jpg"><img src="../assets/testimonials/t-16.jpg" alt="رأي طلاب BRAND-SET" data-i18n-attr="alt:fb.alt" width="640" height="800" loading="lazy"></button></li>
-      </ul>
-      <div class="proof__nav" dir="ltr">
-        <button type="button" class="proof__btn" data-proof-prev data-i18n-attr="aria-label:fb.prev" aria-label="السابق">←</button>
-        <button type="button" class="proof__btn" data-proof-next data-i18n-attr="aria-label:fb.next" aria-label="التالي">→</button>
+  <!-- 05 STUDENT FEEDBACK (same images as the homepage) -->
+  <section class="bs-sec" id="feedback" aria-labelledby="feedback-title">
+    <div class="bs-wrap">
+      <header class="bs-head bs-head--row">
+        <div>
+          <p class="bs-head__n">05</p>
+          <h2 id="feedback-title" class="bs-head__t" lang="en" dir="ltr">Student Feedback</h2>
+          <p class="bs-head__lead" data-i18n="fb.lead">كلمات طلاب الدفعات السابقة، كما وصلتني.</p>
+        </div>
+        <div class="proof__nav" dir="ltr">
+          <button type="button" class="proof__btn" data-proof-prev data-i18n-attr="aria-label:fb.prev" aria-label="السابق">←</button>
+          <button type="button" class="proof__btn" data-proof-next data-i18n-attr="aria-label:fb.next" aria-label="التالي">→</button>
+        </div>
+      </header>
+      <div class="proof-wrap">
+        <ul class="proof" data-proof dir="ltr">
+          <li><button type="button" class="proof__item" data-zoom data-full="../assets/testimonials/t-1-full.jpg"><img src="../assets/testimonials/t-1.jpg" alt="رأي طلاب BRAND-SET" data-i18n-attr="alt:fb.alt" width="640" height="800" loading="lazy"></button></li>
+          <li><button type="button" class="proof__item" data-zoom data-full="../assets/testimonials/t-2-full.jpg"><img src="../assets/testimonials/t-2.jpg" alt="رأي طلاب BRAND-SET" data-i18n-attr="alt:fb.alt" width="640" height="800" loading="lazy"></button></li>
+          <li><button type="button" class="proof__item" data-zoom data-full="../assets/testimonials/t-3-full.jpg"><img src="../assets/testimonials/t-3.jpg" alt="رأي طلاب BRAND-SET" data-i18n-attr="alt:fb.alt" width="640" height="800" loading="lazy"></button></li>
+          <li><button type="button" class="proof__item" data-zoom data-full="../assets/testimonials/t-4-full.jpg"><img src="../assets/testimonials/t-4.jpg" alt="رأي طلاب BRAND-SET" data-i18n-attr="alt:fb.alt" width="640" height="800" loading="lazy"></button></li>
+          <li><button type="button" class="proof__item" data-zoom data-full="../assets/testimonials/t-5-full.jpg"><img src="../assets/testimonials/t-5.jpg" alt="رأي طلاب BRAND-SET" data-i18n-attr="alt:fb.alt" width="640" height="800" loading="lazy"></button></li>
+          <li><button type="button" class="proof__item" data-zoom data-full="../assets/testimonials/t-6-full.jpg"><img src="../assets/testimonials/t-6.jpg" alt="رأي طلاب BRAND-SET" data-i18n-attr="alt:fb.alt" width="640" height="800" loading="lazy"></button></li>
+          <li><button type="button" class="proof__item" data-zoom data-full="../assets/testimonials/t-7-full.jpg"><img src="../assets/testimonials/t-7.jpg" alt="رأي طلاب BRAND-SET" data-i18n-attr="alt:fb.alt" width="640" height="800" loading="lazy"></button></li>
+          <li><button type="button" class="proof__item" data-zoom data-full="../assets/testimonials/t-8-full.jpg"><img src="../assets/testimonials/t-8.jpg" alt="رأي طلاب BRAND-SET" data-i18n-attr="alt:fb.alt" width="640" height="800" loading="lazy"></button></li>
+          <li><button type="button" class="proof__item" data-zoom data-full="../assets/testimonials/t-9-full.jpg"><img src="../assets/testimonials/t-9.jpg" alt="رأي طلاب BRAND-SET" data-i18n-attr="alt:fb.alt" width="640" height="800" loading="lazy"></button></li>
+          <li><button type="button" class="proof__item" data-zoom data-full="../assets/testimonials/t-10-full.jpg"><img src="../assets/testimonials/t-10.jpg" alt="رأي طلاب BRAND-SET" data-i18n-attr="alt:fb.alt" width="640" height="800" loading="lazy"></button></li>
+          <li><button type="button" class="proof__item" data-zoom data-full="../assets/testimonials/t-11-full.jpg"><img src="../assets/testimonials/t-11.jpg" alt="رأي طلاب BRAND-SET" data-i18n-attr="alt:fb.alt" width="640" height="800" loading="lazy"></button></li>
+          <li><button type="button" class="proof__item" data-zoom data-full="../assets/testimonials/t-12-full.jpg"><img src="../assets/testimonials/t-12.jpg" alt="رأي طلاب BRAND-SET" data-i18n-attr="alt:fb.alt" width="640" height="800" loading="lazy"></button></li>
+          <li><button type="button" class="proof__item" data-zoom data-full="../assets/testimonials/t-13-full.jpg"><img src="../assets/testimonials/t-13.jpg" alt="رأي طلاب BRAND-SET" data-i18n-attr="alt:fb.alt" width="640" height="800" loading="lazy"></button></li>
+          <li><button type="button" class="proof__item" data-zoom data-full="../assets/testimonials/t-14-full.jpg"><img src="../assets/testimonials/t-14.jpg" alt="رأي طلاب BRAND-SET" data-i18n-attr="alt:fb.alt" width="640" height="800" loading="lazy"></button></li>
+          <li><button type="button" class="proof__item" data-zoom data-full="../assets/testimonials/t-15-full.jpg"><img src="../assets/testimonials/t-15.jpg" alt="رأي طلاب BRAND-SET" data-i18n-attr="alt:fb.alt" width="640" height="800" loading="lazy"></button></li>
+          <li><button type="button" class="proof__item" data-zoom data-full="../assets/testimonials/t-16-full.jpg"><img src="../assets/testimonials/t-16.jpg" alt="رأي طلاب BRAND-SET" data-i18n-attr="alt:fb.alt" width="640" height="800" loading="lazy"></button></li>
+        </ul>
       </div>
+      <p class="note" data-i18n="fb.hint">اسحب لعرض المزيد، واضغط على أي صورة لتكبيرها.</p>
     </div>
-    <p class="note" data-i18n="fb.hint">اسحب لعرض المزيد، واضغط على أي صورة لتكبيرها.</p>
   </section>
 
-  <!-- 07 PRACTICAL DETAILS -->
-  <section class="s" id="details" aria-labelledby="details-title">
-    <div class="sh">
-      <div><span class="sh__n">07</span><h2 id="details-title" class="sh__t" lang="en" dir="ltr">The Details</h2></div>
-      <p class="sh__lead reveal" data-i18n="det.lead">كل ما تحتاج معرفته قبل التسجيل.</p>
-    </div>
-    <dl class="bs-det">
-      <div class="reveal"><dt data-i18n="det.when.k">المواعيد</dt><dd><span data-i18n="det.when.v">الجمعة والسبت، 6:30 مساءً بتوقيت القاهرة — 3 ويك إندات:</span> <span data-bs="start"></span> – <span data-bs="end"></span></dd></div>
-      <div class="reveal"><dt data-i18n="det.len.k">المدة</dt><dd data-i18n="det.len.v">6 محاضرات، كل محاضرة 3 ساعات (180 دقيقة)</dd></div>
-      <div class="reveal"><dt data-i18n="det.rec.k">أونلاين + تسجيلات</dt><dd data-i18n="det.rec.v">المحاضرات أونلاين، وكل محاضرة مسجّلة — لو فاتتك محاضرة تقدر تشاهدها بعدها</dd></div>
-      <div class="reveal"><dt data-i18n="det.tools.k">البرامج</dt><dd lang="en" dir="ltr">Adobe Illustrator + Adobe Photoshop</dd></div>
-      <div class="reveal"><dt data-i18n="det.cert.k">الشهادة</dt><dd data-i18n="det.cert.v">شهادة إتمام بعد تسليم المشروع النهائي</dd></div>
-      <div class="reveal"><dt data-i18n="det.be.k">عرض شغلك</dt><dd data-i18n="det.be.v">أفضل مشاريع الطلاب تُعرض على حسابي على Behance</dd></div>
-      <div class="reveal"><dt data-i18n="det.seats.k">المقاعد</dt><dd><span class="num" data-bs="seats"></span> <span data-i18n="det.seats.v">مقعدًا فقط لهذه الدفعة</span></dd></div>
-    </dl>
-  </section>
-
-  <!-- 08 PRICE -->
-  <section class="s s--dark bs-pricing" id="price" aria-labelledby="price-title">
+  <!-- 06 ENROLL: details + price side by side -->
+  <section class="bs-sec bs-sec--dark" id="price" aria-labelledby="price-title">
     <div class="atmos atmos--soft" aria-hidden="true"></div>
-    <div class="bs-pricing__grid">
-      <div>
-        <span class="sh__n">08</span>
-        <h2 id="price-title" class="sh__t" lang="en" dir="ltr">Enroll</h2>
-        <p class="bs-pricing__lead"><span data-i18n="pr.lead">مقعدك في الدفعة التي تبدأ</span> <span data-bs="start"></span>.</p>
-        <ul class="bs-incl">
-          <li data-i18n="pr.i1">6 محاضرات أونلاين × 3 ساعات</li>
-          <li data-i18n="pr.i2">تسجيلات كل المحاضرات</li>
-          <li data-i18n="pr.i3">مشروع هوية كامل في ملف أعمالك</li>
-          <li data-i18n="pr.i4">شهادة إتمام بعد تسليم المشروع النهائي</li>
-          <li data-i18n="pr.i5">فرصة عرض مشروعك على Behance</li>
-        </ul>
+    <div class="bs-wrap">
+      <header class="bs-head">
+        <p class="bs-head__n">06</p>
+        <h2 id="price-title" class="bs-head__t" lang="en" dir="ltr">Enroll</h2>
+        <p class="bs-head__lead"><span data-i18n="pr.lead">مقعدك في الدفعة التي تبدأ</span> <span data-bs="start"></span>.</p>
+      </header>
+      <div class="bs-enroll">
+        <dl class="bs-det">
+          <div><dt data-i18n="det.when.k">المواعيد</dt><dd><span data-bs="schedule"></span> · <span data-bs="start"></span> – <span data-bs="end"></span></dd></div>
+          <div><dt data-i18n="det.len.k">المدة</dt><dd data-i18n="det.len.v">6 محاضرات، كل محاضرة 3 ساعات (180 دقيقة)</dd></div>
+          <div><dt data-i18n="det.rec.k">أونلاين + تسجيلات</dt><dd data-i18n="det.rec.v">المحاضرات أونلاين، وكل محاضرة مسجّلة — لو فاتتك محاضرة تقدر تشاهدها بعدها</dd></div>
+          <div><dt data-i18n="det.tools.k">البرامج</dt><dd lang="en" dir="ltr">Adobe Illustrator + Adobe Photoshop</dd></div>
+          <div><dt data-i18n="det.cert.k">الشهادة</dt><dd data-i18n="det.cert.v">شهادة إتمام بعد تسليم المشروع النهائي</dd></div>
+          <div><dt data-i18n="det.be.k">عرض شغلك</dt><dd data-i18n="det.be.v">أفضل مشاريع الطلاب تُعرض على حسابي على Behance</dd></div>
+        </dl>
+        <div class="bs-pricecard">
+          <p class="bs-ticket__tag" data-early-only data-i18n="pr.tag">سعر الإطلاق — لهذه الدفعة فقط</p>
+          <p class="bs-pricecard__now"><span class="num" dir="ltr" data-bs="price"></span> <span data-i18n="price.cur">جنيه</span></p>
+          <p class="bs-pricecard__was" data-early-only><span data-i18n="pr.instead">بدلًا من</span> <s><span class="num" dir="ltr" data-bs="priceRegular"></span> <span data-i18n="price.cur">جنيه</span></s> · <span data-i18n="pr.until">حتى</span> <span data-bs="earlyUntil"></span></p>
+          <p class="bs-pricecard__seats"><span class="num" data-bs="seats"></span> <span data-i18n="seats.only">مقعدًا فقط</span></p>
+          <a class="btn btn--primary btn--lg bs-pricecard__btn" data-link="brandSet" data-register data-cta="bs_register_price">
+            <span data-i18n="cta.register">سجّل الآن</span><span class="btn__en" lang="en">Register Now</span>
+          </a>
+          <p class="note" data-i18n="pr.note">التسجيل والدفع عبر منصة نظملي (Nzmly).</p>
+        </div>
       </div>
-      <div class="bs-pricecard">
-        <p class="bs-pricecard__tag" data-early-only data-i18n="pr.tag">سعر الإطلاق — لهذه الدفعة فقط</p>
-        <p class="bs-pricecard__now"><span class="num" dir="ltr" data-bs="price"></span> <span data-i18n="price.cur">جنيه</span></p>
-        <p class="bs-pricecard__was" data-early-only><span data-i18n="pr.instead">بدلًا من</span> <s><span class="num" dir="ltr" data-bs="priceRegular"></span> <span data-i18n="price.cur">جنيه</span></s></p>
-        <p class="bs-pricecard__until" data-early-only><span data-i18n="pr.until">حتى</span> <span data-bs="earlyUntil"></span></p>
-        <p class="bs-pricecard__seats"><span class="num" data-bs="seats"></span> <span data-i18n="seats.only">مقعدًا فقط</span></p>
-        <a class="btn btn--primary btn--lg bs-pricecard__btn" data-link="brandSet" data-register data-cta="bs_register_price">
+    </div>
+  </section>
+
+  <!-- 07 FAQ -->
+  <section class="bs-sec" id="faq" aria-labelledby="faq-title">
+    <div class="bs-wrap bs-faq">
+      <header class="bs-head">
+        <p class="bs-head__n">07</p>
+        <h2 id="faq-title" class="bs-head__t" lang="en" dir="ltr">FAQ</h2>
+        <p class="bs-head__lead" data-i18n="faq.lead">أكثر الأسئلة التي تصلني قبل التسجيل.</p>
+      </header>
+      <div class="faq bs-faq__list">
+        <details><summary data-i18n="faq.q1">ما مستوى الخبرة المطلوب؟</summary><p data-i18n="faq.a1">الكورس للمصممين الذين لديهم خبرة سابقة في التصميم ويعملون على Illustrator وPhotoshop. إذا كنت تبدأ في التصميم من الصفر، فالأفضل أن تبني أساسياتك أولًا.</p></details>
+        <details><summary data-i18n="faq.q2">ماذا لو فاتتني محاضرة؟</summary><p data-i18n="faq.a2">كل المحاضرات مسجّلة، فتقدر تشاهد أي محاضرة فاتتك وتكمل مشروعك مع الدفعة.</p></details>
+        <details><summary data-i18n="faq.q6">هل أحصل على تقييم (Feedback) على مشروعي؟</summary><p data-i18n="faq.a6">نعم. في المحاضرات نراجع شغل الطلاب معًا في كل مرحلة من مراحل المشروع، وعلى المشروع النهائي تحصل على تقييم فردي على مشروعك أنت.</p></details>
+        <details><summary data-i18n="faq.q3">كيف أدفع؟</summary><p data-i18n="faq.a3">التسجيل والدفع أونلاين عبر منصة نظملي (Nzmly) من خلال زر «سجّل الآن»، وبعد الدفع يتم تأكيد مقعدك.</p></details>
+        <details><summary data-i18n="faq.q7">أنا من خارج مصر، كيف أدفع وأحضر؟</summary><p data-i18n="faq.a7">تقدر تسجّل وتدفع من أي دولة ببطاقة Visa عبر منصة نظملي، والسعر بالجنيه المصري. المحاضرات أونلاين بتوقيت القاهرة: في أول ويك إند 6:30 مساءً بتوقيت السعودية (7:30 الإمارات)، ومن الويك إند الثاني 7:30 مساءً بتوقيت السعودية (8:30 الإمارات) بعد انتهاء التوقيت الصيفي في مصر. ولو فاتتك محاضرة، كلها مسجّلة.</p></details>
+        <details><summary data-i18n="faq.q4">ما البرامج المطلوبة؟</summary><p data-i18n="faq.a4">Adobe Illustrator وAdobe Photoshop.</p></details>
+        <details><summary data-i18n="faq.q5">هل توجد شهادة؟</summary><p data-i18n="faq.a5">نعم، شهادة إتمام بعد تسليم المشروع النهائي. وأفضل مشاريع الطلاب تُعرض على حسابي على Behance.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="bs-final" aria-labelledby="final-title">
+    <div class="bs-wrap bs-final__grid">
+      <div>
+        <p class="bs-kicker caps" lang="en" dir="ltr">Cohort starts <span data-bs="start" data-bs-lang="en"></span></p>
+        <h2 id="final-title" class="bs-final__t"><span class="num" data-bs="seats"></span> <span data-i18n="fin.t">مقعدًا فقط في هذه الدفعة.</span></h2>
+        <p class="bs-final__p"><span data-i18n="fin.p">ابدأ مشروع الهوية الذي تعرضه بثقة في ملف أعمالك.</span></p>
+      </div>
+      <div class="bs-final__buy">
+        <p class="bs-final__price"><span class="num" dir="ltr" data-bs="price"></span> <span data-i18n="price.cur">جنيه</span><span class="bs-final__early" data-early-only> · <span data-i18n="fin.early">سعر الإطلاق حتى</span> <span data-bs="earlyUntil"></span></span></p>
+        <a class="btn btn--primary btn--lg" data-link="brandSet" data-register data-cta="bs_register_final">
           <span data-i18n="cta.register">سجّل الآن</span><span class="btn__en" lang="en">Register Now</span>
         </a>
-        <p class="note" data-i18n="pr.note">التسجيل والدفع عبر منصة نظملي (Nzmly).</p>
       </div>
     </div>
-  </section>
-
-  <!-- 09 FAQ -->
-  <section class="s faq" id="faq" aria-labelledby="faq-title">
-    <div class="sh">
-      <div><span class="sh__n">09</span><h2 id="faq-title" class="sh__t" lang="en" dir="ltr">FAQ</h2></div>
-      <p class="sh__lead reveal" data-i18n="faq.lead">أكثر الأسئلة التي تصلني قبل التسجيل.</p>
-    </div>
-    <div class="faq__list">
-      <details class="reveal"><summary data-i18n="faq.q1">ما مستوى الخبرة المطلوب؟</summary><p data-i18n="faq.a1">الكورس للمصممين الذين لديهم خبرة سابقة في التصميم ويعملون على Illustrator وPhotoshop. إذا كنت تبدأ في التصميم من الصفر، فالأفضل أن تبني أساسياتك أولًا.</p></details>
-      <details class="reveal"><summary data-i18n="faq.q2">ماذا لو فاتتني محاضرة؟</summary><p data-i18n="faq.a2">كل المحاضرات مسجّلة، فتقدر تشاهد أي محاضرة فاتتك وتكمل مشروعك مع الدفعة.</p></details>
-      <details class="reveal"><summary data-i18n="faq.q6">هل أحصل على تقييم (Feedback) على مشروعي؟</summary><p data-i18n="faq.a6">نعم. في المحاضرات نراجع شغل الطلاب معًا في كل مرحلة من مراحل المشروع، وعلى المشروع النهائي تحصل على تقييم فردي على مشروعك أنت.</p></details>
-      <details class="reveal"><summary data-i18n="faq.q3">كيف أدفع؟</summary><p data-i18n="faq.a3">التسجيل والدفع أونلاين عبر منصة نظملي (Nzmly) من خلال زر «سجّل الآن»، وبعد الدفع يتم تأكيد مقعدك.</p></details>
-      <details class="reveal"><summary data-i18n="faq.q7">أنا من خارج مصر، كيف أدفع وأحضر؟</summary><p data-i18n="faq.a7">تقدر تسجّل وتدفع من أي دولة ببطاقة Visa عبر منصة نظملي، والسعر بالجنيه المصري. المحاضرات أونلاين بتوقيت القاهرة: في أول ويك إند 6:30 مساءً بتوقيت السعودية (7:30 الإمارات)، ومن الويك إند الثاني 7:30 مساءً بتوقيت السعودية (8:30 الإمارات) بعد انتهاء التوقيت الصيفي في مصر. ولو فاتتك محاضرة، كلها مسجّلة.</p></details>
-      <details class="reveal"><summary data-i18n="faq.q4">ما البرامج المطلوبة؟</summary><p data-i18n="faq.a4">Adobe Illustrator وAdobe Photoshop.</p></details>
-      <details class="reveal"><summary data-i18n="faq.q5">هل توجد شهادة؟</summary><p data-i18n="faq.a5">نعم، شهادة إتمام بعد تسليم المشروع النهائي. وأفضل مشاريع الطلاب تُعرض على حسابي على Behance.</p></details>
-    </div>
-  </section>
-
-  <!-- 10 FINAL CTA -->
-  <section class="s s--dark bs-final" aria-labelledby="final-title">
-    <div class="atmos atmos--soft" aria-hidden="true"></div>
-    <p class="bs-hero__kicker caps" lang="en" dir="ltr">Cohort starts <span data-bs="start" data-bs-lang="en"></span></p>
-    <h2 id="final-title" class="bs-final__t"><span class="num" data-bs="seats"></span> <span data-i18n="fin.t">مقعدًا فقط في هذه الدفعة.</span></h2>
-    <p class="bs-final__p"><span data-i18n="fin.p">ابدأ مشروع الهوية الذي تعرضه بثقة في ملف أعمالك.</span> <span class="bs-final__price"><span class="num" dir="ltr" data-bs="price"></span> <span data-i18n="price.cur">جنيه</span><span data-early-only> — <span data-i18n="fin.early">سعر الإطلاق حتى</span> <span data-bs="earlyUntil"></span></span></span></p>
-    <a class="btn btn--primary btn--lg" data-link="brandSet" data-register data-cta="bs_register_final">
-      <span data-i18n="cta.register">سجّل الآن</span><span class="btn__en" lang="en">Register Now</span>
-    </a>
   </section>
 </main>
 

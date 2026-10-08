@@ -3,6 +3,10 @@
    Arabic copy lives in brand-set/index.html. Same keys.
    ========================================================= */
 const EN = {
+  "inst.brandersR": "Partner & MD · design education community",
+  "inst.idntikR": "Founder · visual identity studio",
+  "ba.after": "After the course",
+  "ba.before": "Before the course",
   "faq.a7": "You can register and pay from any country with a Visa card through Nzmly; the price is in Egyptian pounds. Lectures are online on Cairo time: the first weekend at 6:30 pm Saudi time (7:30 pm UAE), and from the second weekend at 7:30 pm Saudi time (8:30 pm UAE), after Egypt’s daylight saving time ends. Every lecture is recorded if you miss one.",
   "faq.q7": "I’m outside Egypt — how do I pay and attend?",
   "faq.a6": "Yes. In the lectures we review students’ work together at every stage of the project, and on your final project you get individual feedback on your own work.",
@@ -45,7 +49,7 @@ const EN = {
   "out.2t": "A method you can use with any client",
   "out.2p": "Four clear phases you apply to every project — Discovery, Thinking, Design and Production — plus a way to work with clients and price your work with a clear quotation.",
 
-  "cur.lead": "6 lectures over 3 weekends, 3 hours each — Fridays and Saturdays at 6:30 pm Cairo time.",
+  "cur.lead": "6 lectures, 3 hours each — and every lecture is a new step in your final project.",
   "cur.1": "Core branding vocabulary, the seven logo types and when to choose each, and four tests every logo must pass: clarity, differentiation, concept and alignment.",
   "cur.2": "Working with different client types, writing the creative brief, preparing a quotation — and starting your final project from the brief.",
   "cur.3": "Turning the brief into keywords, mind-mapping and market research — and from there into a design concept with real meaning.",
@@ -106,7 +110,7 @@ const EN = {
   "pr.i5": "A chance to have your project featured on Behance",
   "pr.tag": "Launch price — this cohort only",
   "pr.instead": "instead of",
-  "pr.until": "Until",
+  "pr.until": "until",
   "pr.note": "Registration and payment are handled through Nzmly.",
 
   "faq.lead": "The questions I'm asked most before people register.",
