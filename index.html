@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="assets/js/pixel.js?v=20261010a"></script>
+  <script src="assets/js/pixel.js?v=20261010b"></script>
   <title>Mohamed Sherif — Brand Identity Designer &amp; Branding Educator</title>
   <meta name="description" content="محمد شريف، مصمم هويات بصرية ومحاضر في البراندنج من القاهرة. أساعد الشركات على بناء هويات بصرية واضحة، وأدرّب المصممين عبر كورس BRAND-SET وجلسات Mentoring فردية.">
   <meta name="author" content="Mohamed Sherif">
-  <meta name="theme-color" content="#F4F3F0">
+  <meta name="theme-color" content="#FFFFFF">
   <!-- Site URL: custom domain (GitHub Pages, see CNAME file) -->
   <link rel="canonical" href="https://mohamed-sherif.com/">
 
@@ -42,7 +42,7 @@
   if(l!=="en"&&l!=="ar"){try{l=localStorage.getItem("ms-lang")}catch(e){}}
   if(l==="en"){document.documentElement.lang="en";document.documentElement.dir="ltr"}})();
   </script>
-  <link rel="stylesheet" href="style.css?v=20261010a">
+  <link rel="stylesheet" href="style.css?v=20261010b">
 
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Person","name":"Mohamed Sherif","jobTitle":"Brand Identity Designer & Branding Educator","address":{"@type":"PostalAddress","addressLocality":"Cairo","addressCountry":"EG"}}
@@ -55,34 +55,42 @@
      ARABIC COPY lives in this file (default language).
      ENGLISH COPY lives in content-en.js — same keys (data-i18n).
      LINKS live in script.js. Buttons use data-link="key", never a raw URL.
-     Type hierarchy (style.css): label → statement → body. One font: Noto Sans Arabic.
+     Layout + type follow apple.com: one centered column (980px),
+     every section = headline + intro + content. See style.css header.
      ========================================================= -->
 
 <nav class="nav" data-i18n-attr="aria-label:nav.label" aria-label="التنقل">
-  <button type="button" class="nav__menu" data-menu-open aria-controls="menu" aria-expanded="false" data-cta="nav_menu"><span class="nav__burger" aria-hidden="true"></span><span data-i18n="nav.menu">القائمة</span></button>
-  <a class="nav__mark" href="#top" data-i18n-attr="aria-label:nav.top" aria-label="العودة للأعلى"><img src="assets/icons/logo-red-black.svg" alt="" width="30" height="21"><span class="nav__name" lang="en" dir="ltr">Mohamed Sherif</span></a>
+  <a class="nav__mark" href="#top" data-i18n-attr="aria-label:nav.top" aria-label="العودة للأعلى"><img src="assets/icons/logo-red-black.svg" alt="" width="28" height="20"><span class="nav__name" lang="en" dir="ltr">Mohamed Sherif</span></a>
+  <ul class="nav__links">
+    <li><a href="#work" data-i18n="nav.work">الأعمال</a></li>
+    <li><a href="#about" data-i18n="nav.about">عنّي</a></li>
+    <li><a href="#services" data-i18n="nav.services">الخدمات</a></li>
+    <li><a href="#feedback" data-i18n="nav.feedback">آراء الطلاب</a></li>
+    <li><a href="#contact" data-i18n="nav.connect">تواصل</a></li>
+  </ul>
   <div class="nav__end">
     <button type="button" class="lang" data-lang-toggle data-cta="lang_toggle_nav"><span class="lang__en">EN</span><span class="lang__ar">عربي</span></button>
     <a class="nav__cta" data-link="workWithMe" data-pixel="Lead" data-cta="nav_work_with_me" data-i18n="cta.work">اعمل معي</a>
+    <button type="button" class="nav__menu" data-menu-open aria-controls="menu" aria-expanded="false" data-cta="nav_menu" data-i18n-attr="aria-label:nav.menu" aria-label="القائمة"><span class="nav__burger" aria-hidden="true"></span></button>
   </div>
 </nav>
 
-<!-- Full-screen menu -->
+<!-- Full-screen menu (phones) -->
 <div class="menu" id="menu" hidden>
   <div class="menu__top">
     <img src="assets/icons/logo-red-white.svg" alt="" width="36" height="25">
     <button type="button" class="menu__x" data-menu-close data-i18n-attr="aria-label:close" aria-label="إغلاق">×</button>
   </div>
   <ol class="menu__links">
-    <li><a href="#work" data-menu-close><span class="menu__n">001</span><span data-i18n="nav.work">الأعمال</span></a></li>
-    <li><a href="#about" data-menu-close><span class="menu__n">002</span><span data-i18n="nav.about">عنّي</span></a></li>
-    <li><a href="#services" data-menu-close><span class="menu__n">003</span><span data-i18n="nav.services">الخدمات</span></a></li>
-    <li><a href="brand-identity/" data-menu-close><span class="menu__n">—</span><span data-i18n="nav.identity">الهوية للشركات</span></a></li>
-    <li><a href="brand-set/" data-menu-close><span class="menu__n">—</span><span lang="en" dir="ltr">BRAND-SET</span></a></li>
-    <li><a href="mentoring/" data-menu-close><span class="menu__n">—</span><span lang="en" dir="ltr">One : One Session</span></a></li>
-    <li><a href="#feedback" data-menu-close><span class="menu__n">004</span><span data-i18n="nav.feedback">آراء الطلاب</span></a></li>
-    <li><a href="#resume" data-menu-close><span class="menu__n">005</span><span data-i18n="nav.resume">الخبرات</span></a></li>
-    <li><a href="#contact" data-menu-close><span class="menu__n">006</span><span data-i18n="nav.connect">تواصل</span></a></li>
+    <li><a href="#work" data-menu-close data-i18n="nav.work">الأعمال</a></li>
+    <li><a href="#about" data-menu-close data-i18n="nav.about">عنّي</a></li>
+    <li><a href="#services" data-menu-close data-i18n="nav.services">الخدمات</a></li>
+    <li><a href="brand-identity/" data-menu-close data-i18n="nav.identity">الهوية للشركات</a></li>
+    <li><a href="brand-set/" data-menu-close><span lang="en" dir="ltr">BRAND-SET</span></a></li>
+    <li><a href="mentoring/" data-menu-close><span lang="en" dir="ltr">One : One Session</span></a></li>
+    <li><a href="#feedback" data-menu-close data-i18n="nav.feedback">آراء الطلاب</a></li>
+    <li><a href="#resume" data-menu-close data-i18n="nav.resume">الخبرات</a></li>
+    <li><a href="#contact" data-menu-close data-i18n="nav.connect">تواصل</a></li>
   </ol>
   <ul class="menu__social" dir="ltr">
     <li><a data-link="instagram" data-cta="menu_instagram">Instagram</a></li>
@@ -92,56 +100,58 @@
   </ul>
 </div>
 
-<!-- HERO: name, one line of positioning, two actions -->
-<header class="hero wrap" id="top">
-  <div class="hero__meta">
-    <p class="label" lang="en" dir="ltr">Brand Identity Designer · Branding Educator</p>
-    <p class="label" data-i18n="hero.where">القاهرة · أعمل مع شركات في مصر والخليج</p>
-  </div>
-  <h1 class="hero__name" lang="en" dir="ltr"><span class="ln"><span>Mohamed Sherif</span></span></h1>
-  <div class="hero__row">
-    <p class="hero__lead" data-i18n="hero.lead">أساعد الشركات على بناء هويات بصرية واضحة ومتّسقة، وأعلّم المصممين كيف يصمّمون هوية <em>أبعد من الشعار.</em></p>
-    <div class="hero__cta">
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="w">
+    <p class="eyebrow" lang="en" dir="ltr">Brand Identity Designer · Branding Educator</p>
+    <h1 class="display" lang="en" dir="ltr">Mohamed Sherif</h1>
+    <p class="intro hero__lead" data-i18n="hero.lead">أساعد الشركات على بناء هويات بصرية واضحة ومتّسقة، وأعلّم المصممين كيف يصمّمون هوية <em>أبعد من الشعار.</em></p>
+    <div class="ctas">
       <a class="btn btn--primary" data-link="workWithMe" data-pixel="Lead" data-cta="hero_work_with_me">
         <span data-i18n="cta.work">اعمل معي</span><span class="btn__en" lang="en">Work With Me</span>
       </a>
-      <a class="go" href="brand-set/" data-cta="hero_learn_with_me"><span class="go__ic" aria-hidden="true"></span><span data-i18n="cta.learn">تعلّم معي</span></a>
+      <a class="go" href="brand-set/" data-cta="hero_learn_with_me"><span data-i18n="cta.learn">تعلّم معي</span><span class="go__ic" aria-hidden="true"></span></a>
     </div>
+    <p class="caption hero__where" data-i18n="hero.where">القاهرة · أعمل مع شركات في مصر والخليج</p>
   </div>
 </header>
 
 <main id="main">
 
-  <!-- 001 SELECTED WORK — add up to 6 projects: image in assets/projects/, link key in LINKS (script.js) -->
-  <section class="s s--first wrap" id="work" aria-labelledby="work-title">
-    <div class="lbl"><span class="lbl__n">001</span><span class="lbl__t" lang="en" dir="ltr">Selected Work</span></div>
-    <div class="work">
-      <a class="card reveal" data-link="project1" data-cta="project_1">
-        <figure class="card__img"><img src="assets/projects/project-1.jpg" alt="Arc De Sol — brand identity by Mohamed Sherif" loading="lazy" width="1200" height="900"></figure>
-        <h3 class="card__t" lang="en" dir="ltr">Arc De Sol</h3>
-      </a>
-      <a class="card reveal" data-link="project2" data-cta="project_2">
-        <figure class="card__img"><img src="assets/projects/project-2.jpg" alt="Elite Construction — brand identity by Mohamed Sherif" loading="lazy" width="1200" height="900"></figure>
-        <h3 class="card__t" lang="en" dir="ltr">Elite Construction</h3>
-      </a>
-      <a class="card reveal" data-link="project3" data-cta="project_3">
-        <figure class="card__img"><img src="assets/projects/project-3.jpg" alt="Comet Group — brand identity by Mohamed Sherif" loading="lazy" width="1200" height="900"></figure>
-        <h3 class="card__t" lang="en" dir="ltr">Comet Group</h3>
-      </a>
-      <a class="card reveal" data-link="project4" data-cta="project_4">
-        <figure class="card__img"><img src="assets/projects/project-4.jpg" alt="Mashariq — brand identity by Mohamed Sherif" loading="lazy" width="1200" height="900"></figure>
-        <h3 class="card__t" lang="en" dir="ltr">Mashariq</h3>
-      </a>
-    </div>
-    <div class="row-end">
-      <p class="body" data-i18n="work.lead">مختارات من هويات صمّمتها لشركات في قطاعات مختلفة، والأرشيف الكامل على Behance.</p>
-      <a class="go" data-link="portfolio" data-cta="portfolio"><span class="go__ic" aria-hidden="true"></span><span data-i18n="work.cta">شاهد ملف الأعمال كاملًا</span></a>
+  <!-- SELECTED WORK — image in assets/projects/, link key in LINKS (script.js) -->
+  <section class="sec" id="work" aria-labelledby="work-title">
+    <div class="w">
+      <header class="head">
+        <h2 id="work-title" class="headline" lang="en" dir="ltr">Selected Work</h2>
+        <p class="intro" data-i18n="work.lead">مختارات من هويات صمّمتها لشركات في قطاعات مختلفة، والأرشيف الكامل على Behance.</p>
+      </header>
+      <div class="work">
+        <a class="card reveal" data-link="project1" data-cta="project_1">
+          <figure class="card__img"><img src="assets/projects/project-1.jpg" alt="Arc De Sol — brand identity by Mohamed Sherif" loading="lazy" width="1200" height="900"></figure>
+          <h3 class="card__t" lang="en" dir="ltr">Arc De Sol</h3><p class="card__c" lang="en" dir="ltr">Brand Identity</p>
+        </a>
+        <a class="card reveal" data-link="project2" data-cta="project_2">
+          <figure class="card__img"><img src="assets/projects/project-2.jpg" alt="Elite Construction — brand identity by Mohamed Sherif" loading="lazy" width="1200" height="900"></figure>
+          <h3 class="card__t" lang="en" dir="ltr">Elite Construction</h3><p class="card__c" lang="en" dir="ltr">Brand Identity</p>
+        </a>
+        <a class="card reveal" data-link="project3" data-cta="project_3">
+          <figure class="card__img"><img src="assets/projects/project-3.jpg" alt="Comet Group — brand identity by Mohamed Sherif" loading="lazy" width="1200" height="900"></figure>
+          <h3 class="card__t" lang="en" dir="ltr">Comet Group</h3><p class="card__c" lang="en" dir="ltr">Brand Identity</p>
+        </a>
+        <a class="card reveal" data-link="project4" data-cta="project_4">
+          <figure class="card__img"><img src="assets/projects/project-4.jpg" alt="Mashariq — brand identity by Mohamed Sherif" loading="lazy" width="1200" height="900"></figure>
+          <h3 class="card__t" lang="en" dir="ltr">Mashariq</h3><p class="card__c" lang="en" dir="ltr">Brand Identity</p>
+        </a>
+      </div>
+      <div class="ctas">
+        <a class="go" data-link="portfolio" data-cta="portfolio"><span data-i18n="work.cta">شاهد ملف الأعمال كاملًا</span><span class="go__ic" aria-hidden="true"></span></a>
+      </div>
     </div>
   </section>
 
-  <!-- CLIENTS — logos in assets/clients/ (white PNG; shown black here). Add one: copy an <li> in BOTH lists. -->
+  <!-- CLIENTS — logos in assets/clients/ (white PNG; shown dark here). Add one: copy an <li> in BOTH lists. -->
   <section class="clients" aria-labelledby="clients-title">
-    <p id="clients-title" class="label clients__t wrap" data-i18n="clients.t">علامات عملت معها</p>
+    <p id="clients-title" class="caption clients__t" data-i18n="clients.t">علامات عملت معها</p>
     <div class="marquee" dir="ltr">
       <ul class="marquee__track">
         <li><img src="assets/clients/calla-pharmacy.png" alt="Calla Pharmacy" width="454" height="96" loading="lazy"></li>
@@ -190,52 +200,62 @@
     </div>
   </section>
 
-  <!-- 002 ABOUT -->
-  <section class="s wrap" id="about" aria-labelledby="about-title">
-    <div class="lbl"><span class="lbl__n">002</span><h2 id="about-title" class="lbl__t" lang="en" dir="ltr">About</h2></div>
-    <div class="about">
-      <figure class="about__photo reveal">
-        <img src="assets/images/mohamed-sherif-sm.jpg" alt="محمد شريف — مصمم هويات بصرية" data-i18n-attr="alt:about.photoAlt" width="640" height="640" loading="lazy">
-      </figure>
-      <div class="about__body">
-        <p class="statement reveal" data-i18n="about.big1">أنا محمد شريف، مصمم هويات بصرية ومحاضر في البراندنج (Branding) من القاهرة. أعمل مع شركات وعلامات في مصر والخليج على بناء هوياتها البصرية، من الشعار حتى دليل الهوية.</p>
-        <p class="body reveal" data-i18n="about.big2">وإلى جانب ذلك، أشارك هذه الخبرة مع المصممين من خلال كورسات عملية وجلسات Mentoring فردية.</p>
-        <dl class="stats reveal">
-          <div><dt class="stat" dir="ltr">+<span data-count="850">850</span></dt><dd data-i18n="about.f5">طالب ومصمم تعلّموا معي</dd></div>
-          <div><dt class="stat" dir="ltr">+<span data-count="10">10</span></dt><dd data-i18n="about.f1">سنوات خبرة في التصميم</dd></div>
-          <div><dt class="stat" dir="ltr">+<span data-count="90">90</span></dt><dd data-i18n="about.f2">عميل وعلامة تجارية عملت معهم</dd></div>
-        </dl>
-        <ul class="roles reveal">
-          <li><a class="role" data-link="idntik" data-cta="about_idntik"><span class="role__name" lang="en" dir="ltr">Idntik</span><span class="role__d"><span data-i18n="about.founder">مؤسس</span> · <span data-i18n="about.f3">استوديو متخصص في الهوية البصرية</span></span><span class="role__arrow" aria-hidden="true">↗</span></a></li>
-          <li><a class="role" data-link="branders" data-cta="about_branders"><span class="role__name" lang="en" dir="ltr">Branders</span><span class="role__d"><span data-i18n="about.partner">شريك ومدير تنفيذي</span> · <span data-i18n="about.f4">مجتمع ومنصة لتعليم التصميم</span></span><span class="role__arrow" aria-hidden="true">↗</span></a></li>
-        </ul>
+  <!-- ABOUT -->
+  <section class="sec sec--grey" id="about" aria-labelledby="about-title">
+    <div class="w">
+      <header class="head">
+        <h2 id="about-title" class="headline" lang="en" dir="ltr">About</h2>
+        <p class="intro" data-i18n="about.big1">أنا محمد شريف، مصمم هويات بصرية ومحاضر في البراندنج (Branding) من القاهرة. أعمل مع شركات وعلامات في مصر والخليج على بناء هوياتها البصرية، من الشعار حتى دليل الهوية.</p>
+      </header>
+      <div class="about">
+        <figure class="about__photo reveal"><img src="assets/images/mohamed-sherif-sm.jpg" alt="محمد شريف — مصمم هويات بصرية" data-i18n-attr="alt:about.photoAlt" width="640" height="640" loading="lazy"></figure>
+        <div class="about__body reveal">
+          <p class="body" data-i18n="about.big2">وإلى جانب ذلك، أشارك هذه الخبرة مع المصممين من خلال كورسات عملية وجلسات Mentoring فردية.</p>
+          <dl class="stats">
+            <div><dt class="stat" dir="ltr">+<span data-count="850">850</span></dt><dd data-i18n="about.f5">طالب ومصمم تعلّموا معي</dd></div>
+            <div><dt class="stat" dir="ltr">+<span data-count="10">10</span></dt><dd data-i18n="about.f1">سنوات خبرة في التصميم</dd></div>
+            <div><dt class="stat" dir="ltr">+<span data-count="90">90</span></dt><dd data-i18n="about.f2">عميل وعلامة تجارية عملت معهم</dd></div>
+          </dl>
+          <ul class="rows">
+            <li><a class="row" data-link="idntik" data-cta="about_idntik"><span class="row__t" lang="en" dir="ltr">Idntik</span><span class="row__d"><span data-i18n="about.founder">مؤسس</span> · <span data-i18n="about.f3">استوديو متخصص في الهوية البصرية</span></span><span class="row__go" aria-hidden="true">↗</span></a></li>
+            <li><a class="row" data-link="branders" data-cta="about_branders"><span class="row__t" lang="en" dir="ltr">Branders</span><span class="row__d"><span data-i18n="about.partner">شريك ومدير تنفيذي</span> · <span data-i18n="about.f4">مجتمع ومنصة لتعليم التصميم</span></span><span class="row__go" aria-hidden="true">↗</span></a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 003 SERVICES — titles only; each one has its own page. Add a service: copy one <li>. -->
-  <section class="s wrap" id="services" aria-labelledby="services-title">
-    <div class="lbl"><span class="lbl__n">003</span><h2 id="services-title" class="lbl__t" lang="en" dir="ltr">Services</h2></div>
-    <p class="statement statement--narrow reveal" data-i18n="do.lead">خدمة للشركات، وثلاث طرق للتعلّم، وفكرة واحدة تجمعها: الهوية قرار، لا مجرد شكل.</p>
-    <ol class="svc">
-      <li><a class="svc__row" href="brand-identity/" data-cta="svc_brand_identity"><span class="svc__n">01</span><span class="svc__t" lang="en" dir="ltr">Brand Identity</span><span class="svc__d" data-i18n="svc.t1">تصميم الهوية للشركات</span><span class="svc__go" aria-hidden="true"></span></a></li>
-      <li><a class="svc__row" href="brand-set/" data-cta="svc_brandset"><span class="svc__n">02</span><span class="svc__t" lang="en" dir="ltr">BRAND-SET</span><span class="svc__d" data-i18n="svc.t2">كورس الهوية البصرية</span><span class="svc__go" aria-hidden="true"></span></a></li>
-      <li><a class="svc__row" href="mentoring/" data-cta="svc_mentoring"><span class="svc__n">03</span><span class="svc__t" lang="en" dir="ltr">One : One Session</span><span class="svc__d" data-i18n="svc.t3">جلسات Mentoring فردية</span><span class="svc__go" aria-hidden="true"></span></a></li>
-      <li><a class="svc__row" href="#webinar" data-cta="svc_webinar"><span class="svc__n">04</span><span class="svc__t" lang="en" dir="ltr">Free Webinars</span><span class="svc__d" data-i18n="svc.t4">ويبينارات مجانية</span><span class="svc__go" aria-hidden="true"></span></a></li>
-    </ol>
+  <!-- SERVICES — titles only; each one has its own page. Add a service: copy one <a class="tile">. -->
+  <section class="sec" id="services" aria-labelledby="services-title">
+    <div class="w">
+      <header class="head">
+        <h2 id="services-title" class="headline" lang="en" dir="ltr">Services</h2>
+        <p class="intro" data-i18n="do.lead">خدمة للشركات، وثلاث طرق للتعلّم، وفكرة واحدة تجمعها: الهوية قرار، لا مجرد شكل.</p>
+      </header>
+      <div class="tiles">
+        <a class="tile reveal" href="brand-identity/" data-cta="svc_brand_identity"><span class="tile__n">01</span><span class="tile__t" lang="en" dir="ltr">Brand Identity</span><span class="tile__d" data-i18n="svc.t1">تصميم الهوية للشركات</span><span class="tile__go go__ic" aria-hidden="true"></span></a>
+        <a class="tile reveal" href="brand-set/" data-cta="svc_brandset"><span class="tile__n">02</span><span class="tile__t" lang="en" dir="ltr">BRAND-SET</span><span class="tile__d" data-i18n="svc.t2">كورس الهوية البصرية</span><span class="tile__go go__ic" aria-hidden="true"></span></a>
+        <a class="tile reveal" href="mentoring/" data-cta="svc_mentoring"><span class="tile__n">03</span><span class="tile__t" lang="en" dir="ltr">One : One Session</span><span class="tile__d" data-i18n="svc.t3">جلسات Mentoring فردية</span><span class="tile__go go__ic" aria-hidden="true"></span></a>
+        <a class="tile reveal" href="#webinar" data-cta="svc_webinar"><span class="tile__n">04</span><span class="tile__t" lang="en" dir="ltr">Free Webinars</span><span class="tile__d" data-i18n="svc.t4">ويبينارات مجانية</span><span class="tile__go go__ic" aria-hidden="true"></span></a>
+      </div>
+    </div>
   </section>
 
-  <!-- 004 STUDENT FEEDBACK — screenshots in assets/testimonials/ (t-N.jpg + t-N-full.jpg) -->
-  <section class="s wrap" id="feedback" aria-labelledby="feedback-title">
-    <div class="lbl"><span class="lbl__n">004</span><h2 id="feedback-title" class="lbl__t" lang="en" dir="ltr">Student Feedback</h2></div>
-    <p class="statement statement--narrow reveal" data-i18n="fb.lead">أكثر من 850 طالبًا تعلّموا معي. هذه بعض كلماتهم كما وصلتني.</p>
-    <dl class="stats stats--3 reveal">
-      <div><dt class="stat" dir="ltr"><span data-count="98.6" data-decimals="1">98.6</span><i>%</i></dt><dd data-i18n="fb.s1">قيّموا معرفة المحاضر ومهاراته بـ «ممتاز»</dd></div>
-      <div><dt class="stat" dir="ltr"><span data-count="97.1" data-decimals="1">97.1</span><i>%</i></dt><dd data-i18n="fb.s2">قيّموا أسلوبه في الشرح والتفاعل بـ «ممتاز»</dd></div>
-      <div><dt class="stat" dir="ltr"><span data-count="95.7" data-decimals="1">95.7</span><i>%</i></dt><dd data-i18n="fb.s3">قيّموا التجربة التدريبية ككل بـ «ممتاز»</dd></div>
-    </dl>
-    <p class="note" data-i18n="fb.src">من استبيان 69 طالبًا بعد إحدى دفعات كورس BRAND-SET.</p>
-    <div class="proof-wrap">
+  <!-- STUDENT FEEDBACK — screenshots in assets/testimonials/ (t-N.jpg + t-N-full.jpg) -->
+  <section class="sec sec--grey" id="feedback" aria-labelledby="feedback-title">
+    <div class="w">
+      <header class="head">
+        <h2 id="feedback-title" class="headline" lang="en" dir="ltr">Student Feedback</h2>
+        <p class="intro" data-i18n="fb.lead">أكثر من 850 طالبًا تعلّموا معي. هذه بعض كلماتهم كما وصلتني.</p>
+      </header>
+      <dl class="stats stats--center reveal">
+        <div><dt class="stat" dir="ltr"><span data-count="98.6" data-decimals="1">98.6</span>%</dt><dd data-i18n="fb.s1">قيّموا معرفة المحاضر ومهاراته بـ «ممتاز»</dd></div>
+        <div><dt class="stat" dir="ltr"><span data-count="97.1" data-decimals="1">97.1</span>%</dt><dd data-i18n="fb.s2">قيّموا أسلوبه في الشرح والتفاعل بـ «ممتاز»</dd></div>
+        <div><dt class="stat" dir="ltr"><span data-count="95.7" data-decimals="1">95.7</span>%</dt><dd data-i18n="fb.s3">قيّموا التجربة التدريبية ككل بـ «ممتاز»</dd></div>
+      </dl>
+      <p class="caption center" data-i18n="fb.src">من استبيان 69 طالبًا بعد إحدى دفعات كورس BRAND-SET.</p>
+    </div>
+    <div class="w w--wide proof-wrap">
       <ul class="proof" data-proof dir="ltr">
         <li><button type="button" class="proof__item" data-zoom data-full="assets/testimonials/t-1-full.jpg"><img src="assets/testimonials/t-1.jpg" alt="رأي طلاب BRAND-SET" data-i18n-attr="alt:fb.alt" width="640" height="800" loading="lazy"></button></li>
         <li><button type="button" class="proof__item" data-zoom data-full="assets/testimonials/t-2-full.jpg"><img src="assets/testimonials/t-2.jpg" alt="رأي طلاب BRAND-SET" data-i18n-attr="alt:fb.alt" width="640" height="800" loading="lazy"></button></li>
@@ -255,8 +275,8 @@
         <li><button type="button" class="proof__item" data-zoom data-full="assets/testimonials/t-16-full.jpg"><img src="assets/testimonials/t-16.jpg" alt="رأي طلاب BRAND-SET" data-i18n-attr="alt:fb.alt" width="640" height="800" loading="lazy"></button></li>
       </ul>
     </div>
-    <div class="proof__bar">
-      <p class="note" data-i18n="fb.hint">اسحب لعرض المزيد، واضغط على أي صورة لتكبيرها.</p>
+    <div class="w proof__bar">
+      <p class="caption" data-i18n="fb.hint">اسحب لعرض المزيد، واضغط على أي صورة لتكبيرها.</p>
       <div class="proof__nav" dir="ltr">
         <button type="button" class="proof__btn" data-proof-prev data-i18n-attr="aria-label:fb.prev" aria-label="السابق"><span class="arw arw--l" aria-hidden="true"></span></button>
         <button type="button" class="proof__btn" data-proof-next data-i18n-attr="aria-label:fb.next" aria-label="التالي"><span class="arw" aria-hidden="true"></span></button>
@@ -264,52 +284,57 @@
     </div>
   </section>
 
-  <!-- 005 FREE WEBINAR (Luma). To hide: add hidden → <section hidden …> -->
-  <section class="s wrap" id="webinar" aria-labelledby="webinar-title">
-    <div class="lbl"><span class="lbl__n">005</span><span class="lbl__t" lang="en" dir="ltr">Free Webinar</span></div>
-    <div class="webinar">
+  <!-- FREE WEBINAR (Luma). To hide: add hidden → <section hidden …> -->
+  <section class="sec" id="webinar" aria-labelledby="webinar-title">
+    <div class="w">
+      <header class="head">
+        <p class="eyebrow" lang="en" dir="ltr">Free Webinar</p>
+        <h2 id="webinar-title" class="headline" lang="en" dir="ltr">Branding The Big Picture</h2>
+        <p class="intro" data-i18n="web.desc">ساعتان تنتقل فيهما من رؤية العلامة كشعار وألوان، إلى فهم ما يصنع قيمتها فعلًا.</p>
+      </header>
       <figure class="webinar__cover reveal"><img src="assets/images/webinar-big-picture.jpg" alt="Branding The Big Picture — Webinar by Mohamed Sherif" width="1600" height="902" loading="lazy"></figure>
-      <div class="webinar__body reveal">
-        <h2 id="webinar-title" class="h3" lang="en" dir="ltr">Branding The Big Picture</h2>
-        <p class="body" data-i18n="web.desc">ساعتان تنتقل فيهما من رؤية العلامة كشعار وألوان، إلى فهم ما يصنع قيمتها فعلًا.</p>
-        <dl class="facts">
-          <div><dt data-i18n="web.dur">المدة</dt><dd data-i18n="web.durV">ساعتان · أونلاين</dd></div>
-          <div><dt data-i18n="web.price">السعر</dt><dd data-i18n="web.priceV">مجاني</dd></div>
-        </dl>
-        <a class="btn btn--dark" data-link="webinar" data-cta="webinar_register">
-          <span data-i18n="web.cta">اعرض المواعيد وسجّل</span><span class="btn__en" lang="en">See Dates &amp; Register</span>
-        </a>
-        <p class="note" data-i18n="web.note">جميع الويبينارات القادمة متاحة على صفحتي في Luma.</p>
+      <dl class="facts facts--center">
+        <div><dt data-i18n="web.dur">المدة</dt><dd data-i18n="web.durV">ساعتان · أونلاين</dd></div>
+        <div><dt data-i18n="web.price">السعر</dt><dd data-i18n="web.priceV">مجاني</dd></div>
+      </dl>
+      <div class="ctas">
+        <a class="btn btn--dark" data-link="webinar" data-cta="webinar_register"><span data-i18n="web.cta">اعرض المواعيد وسجّل</span><span class="btn__en" lang="en">See Dates &amp; Register</span></a>
       </div>
+      <p class="caption center" data-i18n="web.note">جميع الويبينارات القادمة متاحة على صفحتي في Luma.</p>
     </div>
   </section>
 
-  <!-- 006 RESUME -->
-  <section class="s wrap" id="resume" aria-labelledby="resume-title">
-    <div class="lbl"><span class="lbl__n">006</span><h2 id="resume-title" class="lbl__t" lang="en" dir="ltr">Resume</h2></div>
-    <p class="statement statement--narrow reveal" data-i18n="res.lead">أعمل في التصميم منذ 2016، ومتخصص في الهوية البصرية منذ 2020، لأنها المجال الذي أحبه وأقدّم فيه أفضل ما لدي.</p>
-    <ol class="jobs">
-      <li class="job"><span class="job__t" lang="en" dir="ltr">Founder &amp; Creative Director</span><span class="job__co" lang="en" dir="ltr">Idntik</span><p class="job__d" data-i18n="res.r0">استوديو أسسته لتصميم الهويات البصرية للشركات في مصر والخليج.</p></li>
-      <li class="job"><span class="job__t" lang="en" dir="ltr">Art Director</span><span class="job__co" lang="en" dir="ltr">Level A Agency</span><p class="job__d" data-i18n="res.r1">إدارة الاتجاه الفني (Art Direction) للمشاريع، من الفكرة حتى التسليم.</p></li>
-      <li class="job"><span class="job__t" lang="en" dir="ltr">Sr. Branding Designer</span><span class="job__co" lang="en" dir="ltr">The Generator</span><p class="job__d" data-i18n="res.r2">تصميم هويات بصرية لعلامات تجارية، أغلبها لعملاء في الخليج.</p></li>
-      <li class="job"><span class="job__t" lang="en" dir="ltr">Sr. Branding Designer</span><span class="job__co" lang="en" dir="ltr">Iconic Branding</span><p class="job__d" data-i18n="res.r3">تصميم هويات بصرية ومطبوعات لعلامات في قطاعات متنوعة.</p></li>
-      <li class="job"><span class="job__t" lang="en" dir="ltr">Sr. Graphic Designer</span><span class="job__co" lang="en" dir="ltr">Social Nuts</span><p class="job__d" data-i18n="res.r4">تصميمات السوشيال ميديا والحملات الإعلانية والمطبوعات.</p></li>
-    </ol>
-    <a class="go" data-link="linkedin" data-cta="resume_linkedin"><span class="go__ic" aria-hidden="true"></span><span lang="en" dir="ltr">LinkedIn</span></a>
+  <!-- RESUME -->
+  <section class="sec sec--grey" id="resume" aria-labelledby="resume-title">
+    <div class="w">
+      <header class="head">
+        <h2 id="resume-title" class="headline" lang="en" dir="ltr">Resume</h2>
+        <p class="intro" data-i18n="res.lead">أعمل في التصميم منذ 2016، ومتخصص في الهوية البصرية منذ 2020، لأنها المجال الذي أحبه وأقدّم فيه أفضل ما لدي.</p>
+      </header>
+      <ol class="jobs">
+        <li class="job"><div class="job__h"><span class="job__t" lang="en" dir="ltr">Founder &amp; Creative Director</span><span class="job__co" lang="en" dir="ltr">Idntik</span></div><p class="job__d" data-i18n="res.r0">استوديو أسسته لتصميم الهويات البصرية للشركات في مصر والخليج.</p></li>
+        <li class="job"><div class="job__h"><span class="job__t" lang="en" dir="ltr">Art Director</span><span class="job__co" lang="en" dir="ltr">Level A Agency</span></div><p class="job__d" data-i18n="res.r1">إدارة الاتجاه الفني (Art Direction) للمشاريع، من الفكرة حتى التسليم.</p></li>
+        <li class="job"><div class="job__h"><span class="job__t" lang="en" dir="ltr">Sr. Branding Designer</span><span class="job__co" lang="en" dir="ltr">The Generator</span></div><p class="job__d" data-i18n="res.r2">تصميم هويات بصرية لعلامات تجارية، أغلبها لعملاء في الخليج.</p></li>
+        <li class="job"><div class="job__h"><span class="job__t" lang="en" dir="ltr">Sr. Branding Designer</span><span class="job__co" lang="en" dir="ltr">Iconic Branding</span></div><p class="job__d" data-i18n="res.r3">تصميم هويات بصرية ومطبوعات لعلامات في قطاعات متنوعة.</p></li>
+        <li class="job"><div class="job__h"><span class="job__t" lang="en" dir="ltr">Sr. Graphic Designer</span><span class="job__co" lang="en" dir="ltr">Social Nuts</span></div><p class="job__d" data-i18n="res.r4">تصميمات السوشيال ميديا والحملات الإعلانية والمطبوعات.</p></li>
+      </ol>
+      <div class="ctas">
+        <a class="go" data-link="linkedin" data-cta="resume_linkedin"><span lang="en" dir="ltr">LinkedIn</span><span class="go__ic" aria-hidden="true"></span></a>
+      </div>
+    </div>
   </section>
 </main>
 
-<!-- 007 CONTACT + FOOTER (one black block) -->
+<!-- CONTACT + FOOTER (one black block) -->
 <footer class="end" id="contact" aria-labelledby="contact-title">
-  <div class="wrap">
-    <div class="lbl lbl--dark"><span class="lbl__n">007</span><span class="lbl__t" lang="en" dir="ltr">Contact</span></div>
-    <h2 id="contact-title" class="end__t" lang="en" dir="ltr">Let’s Work Together<i>.</i></h2>
-    <div class="end__row">
-      <p class="end__lead" data-i18n="proc.lead">إذا كنت تبحث عن هوية بصرية تنطلق من فهم حقيقي لنشاطك وجمهورك، فهنا نبدأ.</p>
-      <div class="end__cta">
-        <a class="btn btn--primary" data-link="workWithMe" data-pixel="Lead" data-cta="contact_start_project"><span data-i18n="proc.cta">ابدأ مشروعك</span><span class="btn__en" lang="en">Start Your Project</span></a>
-        <a class="go go--light" data-link="email" data-cta="contact_email"><span class="go__ic" aria-hidden="true"></span><span data-i18n="cta.email">راسلني بالبريد</span></a>
-      </div>
+  <div class="w">
+    <div class="head">
+      <h2 id="contact-title" class="display" lang="en" dir="ltr">Let’s Work Together<em>.</em></h2>
+      <p class="intro" data-i18n="proc.lead">إذا كنت تبحث عن هوية بصرية تنطلق من فهم حقيقي لنشاطك وجمهورك، فهنا نبدأ.</p>
+    </div>
+    <div class="ctas">
+      <a class="btn btn--primary" data-link="workWithMe" data-pixel="Lead" data-cta="contact_start_project"><span data-i18n="proc.cta">ابدأ مشروعك</span><span class="btn__en" lang="en">Start Your Project</span></a>
+      <a class="go go--light" data-link="email" data-cta="contact_email"><span data-i18n="cta.email">راسلني بالبريد</span><span class="go__ic" aria-hidden="true"></span></a>
     </div>
     <div class="end__grid">
       <ul class="end__nav">
@@ -332,7 +357,7 @@
       </ul>
     </div>
     <div class="foot" dir="ltr">
-      <span class="foot__id"><img src="assets/icons/logo-red-white.svg" alt="" width="30" height="21"><span>Mohamed Sherif</span></span>
+      <span class="foot__id"><img src="assets/icons/logo-red-white.svg" alt="" width="28" height="20"><span>Mohamed Sherif</span></span>
       <span>Brand Identity Designer · Branding Educator</span>
       <span>© 2026</span>
     </div>
@@ -343,14 +368,13 @@
 <dialog class="drawer" id="interest" aria-labelledby="interest-title">
   <div class="drawer__in">
     <button type="button" class="drawer__x" data-close data-i18n-attr="aria-label:close" aria-label="إغلاق">×</button>
-    <p class="label" lang="en" dir="ltr">BRAND-SET Course · Interest List</p>
+    <p class="eyebrow" lang="en" dir="ltr">BRAND-SET Course · Interest List</p>
     <h2 id="interest-title" class="drawer__t" data-i18n="int.t">قائمة الاهتمام</h2>
     <p class="drawer__p" data-i18n="int.p">سجّل اهتمامك لتصلك تفاصيل الدفعة القادمة أولًا، دون أي التزام بالدفع.</p>
     <div class="drawer__form" data-form="brandSetInterest"></div>
   </div>
 </dialog>
 
-<!-- Feedback zoom -->
 <dialog class="zoom" id="zoom" data-i18n-attr="aria-label:fb.zoom" aria-label="رأي طالب مكبّر">
   <button type="button" class="zoom__x" data-close data-i18n-attr="aria-label:close" aria-label="إغلاق">×</button>
   <img class="zoom__img" src="data:," alt="">
@@ -358,7 +382,7 @@
 
 <div class="toast" role="status" aria-live="polite"></div>
 
-<script src="content-en.js?v=20261010a" defer></script>
-<script src="script.js?v=20261010a" defer></script>
+<script src="content-en.js?v=20261010b" defer></script>
+<script src="script.js?v=20261010b" defer></script>
 </body>
 </html>
