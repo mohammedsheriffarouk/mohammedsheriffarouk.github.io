@@ -359,3 +359,9 @@ html[lang=ar] .bs-final__t:not([lang=en]){letter-spacing:0}
 
 /* Intentional line break in intros (desktop/tablet only; phones wrap naturally) */
 @media (max-width:734px){.br-d{display:none}}
+
+/* Service tiles: everything centered (number, title, line, arrow) */
+.tile{align-items:center;justify-content:center;text-align:center;gap:10px}
+.tile__t{margin-top:0}
+.tile__t[lang=en]{direction:ltr}
+.tile__go{position:static;margin-top:8px}
