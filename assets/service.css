@@ -213,3 +213,6 @@ html[dir=ltr] .bs-inst .bs-head,html[dir=ltr] .bs-inst .bs-head__t{text-align:le
 @media (max-width:1068px){html .bs-inst .bs-head,html .bs-inst .bs-head__t{text-align:center}}
 
 .foot__id{min-height:44px}
+/* Headings: CAPITAL + LIGHT (mirrors style.css; service.css loads later) */
+.bs-hero__name,.bs-head__t,.bs-final__t{font-weight:300;text-transform:uppercase;letter-spacing:.02em}
+html[lang=ar] .bs-final__t:not([lang=en]){letter-spacing:0}

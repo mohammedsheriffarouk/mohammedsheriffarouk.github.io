@@ -348,3 +348,11 @@ html[dir=ltr] .drawer[open]{transform:none}
   .marquee__track[aria-hidden]{display:none}
 }
 @media print{.nav,.drawer,.toast,.menu{display:none}}
+
+/* ---------- Headings: CAPITAL + LIGHT ----------
+   Same Apple sizes; weight 300, uppercase, slight positive tracking (caps need air).
+   Arabic headings: light 300 too (no case in Arabic). Item titles stay semibold
+   so the hierarchy keeps one contrast step under the light headings. */
+.display,.headline,.bs-head__t,.bs-hero__name,.bs-final__t{font-weight:300;text-transform:uppercase;letter-spacing:.02em}
+html[lang=ar] .bs-final__t:not([lang=en]){letter-spacing:0}
+.display em,.end .display em{font-weight:300}
