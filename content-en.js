@@ -4,6 +4,11 @@
    data-i18n="key" in index.html. Edit the text, keep the key.
    ========================================================= */
 const EN = {
+  "nav.identity": "Brand Identity",
+  "svc.t4": "Free webinars",
+  "svc.t3": "1:1 mentoring sessions",
+  "svc.t2": "The visual identity course",
+  "svc.t1": "Brand identity for companies",
   "prog.date": "Friday, 23 October 2026",
   "men.s1.note": "Booking is through Google Calendar; you'll receive the meeting link once it's confirmed.",
   "book.t": "Book Your Free Intro Session",
