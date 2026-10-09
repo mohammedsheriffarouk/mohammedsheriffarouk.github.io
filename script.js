@@ -12,8 +12,8 @@ const LINKS = {
   // Free intro session (Nzmly free product, Luma, or Calendly)
   freeSession: "https://calendar.app.google/H2Ncc1gTvNGskbZp8",
 
-  // Upcoming webinar — Luma event page (lu.ma/…)
-  webinar:     "https://luma.com/user/MohamedSherif",
+  // Free webinar (recorded) — Nzmly
+  webinar:     "https://mohamed-sherifco.nzmly.com/l/wddKdsdWNA",
 
   // "Work With Me" — a Nzmly service page, a Tally inquiry form, or WhatsApp
   workWithMe:  "https://tally.so/r/VL2L5v?utm_source=website",
