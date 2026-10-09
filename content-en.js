@@ -59,6 +59,7 @@ const EN = {
   "nav.connect": "Contact",
   "nav.faq": "FAQ",
 
+  "hero.where": "Cairo · Working with companies across Egypt & the Gulf",
   "hero.lead": "I help companies build clear, consistent visual identities — and teach designers to design identity <em>beyond the logo.</em>",
   "cta.work": "Work With Me",
   "cta.learn": "Learn With Me",
