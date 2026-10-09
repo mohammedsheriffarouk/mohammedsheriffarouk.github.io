@@ -95,7 +95,7 @@ html[lang=ar] .caption:not([lang=en]){font-size:13px}
 /* Section head: centered headline + intro (Apple pattern) */
 .head{text-align:center;margin-bottom:calc(var(--sec) * .5)}
 .head .eyebrow{margin-bottom:10px}
-.head .intro{max-width:640px;margin:16px auto 0}
+.head .intro{max-width:720px;margin:16px auto 0}
 .ctas{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:16px 32px;margin-top:40px}
 
 /* ---------- Buttons ---------- */
@@ -356,3 +356,6 @@ html[dir=ltr] .drawer[open]{transform:none}
 .display,.headline,.bs-head__t,.bs-hero__name,.bs-final__t{font-weight:300;text-transform:uppercase;letter-spacing:.02em}
 html[lang=ar] .bs-final__t:not([lang=en]){letter-spacing:0}
 .display em,.end .display em{font-weight:300}
+
+/* Intentional line break in intros (desktop/tablet only; phones wrap naturally) */
+@media (max-width:734px){.br-d{display:none}}
