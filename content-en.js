@@ -76,7 +76,7 @@ const EN = {
   "about.partner": "Partner & Managing Director",
   "about.f4": "Design community & education platform",
 
-  "do.lead": "One service for companies, three ways to learn — and one idea behind them all: identity is a decision, not a look.",
+  "do.lead": "One service for companies, three ways to learn —<br class='br-d'> and one idea behind them all: identity is a decision, not a look.",
   "do.a1.t": "Identities that work",
   "do.a1.p": "A complete visual identity shaped around your business and your audience, and just as clear at every touchpoint.",
   "do.a1.l1": "Logo design",
@@ -132,7 +132,7 @@ const EN = {
 
   "web.lead": "Start for free with an open webinar — no commitment.",
   "web.next": "Next webinar",
-  "web.desc": "Two hours to look past the logo and colors — and understand what really gives a brand its value.",
+  "web.desc": "Two hours to look past the logo and colors —<br class='br-d'> and understand what really gives a brand its value.",
   "web.date": "Date",
   "web.dur": "Duration",
   "web.durV": "2 hours · recorded",
@@ -141,7 +141,7 @@ const EN = {
   "web.cta": "Watch Free Now",
   "web.note": "The full recording is available now, free on Nzmly.",
 
-  "work.lead": "A selection of identities designed for companies across different sectors. The full archive is on Behance.",
+  "work.lead": "A selection of identities designed for companies<br class='br-d'> across different sectors. The full archive is on Behance.",
   "work.cta": "View Full Portfolio",
 
   "men.lead": "One-to-one sessions for designers who want to grow with more clarity and momentum. We review your work together, pinpoint your strengths and what to develop next, and you leave every session with practical steps you can apply straight away.",
