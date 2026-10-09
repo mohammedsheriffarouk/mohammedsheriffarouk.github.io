@@ -65,7 +65,7 @@
   {"@context":"https://schema.org","@type":"Course","name":"BRAND-SET","description":"A hands-on visual identity course: build a complete brand identity following the steps of real projects.","inLanguage":"ar","provider":{"@type":"Person","name":"Mohamed Sherif","url":"https://mohamed-sherif.com/"}}
   </script>
 </head>
-<body class="bs">
+<body class="bs bs--light">
 <a class="skip" href="#main" data-i18n="skip">تخطَّ إلى المحتوى</a>
 <!-- Arabic copy lives here; English in brand-set/content-en.js.
      Price, dates, seats and schedule: COHORT CONFIG (window.BRANDSET) in <head>.
@@ -81,12 +81,12 @@
 </nav>
 
 <!-- HERO: promise on one side, course "ticket" on the other -->
-<header class="bs-hero" id="top">
-  <div class="atmos" aria-hidden="true"></div>
-  <div class="bs-wrap bs-hero__grid">
+<header class="bs-hero bs-hero--art" id="top">
+  <div class="bs-wrap">
+    <h1 class="bs-wordmark"><img src="../assets/images/brand-set-wordmark.png" alt="BRAND-SET" width="1560" height="306" fetchpriority="high"></h1>
+    <div class="bs-hero__grid">
     <div class="bs-hero__text">
       <p class="bs-kicker caps" lang="en" dir="ltr">The Visual Identity Course</p>
-      <h1 class="bs-hero__name" lang="en" dir="ltr">BRAND-SET.</h1>
       <p class="bs-hero__promise" data-i18n="hero.promise">تبني هوية بصرية كاملة، <em>بنفس خطوات المشاريع الحقيقية.</em></p>
       <p class="bs-hero__lead" data-i18n="hero.lead">كورس أونلاين من 6 محاضرات مع محمد شريف: من ملخص العميل (Brief) حتى عرض الهوية وملفات التسليم.</p>
     </div>
@@ -108,6 +108,11 @@
       </a>
       <a class="bs-ticket__link" href="#curriculum" data-cta="bs_see_curriculum" data-i18n="cta.curriculum">شاهد المنهج</a>
     </aside>
+    </div>
+    <div class="bs-hero__foot" dir="ltr">
+      <img src="../assets/icons/logo-red-black.svg" alt="" width="64" height="44">
+      <a data-link="behance" data-cta="bs_behance_hero"><span class="bs-hero__be">Be.net/</span>MohamedSherifco</a>
+    </div>
   </div>
 </header>
 
@@ -258,7 +263,6 @@
 
   <!-- 06 ENROLL: details + price side by side -->
   <section class="bs-sec bs-sec--dark" id="price" aria-labelledby="price-title">
-    <div class="atmos atmos--soft" aria-hidden="true"></div>
     <div class="bs-wrap">
       <header class="bs-head">
         <p class="bs-head__n">06</p>

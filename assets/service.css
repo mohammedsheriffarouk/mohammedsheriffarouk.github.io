@@ -234,3 +234,24 @@ html[lang=en] .bs-gets p{font-weight:500}
 .bs-final__mail:hover{color:var(--red)}
 .bs-final .btn{min-width:260px}
 @media (max-width:760px){.bs-final .btn{min-width:0}}
+
+/* ---------- Light art hero (BRAND-SET key visual), no gradients ---------- */
+.bs-hero--art{background:#EBEBEB;color:var(--ink);padding:calc(72px + clamp(32px,4vw,56px)) 0 clamp(28px,3vw,40px)}
+.bs-wordmark{margin:0 0 clamp(28px,4vw,56px);direction:ltr;text-align:left}
+.bs-wordmark img{width:min(100%,960px);height:auto;display:block}
+.bs-hero--art .bs-kicker{color:var(--muted);opacity:1}
+.bs-hero--art .bs-hero__lead{color:var(--body)}
+.bs-hero--art .bs-ticket{border:1px solid #D9D7D5}
+.bs-hero__foot{display:flex;align-items:center;justify-content:space-between;margin-top:clamp(32px,4vw,56px)}
+.bs-hero__foot img{width:44px;height:auto}
+.bs-hero__foot a{font-family:var(--num);font-size:13px;color:var(--ink);text-decoration:none}
+.bs-hero__be{color:var(--red)}
+.bs-hero__foot a:hover{text-decoration:underline;text-underline-offset:4px}
+@media (max-width:620px){.bs-hero__foot img{width:36px}}
+
+/* Nav over a light hero: dark logo and text from the start */
+.bs--light .nav{color:var(--ink)}
+.bs--light .nav .nav__logo--light{display:none}
+.bs--light .nav .nav__logo--dark{display:block}
+.bs--light .nav .lang{border-color:rgba(0,0,0,.25);color:var(--ink)}
+.bs--light .foot{background:var(--black)}
