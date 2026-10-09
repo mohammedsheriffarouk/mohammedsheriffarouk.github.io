@@ -3,6 +3,12 @@
    Arabic copy lives in brand-set/index.html. Same keys.
    ========================================================= */
 const EN = {
+  "cur.1t": "Exercise: pick the right logo type for two real briefs — and justify it.",
+  "cur.2t": "Practice: analyze a real client message and turn it into a brief and design direction.",
+  "cur.3t": "Practice: extract keywords and build the mind map for your project.",
+  "cur.4t": "Practice: one word in four type personalities, then your project's moodboard.",
+  "cur.5t": "Practice: 20 logos from one word using different techniques, then your project sketches.",
+  "cur.6t": "Practice: graphic elements from geometric shapes, then your final brand proposal.",
   "inst.brandersR": "Partner & MD · design education community",
   "inst.idntikR": "Founder · visual identity studio",
   "ba.after": "After the course",

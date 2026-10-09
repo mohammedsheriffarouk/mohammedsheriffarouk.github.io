@@ -190,3 +190,10 @@ html[dir=rtl] .bs-det dd[lang=en]{text-align:right}
   .bs-cur__n{font-size:40px}
   .bs-hero{padding-top:calc(60px + 32px)}
 }
+
+/* Curriculum: practice line + delivery-file chips */
+.bs-cur__task{margin-top:auto;padding-top:10px;border-top:1px dashed var(--line);font-size:var(--t-xs)!important;color:var(--ink)!important;font-weight:600}
+html[lang=en] .bs-cur__task{font-weight:500}
+.bs-chips{list-style:none;display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+html[dir=rtl] .bs-chips{justify-content:flex-end}
+.bs-chips li{font-family:var(--num);font-size:11px;letter-spacing:.04em;padding:4px 8px;border:1px solid var(--ink);color:var(--ink)}
