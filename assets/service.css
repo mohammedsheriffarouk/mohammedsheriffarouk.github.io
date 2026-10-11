@@ -216,3 +216,10 @@ html[dir=ltr] .bs-inst .bs-head,html[dir=ltr] .bs-inst .bs-head__t{text-align:le
 /* Headings: CAPITAL + LIGHT (mirrors style.css; service.css loads later) */
 .bs-hero__name,.bs-head__t,.bs-final__t{font-weight:300;text-transform:uppercase;letter-spacing:.02em}
 html[lang=ar] .bs-final__t:not([lang=en]){letter-spacing:0}
+
+/* One : One — session timeline list inside a step card */
+.bs-steps .bs-list{margin-top:4px}
+.bs-steps .bs-list li{display:block;background:none;padding:10px 0;padding-inline-start:22px;font-size:var(--t-small);line-height:var(--lh-small)}
+.bs-steps .bs-list li:first-child{border-top:1px solid var(--line)}
+.bs-steps .bs-list li b{color:var(--ink);font-weight:600}
+.bs-steps .bs-list li::before{top:1.15em}
