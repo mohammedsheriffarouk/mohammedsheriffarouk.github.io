@@ -99,7 +99,6 @@ const EN = {
   "pr.v3": "A plan and a specific exercise",
   "pr.k4": "Recording",
   "pr.v4": "The session recording and your result image",
-  "pr.abroad": "Outside Egypt: <span class=\"num\" dir=\"ltr\">$85</span>",
   "pr.note": "Booking and payment are handled through Nzmly. If you join Mentoring Month within 14 days, the session fee is deducted from the subscription.",
   "faq.lead": "Questions I'm often asked before booking.",
   "faq.q1": "Do I need to be at a certain level?",
