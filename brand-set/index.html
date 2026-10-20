@@ -11,13 +11,15 @@
        final CTA, mobile bar, curriculum, Pixel value) reads from here.
        earlyBird: "auto" switches to the regular price by itself
                   after earlyBirdEnds. "on"/"off" force it.
+       NOW: earlyBird "off" and priceRegular 4999 = one flat price, no strike-through,
+       no deadline, until Mohamed says otherwise. To change price: edit priceRegular.
        ========================================================= -->
   <script>
   window.BRANDSET = {
-    earlyBird: "auto",
+    earlyBird: "off",
     earlyBirdEnds: "2026-10-16T23:59:59+03:00",
     priceEarly: 4999,
-    priceRegular: 9000,
+    priceRegular: 4999,
     seats: 20,
     earlyUntil: { ar: "الجمعة 16 أكتوبر", en: "Friday, 16 October" },
     start:      { ar: "الأحد 25 أكتوبر", en: "Sunday, 25 October" },
@@ -348,7 +350,7 @@
 
 <div class="toast" role="status" aria-live="polite"></div>
 
-<script src="content-en.js?v=20261012s" defer></script>
+<script src="content-en.js?v=20261020p" defer></script>
 <script src="../script.js?v=20261010i" defer></script>
 <script defer>
 /* BRAND-SET page: renders price/dates/seats from window.BRANDSET (AR/EN), sets the Pixel value, mobile register bar.
