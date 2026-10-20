@@ -11,15 +11,15 @@
        final CTA, mobile bar, curriculum, Pixel value) reads from here.
        earlyBird: "auto" switches to the regular price by itself
                   after earlyBirdEnds. "on"/"off" force it.
-       NOW: earlyBird "off" and priceRegular 4999 = one flat price, no strike-through,
-       no deadline, until Mohamed says otherwise. To change price: edit priceRegular.
+       NOW: earlyBird "on" with no deadline shown: 4,999 struck against 9,000 until Mohamed says otherwise.
+       To change price: edit priceEarly (shown) / priceRegular (struck).
        ========================================================= -->
   <script>
   window.BRANDSET = {
-    earlyBird: "off",
+    earlyBird: "on",
     earlyBirdEnds: "2026-10-16T23:59:59+03:00",
     priceEarly: 4999,
-    priceRegular: 4999,
+    priceRegular: 9000,
     seats: 20,
     earlyUntil: { ar: "الجمعة 16 أكتوبر", en: "Friday, 16 October" },
     start:      { ar: "الأحد 25 أكتوبر", en: "Sunday, 25 October" },
@@ -99,9 +99,8 @@
         <div><dt data-i18n="fact.seats.k">المقاعد</dt><dd><span class="num" data-bs="seats"></span> <span data-i18n="seats.only">مقعدًا فقط</span></dd></div>
       </dl>
       <div class="bs-ticket__price">
-        <p class="bs-ticket__tag" data-early-only data-i18n="pr.tag">سعر الإطلاق — لهذه الدفعة فقط</p>
         <p class="bs-ticket__now"><span class="num" dir="ltr" data-bs="price"></span> <span data-i18n="price.cur">جنيه</span></p>
-        <p class="bs-ticket__was" data-early-only><span data-i18n="pr.instead">بدلًا من</span> <s><span class="num" dir="ltr" data-bs="priceRegular"></span></s> · <span data-i18n="pr.until">حتى</span> <span data-bs="earlyUntil"></span></p>
+        <p class="bs-ticket__was" data-early-only><span data-i18n="pr.instead">بدلًا من</span> <s><span class="num" dir="ltr" data-bs="priceRegular"></span></s></p>
       </div>
       <a class="btn btn--primary btn--lg bs-ticket__btn" data-link="brandSet" data-register data-pixel="InitiateCheckout" data-cta="bs_register_hero">
         <span data-i18n="cta.register">سجّل الآن</span><span class="btn__en" lang="en">Register Now</span>
@@ -277,9 +276,8 @@
           <div><dt data-i18n="det.be.k">عرض شغلك</dt><dd data-i18n="det.be.v">أفضل مشاريع الطلاب تُعرض على حسابي على Behance</dd></div>
         </dl>
         <div class="bs-pricecard">
-          <p class="bs-ticket__tag" data-early-only data-i18n="pr.tag">سعر الإطلاق — لهذه الدفعة فقط</p>
           <p class="bs-pricecard__now"><span class="num" dir="ltr" data-bs="price"></span> <span data-i18n="price.cur">جنيه</span></p>
-          <p class="bs-pricecard__was" data-early-only><span data-i18n="pr.instead">بدلًا من</span> <s><span class="num" dir="ltr" data-bs="priceRegular"></span> <span data-i18n="price.cur">جنيه</span></s> · <span data-i18n="pr.until">حتى</span> <span data-bs="earlyUntil"></span></p>
+          <p class="bs-pricecard__was" data-early-only><span data-i18n="pr.instead">بدلًا من</span> <s><span class="num" dir="ltr" data-bs="priceRegular"></span> <span data-i18n="price.cur">جنيه</span></s></p>
           <p class="bs-pricecard__seats"><span class="num" data-bs="seats"></span> <span data-i18n="seats.only">مقعدًا فقط</span></p>
           <a class="btn btn--primary btn--lg bs-pricecard__btn" data-link="brandSet" data-register data-pixel="InitiateCheckout" data-cta="bs_register_price">
             <span data-i18n="cta.register">سجّل الآن</span><span class="btn__en" lang="en">Register Now</span>
@@ -319,7 +317,7 @@
         <p class="bs-final__p"><span data-i18n="fin.p">ابدأ مشروع الهوية الذي تعرضه بثقة في ملف أعمالك.</span></p>
       </div>
       <div class="bs-final__buy">
-        <p class="bs-final__price"><span class="num" dir="ltr" data-bs="price"></span> <span data-i18n="price.cur">جنيه</span><span class="bs-final__early" data-early-only> · <span data-i18n="fin.early">سعر الإطلاق حتى</span> <span data-bs="earlyUntil"></span></span></p>
+        <p class="bs-final__price"><span class="num" dir="ltr" data-bs="price"></span> <span data-i18n="price.cur">جنيه</span></p>
         <a class="btn btn--primary btn--lg" data-link="brandSet" data-register data-pixel="InitiateCheckout" data-cta="bs_register_final">
           <span data-i18n="cta.register">سجّل الآن</span><span class="btn__en" lang="en">Register Now</span>
         </a>
@@ -350,7 +348,7 @@
 
 <div class="toast" role="status" aria-live="polite"></div>
 
-<script src="content-en.js?v=20261020p" defer></script>
+<script src="content-en.js?v=20261020q" defer></script>
 <script src="../script.js?v=20261010i" defer></script>
 <script defer>
 /* BRAND-SET page: renders price/dates/seats from window.BRANDSET (AR/EN), sets the Pixel value, mobile register bar.
