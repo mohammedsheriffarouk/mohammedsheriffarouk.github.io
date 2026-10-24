@@ -1,4 +1,4 @@
-/* webinars — ENGLISH COPY. Arabic lives in index.html (same keys). Catalog items carry their own AR/EN. */
+/* workshops — ENGLISH COPY. Arabic lives in index.html (same keys). Catalog items carry their own AR/EN. */
 const EN = {
   "skip": "Skip to content",
   "close": "Close",
@@ -7,14 +7,14 @@ const EN = {
   "nav.label": "Navigation",
   "nav.home": "Home",
   "nav.products": "Products",
-  "meta.title": "Webinars & Products — Mohamed Sherif",
-  "meta.desc": "Free webinars on identity design and branding, plus learning products from Mohamed Sherif: the BRAND-SET course and the One : One session.",
-  "hero.promise": "Start with a free webinar, <em>then pick the step that fits your level.</em>",
-  "hero.lead": "Open webinars on identity design and branding, and learning products that take you from understanding to doing. All through Nzmly.",
-  "hero.cta1": "Watch the webinar",
+  "meta.title": "Workshops & Products — Mohamed Sherif",
+  "meta.desc": "Free workshops on identity design and branding, plus learning products from Mohamed Sherif: the BRAND-SET course and the One : One session.",
+  "hero.promise": "Start with a free workshop, <em>then pick the step that fits your level.</em>",
+  "hero.lead": "Open workshops on identity design and branding, and learning products that take you from understanding to doing. All through Nzmly.",
+  "hero.cta1": "Watch the workshop",
   "hero.cta2": "Browse products",
   "wb.lead": "Start here. No commitment, no payment.",
-  "wb.more": "More webinars",
+  "wb.more": "More workshops",
   "pc.lead": "A course and sessions that start from your real level.",
   "pc.note": "Booking and payment through Nzmly.",
   "fb.lead": "Words from past students, as they reached me.",
@@ -25,6 +25,6 @@ const EN = {
   "inst.s2": "rated the instructor's knowledge and skills as “excellent”*",
   "inst.s3": "clients and brands",
   "inst.src": "* From a survey of 69 students after one BRAND-SET cohort.",
-  "fin.t": "Start with the free webinar.",
+  "fin.t": "Start with the free workshop.",
   "fin.p": "Two hours that change how you look at a brand."
 };
