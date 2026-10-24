@@ -270,3 +270,4 @@ html[lang=ar] .bs-final__t:not([lang=en]){letter-spacing:0}
 @media (max-width:1024px){.wb-feat{grid-template-columns:minmax(0,1fr);gap:32px}.wb-grid,.pc-grid[data-n="3"]{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:734px){.wb-grid,.pc-grid,.pc-grid[data-n="3"]{grid-template-columns:minmax(0,1fr)}.pc{padding:24px}.wb-form__row{flex-direction:column}.wb-facts{gap:24px}}
 .wb-tally iframe{display:block;border:0;min-height:120px}
+.pc-grid[data-n="1"]{justify-content:center}

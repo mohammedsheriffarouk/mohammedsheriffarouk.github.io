@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="../assets/js/pixel.js?v=20261009px"></script>
   <title>ورش ومنتجات — محمد شريف</title>
-  <meta name="description" content="ورش مجانية في تصميم الهوية والبراندنج، ومنتجات تعليمية من محمد شريف: كورس BRAND-SET وجلسات One : One.">
+  <meta name="description" content="ورش مجانية في تصميم الهوية والبراندنج، وأدوات عملية للمصممين من محمد شريف.">
   <meta name="author" content="Mohamed Sherif">
   <meta name="theme-color" content="#FFFFFF">
   <link rel="canonical" href="https://mohamed-sherif.com/workshops/">
@@ -14,7 +14,7 @@
   <meta property="og:locale:alternate" content="en_US">
   <meta property="og:site_name" content="Mohamed Sherif">
   <meta property="og:title" content="ورش ومنتجات — محمد شريف">
-  <meta property="og:description" content="ابدأ بورشة مجانية، ثم اختر الكورس أو الجلسة المناسبة لمستواك.">
+  <meta property="og:description" content="ابدأ بورشة مجانية، ثم جرّب الأدوات اللي تختصر وقتك.">
   <meta property="og:url" content="https://mohamed-sherif.com/workshops/">
   <meta property="og:image" content="https://mohamed-sherif.com/assets/images/og-image.jpg">
   <meta property="og:image:width" content="1200">
@@ -30,7 +30,7 @@
   if(l==="en"){document.documentElement.lang="en";document.documentElement.dir="ltr"}})();
   </script>
   <link rel="stylesheet" href="../style.css?v=20261010i">
-  <link rel="stylesheet" href="../assets/service.css?v=20261024b">
+  <link rel="stylesheet" href="../assets/service.css?v=20261024c">
 </head>
 <body class="bs">
 <a class="skip" href="#main" data-i18n="skip">تخطَّ إلى المحتوى</a>
@@ -51,7 +51,7 @@
       <p class="bs-kicker caps" lang="en" dir="ltr">Free Workshops · Products</p>
       <h1 class="bs-hero__name bs-hero__name--wrap" lang="en" dir="ltr">Learn<br>With Me.</h1>
       <p class="bs-hero__promise" data-i18n="hero.promise">ابدأ بورشة مجانية، <em>ثم اختر الخطوة المناسبة لمستواك.</em></p>
-      <p class="bs-hero__lead" data-i18n="hero.lead">ورش مفتوحة في تصميم الهوية والبراندنج، ومنتجات تعليمية تأخذك من الفهم إلى التطبيق. كلها عبر منصة نظملي.</p>
+      <p class="bs-hero__lead" data-i18n="hero.lead">ورش مفتوحة في تصميم الهوية والبراندنج، وأدوات عملية للمصممين تأخذك من الفهم إلى التطبيق.</p>
     </div>
     <div class="bs-hero__cta ctas">
       <a class="btn btn--primary btn--lg" href="#workshops" data-cta="wb_hero_workshop"><span data-i18n="hero.cta1">شاهد الورشة</span><span class="btn__en" lang="en">Watch Free</span></a>
@@ -84,10 +84,9 @@
       <header class="bs-head">
         <p class="bs-head__n">02</p>
         <h2 id="products-title" class="bs-head__t" lang="en" dir="ltr">Products</h2>
-        <p class="bs-head__lead" data-i18n="pc.lead">كورس وجلسات تبدأ بها من مستواك الحقيقي.</p>
+        <p class="bs-head__lead" data-i18n="pc.lead">أدوات تختصر عليك وقت التنفيذ.</p>
       </header>
       <div class="pc-grid" id="pc-grid"></div>
-      <p class="note center" data-i18n="pc.note">الحجز والدفع عبر منصة نظملي (Nzmly).</p>
     </div>
   </section>
 
@@ -181,22 +180,14 @@ window.CATALOG = {
     }
   ],
   products: [
-    { id: "brand-set", kind: { ar: "كورس مباشر", en: "Live course" },
-      title: "BRAND-SET", art: "../assets/images/brand-set-wordmark.png",
-      desc: { ar: "6 محاضرات تبني فيها هوية بصرية كاملة بنفس خطوات المشاريع الحقيقية.",
-              en: "Six lectures to build a complete visual identity, following the steps of real projects." },
-      price: 4999, was: 9000,
-      note: { ar: "يبدأ الأحد 25 أكتوبر · 20 مقعدًا", en: "Starts Sunday 25 October · 20 seats" },
-      link: "brandSet", details: "../brand-set/",
-      cta: { ar: "سجّل الآن", en: "Register Now" }, more: { ar: "التفاصيل", en: "Details" } },
-    { id: "one-one", kind: { ar: "جلسة فردية", en: "1:1 session" },
-      title: "One : One Session", mark: "1 : 1",
-      desc: { ar: "اعرف مستواك في 8 محاور، وراجع مشروعًا من أعمالك، واخرج بخطة عملية.",
-              en: "Know your level across 8 axes, get one of your projects reviewed, and leave with a practical plan." },
-      price: 1500, was: null,
-      note: { ar: "90 دقيقة · أونلاين", en: "90 minutes · online" },
-      link: "mentoring", details: "../mentoring/",
-      cta: { ar: "احجز جلستك", en: "Book Your Session" }, more: { ar: "التفاصيل", en: "Details" } }
+    { id: "mockup-builder", kind: { ar: "أداة للمصممين", en: "Tool for designers" },
+      title: "Mockup Builder",
+      desc: { ar: "نظام كامل يحوّل أي لوجو لموكابات احترافية في كل نقطة تواصل مع العميل. تجهّزه مرة على ChatGPT أو Gemini، وبعدها كل براند ليه شات.",
+              en: "A complete system that turns any logo into professional mockups for every client touch point. Set it up once on ChatGPT or Gemini, then every brand gets its own chat." },
+      price: null, was: null,
+      note: { ar: "ChatGPT · Gemini · Midjourney", en: "ChatGPT · Gemini · Midjourney" },
+      url: "https://claude.ai/artifact/P1qFMmxZTdKoGgnA7RBF7z",   /* TEMP: replace with the tool's final address */
+      cta: { ar: "افتح الأداة", en: "Open the Tool" } }
   ]
 };
 (function () {
@@ -233,13 +224,13 @@ window.CATALOG = {
   function product(p, l) {
     var was = p.was ? '<s class="num" dir="ltr">' + fmt(p.was) + "</s>" : "";
     return '<article class="pc">' + tag(p, l) +
-      '<div class="pc__art">' + (p.art ? '<img src="' + esc(p.art) + '" alt="' + esc(p.title) + '" loading="lazy">' : '<span lang="en" dir="ltr">' + esc(p.mark || "") + "</span>") + "</div>" +
+      (!p.art && !p.mark ? "" : '<div class="pc__art">' + (p.art ? '<img src="' + esc(p.art) + '" alt="' + esc(p.title) + '" loading="lazy">' : '<span lang="en" dir="ltr">' + esc(p.mark || "") + "</span>") + "</div>") +
       '<p class="bs-cur__phase caps">' + esc(v(p.kind, l)) + "</p>" +
       '<h3 class="pc__t" lang="en" dir="ltr">' + esc(p.title) + "</h3>" +
       '<p class="pc__d">' + esc(v(p.desc, l)) + "</p>" +
       '<p class="pc__note">' + esc(v(p.note, l)) + "</p>" +
-      '<div class="pc__price"><span class="pc__now"><span class="num" dir="ltr">' + fmt(p.price) + "</span> " + (l === "en" ? "EGP" : "جنيه") + "</span>" + was + "</div>" +
-      '<div class="pc__act"><a class="btn btn--primary" href="' + esc(href(p.link)) + '"' + ext(href(p.link)) + ' data-pixel="InitiateCheckout" data-value="' + p.price + '" data-pixel-name="' + esc(p.title) + '" data-cta="pc_buy_' + esc(p.id) + '"><span>' + esc(v(p.cta, l)) + "</span></a>" +
+      (p.price ? '<div class="pc__price"><span class="pc__now"><span class="num" dir="ltr">' + fmt(p.price) + "</span> " + (l === "en" ? "EGP" : "جنيه") + "</span>" + was + "</div>" : "") +
+      '<div class="pc__act"><a class="btn btn--primary" href="' + esc(p.url || href(p.link)) + '"' + ext(p.url || href(p.link)) + (p.price ? ' data-pixel="InitiateCheckout" data-value="' + p.price + '"' : ' data-pixel="Lead"') + ' data-pixel-name="' + esc(p.title) + '" data-cta="pc_buy_' + esc(p.id) + '"><span>' + esc(v(p.cta, l)) + "</span></a>" +
       (p.details ? '<a class="txtlink" href="' + esc(p.details) + '" data-cta="pc_more_' + esc(p.id) + '"><span>' + esc(v(p.more, l)) + '</span><span class="arrow" aria-hidden="true">' + (l === "en" ? "→" : "←") + "</span></a>" : "") + "</div></article>";
   }
   window.renderCatalog = function () {
