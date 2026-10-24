@@ -30,7 +30,7 @@
   if(l==="en"){document.documentElement.lang="en";document.documentElement.dir="ltr"}})();
   </script>
   <link rel="stylesheet" href="../style.css?v=20261010i">
-  <link rel="stylesheet" href="../assets/service.css?v=20261022x">
+  <link rel="stylesheet" href="../assets/service.css?v=20261024a">
 </head>
 <body class="bs">
 <a class="skip" href="#main" data-i18n="skip">تخطَّ إلى المحتوى</a>
@@ -140,14 +140,10 @@
         <h2 id="subscribe-title" class="bs-head__t" lang="en" dir="ltr">Stay In The Loop</h2>
         <p class="bs-head__lead" data-i18n="sub.lead">أول من يعرف بالويبينار القادم وبالدفعة الجديدة.</p>
       </header>
-      <form class="wb-form" id="sub-form" novalidate>
-        <label class="wb-form__l" for="sub-email" data-i18n="sub.label">بريدك الإلكتروني</label>
-        <div class="wb-form__row">
-          <input id="sub-email" name="email" type="email" inputmode="email" autocomplete="email" dir="ltr" required placeholder="name@email.com">
-          <button class="btn btn--dark" type="submit"><span data-i18n="sub.btn">اشترك</span></button>
-        </div>
-        <p class="note wb-form__note" id="sub-note" data-i18n="sub.note">رسالة واحدة عند وجود جديد، ويمكنك إلغاء الاشتراك في أي وقت.</p>
-      </form>
+      <div class="wb-tally">
+        <iframe data-tally-src="https://tally.so/embed/4a4b7o?hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="180" frameborder="0" marginheight="0" marginwidth="0" title="اشترك للتنبيه"></iframe>
+      </div>
+      <p class="note wb-form__note" data-i18n="sub.note">رسالة واحدة عند وجود جديد، ويمكنك إلغاء الاشتراك في أي وقت.</p>
     </div>
   </section>
 
@@ -176,6 +172,7 @@
 
 <div class="toast" role="status" aria-live="polite"></div>
 
+<script async src="https://tally.so/widgets/embed.js" onload="Tally.loadEmbeds()"></script>
 <script src="content-en.js?v=20261022w" defer></script>
 <script src="../script.js?v=20261010i" defer></script>
 <script>
@@ -276,18 +273,6 @@ window.CATALOG = {
   document.addEventListener("DOMContentLoaded", function () {
     window.renderCatalog();
     new MutationObserver(window.renderCatalog).observe(document.documentElement, { attributes: true, attributeFilter: ["lang"] });
-    /* Email sign-up. SET_ENDPOINT to a form service (e.g. a Formspree form URL) to make it live. */
-    var SUB_ENDPOINT = "";
-    var f = document.getElementById("sub-form"), em = document.getElementById("sub-email"), note = document.getElementById("sub-note");
-    f.addEventListener("submit", function (e) {
-      e.preventDefault();
-      var l = L(), ok = /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em.value.trim());
-      if (!ok) { note.textContent = l === "en" ? "Please enter a valid email address." : "اكتب بريدًا إلكترونيًا صحيحًا."; note.classList.add("is-err"); em.focus(); return; }
-      note.classList.remove("is-err");
-      var done = function () { note.textContent = l === "en" ? "Done. You're on the list." : "تم. أنت الآن في القائمة."; em.value = ""; if (window.fbq) window.fbq("track", "Lead", { content_name: "Newsletter" }); };
-      if (!SUB_ENDPOINT) { done(); return; }
-      fetch(SUB_ENDPOINT, { method: "POST", headers: { "Accept": "application/json", "Content-Type": "application/json" }, body: JSON.stringify({ email: em.value.trim(), source: "webinars" }) }).then(function (r) { if (r.ok) done(); else note.textContent = l === "en" ? "Something went wrong. Try again." : "حدث خطأ. حاول مرة أخرى."; }).catch(function () { note.textContent = l === "en" ? "Something went wrong. Try again." : "حدث خطأ. حاول مرة أخرى."; });
-    });
   });
 })();
 </script>
