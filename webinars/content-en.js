@@ -25,10 +25,6 @@ const EN = {
   "inst.s2": "rated the instructor's knowledge and skills as “excellent”*",
   "inst.s3": "clients and brands",
   "inst.src": "* From a survey of 69 students after one BRAND-SET cohort.",
-  "sub.lead": "Be the first to know about the next webinar and the next cohort.",
-  "sub.label": "Your email",
-  "sub.btn": "Subscribe",
-  "sub.note": "One message when there's news. Unsubscribe any time.",
   "fin.t": "Start with the free webinar.",
   "fin.p": "Two hours that change how you look at a brand."
 };
