@@ -159,6 +159,11 @@ html[lang=en] .lang__ar{display:inline}
   .nav__end{margin-inline-start:auto}
 }
 @media (max-width:480px){.nav__name{display:none}}
+/* course/service pages: label one side, name centered, actions the other side */
+.nav:has(.nav__course){display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);column-gap:24px}
+.nav:has(.nav__course) .nav__mark{grid-column:2;grid-row:1;justify-self:center}
+.nav:has(.nav__course) .nav__course{grid-column:1;grid-row:1;justify-self:start;margin:0}
+.nav:has(.nav__course) .nav__end{grid-column:3;grid-row:1;justify-self:end;margin:0}
 
 /* ---------- Menu (phones) ---------- */
 .menu{position:fixed;inset:0;z-index:60;background:var(--black);color:var(--white);display:flex;flex-direction:column;padding:12px 6.25vw 32px;overflow-y:auto}
