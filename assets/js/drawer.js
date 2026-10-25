@@ -8,10 +8,10 @@
   var PAGES = [
     { p: "",               ar: "الرئيسية",          en: "Home" },
     { p: "brand-identity/", ar: "الهوية للشركات",    en: "Brand Identity" },
-    { p: "brand-set/",      ar: "BRAND-SET",         en: "BRAND-SET", latin: true },
-    { p: "mentoring/",      ar: "One : One Session", en: "One : One Session", latin: true },
+    { p: "brand-set/",      ar: "براند سِت",         en: "BRAND-SET" },
+    { p: "mentoring/",      ar: "جلسة واحد لواحد",   en: "One : One Session" },
     { p: "workshops/",      ar: "الورش المجانية",    en: "Workshops" },
-    { p: "mockup-builder/", ar: "Mockup Builder",    en: "Mockup Builder", latin: true }
+    { p: "mockup-builder/", ar: "صانع الموكاب",      en: "Mockup Builder" }
   ];
   var HOME = [
     { h: "#work",     ar: "الأعمال",      en: "Selected Work" },
@@ -74,7 +74,7 @@
       btn.setAttribute("aria-label", t("menu"));
       var pages = PAGES.map(function (x, i) {
         var href = u(x.p), cur = new URL(href).pathname === here ? " aria-current=\"page\"" : "";
-        return "<li><a href=\"" + href + "\"" + cur + (x.latin ? " dir=\"ltr\"" : "") + " data-cta=\"drawer_" + (x.p.replace(/\//g, "") || "home") + "\">" + esc(en ? x.en : x.ar) + "<sup>" + ("0" + (i + 1)).slice(-2) + "</sup></a></li>";
+        return "<li><a href=\"" + href + "\"" + cur + "" + " data-cta=\"drawer_" + (x.p.replace(/\//g, "") || "home") + "\">" + esc(en ? x.en : x.ar) + "<sup>" + ("0" + (i + 1)).slice(-2) + "</sup></a></li>";
       }).join("");
       var home = HOME.map(function (x) { return "<a href=\"" + u("") + x.h + "\">" + esc(en ? x.en : x.ar) + "</a>"; }).join("");
       var soc = SOCIAL.map(function (s) { return "<a href=\"" + esc(L[s[0]] || s[2]) + "\" target=\"_blank\" rel=\"noopener\">" + s[1] + "</a>"; }).join("");
