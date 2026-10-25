@@ -271,3 +271,14 @@ html[lang=ar] .bs-final__t:not([lang=en]){letter-spacing:0}
 @media (max-width:734px){.wb-grid,.pc-grid,.pc-grid[data-n="3"]{grid-template-columns:minmax(0,1fr)}.pc{padding:24px}.wb-form__row{flex-direction:column}.wb-facts{gap:24px}}
 .wb-tally iframe{display:block;border:0;min-height:120px}
 .pc-grid[data-n="1"]{justify-content:center}
+
+/* price: struck price draws first, then the new price pops */
+@media (prefers-reduced-motion:no-preference){
+  .bs-ticket__was{animation:t-fade var(--d-slow,400ms) ease-in-out 200ms both}
+  .bs-ticket__was s{text-decoration:none;position:relative}
+  .bs-ticket__was s::after{content:"";position:absolute;inset-inline:0;top:52%;height:1.5px;background:currentColor;transform:scaleX(0);transform-origin:left;animation:t-strike var(--d-slow,400ms) var(--ease-smooth-out) 450ms forwards}
+  .bs-ticket__now{animation:t-pop var(--d-vslow,500ms) var(--ease-bounce) 800ms both}
+}
+@keyframes t-fade{from{opacity:0}to{opacity:1}}
+@keyframes t-strike{to{transform:scaleX(1)}}
+@keyframes t-pop{from{opacity:0;transform:scale(.92);filter:blur(2px)}to{opacity:1;transform:none;filter:none}}

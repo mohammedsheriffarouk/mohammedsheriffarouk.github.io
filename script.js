@@ -293,15 +293,24 @@ const DEFAULT_LANG = "ar";
         const el = en.target, end = +el.dataset.count, from = +(el.dataset.from || 0);
         const dec = +(el.dataset.decimals || 0);
         const show = (n) => (el.hasAttribute("data-plain") ? String(n) : dec ? n.toFixed(dec) : fmt(n));
-        const dur = 1400, t0 = performance.now();
-        const step = (now) => {
-          const p = Math.min(1, (now - t0) / dur), eased = 1 - Math.pow(1 - p, 3);
-          const v = from + (end - from) * eased;
-          el.textContent = show(dec ? v : Math.round(v));
-          if (p < 1) requestAnimationFrame(step);
-        };
-        el.textContent = show(from);
-        requestAnimationFrame(step);
+        const final = show(end);
+        el.setAttribute("aria-label", final);
+        el.textContent = "";
+        const reels = [];
+        [...final].forEach((ch) => {
+          if (!/[0-9]/.test(ch)) { const t = document.createElement("span"); t.textContent = ch; t.setAttribute("aria-hidden", "true"); el.appendChild(t); return; }
+          const r = document.createElement("span"); r.className = "t-reel"; r.setAttribute("aria-hidden", "true");
+          const col = document.createElement("span");
+          for (let d = 0; d <= 9; d++) { const n = document.createElement("span"); n.textContent = d; col.appendChild(n); }
+          r.appendChild(col); el.appendChild(r); reels.push([r, col, +ch]);
+        });
+        void el.offsetWidth;
+        reels.forEach(([r, col, d], i) => {
+          col.style.transitionDelay = (i * 80) + "ms";
+          col.style.transform = "translateY(" + (-d * 10) + "%)";
+          r.classList.add("is-on");
+        });
+        setTimeout(() => { el.textContent = final; el.removeAttribute("aria-label"); }, 1200 + reels.length * 80 + 100);
       });
     }, { threshold: 0.5 });
     counters.forEach((c) => co.observe(c));
