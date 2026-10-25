@@ -33,18 +33,18 @@
     ".dr-btn:focus-visible,.dr-x:focus-visible,.dr a:focus-visible{outline:2px solid #FB2203;outline-offset:2px}" +
     ".dr-ov{position:fixed;inset:0;z-index:69;background:rgba(0,0,0,.3);opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}" +
     ".dr{position:fixed;inset-block:0;inset-inline-start:0;z-index:70;width:min(640px,100vw);display:flex;flex-direction:column;background:#EAEAE7;color:#111;padding:88px clamp(24px,5vw,44px) 32px;overflow-y:auto;visibility:hidden;transition:transform .45s cubic-bezier(.28,.11,.32,1),visibility .45s;font-family:'Noto Sans Arabic','Noto Sans',system-ui,sans-serif;line-height:1.1}" +
+    ".dr{--dt:48px;--dbody:17px;--dsmall:14px}@media (max-width:1068px){.dr{--dt:40px}}@media (max-width:734px){.dr{--dt:32px}}" +
     ".dr[dir=rtl]{transform:translateX(100%)}.dr[dir=ltr]{transform:translateX(-100%)}" +
     "body.dr-open .dr{transform:none;visibility:visible}body.dr-open .dr-ov{opacity:1;visibility:visible}body.dr-open{overflow:hidden}" +
-    ".dr-x{position:absolute;top:0;inset-inline-end:0;display:inline-flex;align-items:center;gap:14px;height:64px;padding:0 28px;border:0;border-inline-start:1px solid #d6d6d2;border-bottom:1px solid #d6d6d2;background:#EAEAE7;color:#111;font:inherit;font-size:18px;line-height:1;cursor:pointer}" +
+    ".dr-x{position:absolute;top:0;inset-inline-end:0;display:inline-flex;align-items:center;gap:14px;height:64px;padding:0 28px;border:0;border-inline-start:1px solid #d6d6d2;border-bottom:1px solid #d6d6d2;background:#EAEAE7;color:#111;font:inherit;font-size:var(--dbody);line-height:1;cursor:pointer}" +
     ".dr-x b{font-weight:300;font-size:26px;color:#b9b9b4;line-height:1}.dr-x:hover b{color:#FB2203}" +
     ".dr ol{list-style:none;margin:0;padding:0}" +
-    ".dr ol a{display:inline-block;color:#111;text-decoration:none;font-size:clamp(34px,9vw,56px);font-weight:400;line-height:1.12;text-transform:uppercase;letter-spacing:-.01em;transition:color .2s}" +
-    ".dr ol a sup{font-size:.28em;font-weight:400;letter-spacing:0;color:#FB2203;vertical-align:top;margin-inline-start:.5em;position:relative;top:.35em;font-family:'Noto Sans',system-ui,sans-serif}" +
+    ".dr ol a{display:inline-block;color:#111;text-decoration:none;font-size:var(--dt);font-weight:300;line-height:1.1;text-transform:uppercase;letter-spacing:-.003em;transition:color .2s}" +
     ".dr ol a:hover,.dr ol a[aria-current]{color:#FB2203}" +
-    ".dr-sub{margin-top:36px;display:flex;flex-wrap:wrap;gap:6px 22px}.dr-sub a{font-size:17px;color:#424245;text-decoration:none}.dr-sub a:hover{color:#FB2203}" +
-    ".dr-lab{margin:auto 0 14px;padding-top:40px;font-size:18px;color:#FB2203}" +
+    ".dr-sub{margin-top:36px;display:flex;flex-wrap:wrap;gap:6px 22px}.dr-sub a{font-size:var(--dbody);color:#424245;text-decoration:none}.dr-sub a:hover{color:#FB2203}" +
+    ".dr-lab{margin:auto 0 14px;padding-top:40px;font-size:var(--dsmall);font-weight:600;color:#FB2203}" +
     ".dr-soc{display:flex;flex-wrap:wrap;gap:10px 28px;direction:ltr}" +
-    ".dr-soc a{font-size:20px;color:#111;text-decoration:none}.dr-soc a:hover{color:#FB2203}" +
+    ".dr-soc a{font-size:var(--dbody);color:#111;text-decoration:none}.dr-soc a:hover{color:#FB2203}" +
     "@media (prefers-reduced-motion:reduce){.dr,.dr-ov{transition:none}}@media print{.dr,.dr-ov,.dr-btn{display:none}}";
 
   function init() {
@@ -74,7 +74,7 @@
       btn.setAttribute("aria-label", t("menu"));
       var pages = PAGES.map(function (x, i) {
         var href = u(x.p) + (x.h || ""), cur = !x.h && new URL(href).pathname === here ? " aria-current=\"page\"" : "";
-        return "<li><a href=\"" + href + "\"" + cur + "" + " data-cta=\"drawer_" + (x.p.replace(/\//g, "") || (x.h ? "portfolio" : "home")) + "\">" + esc(en ? x.en : x.ar) + "<sup>" + ("0" + (i + 1)).slice(-2) + "</sup></a></li>";
+        return "<li><a href=\"" + href + "\"" + cur + "" + " data-cta=\"drawer_" + (x.p.replace(/\//g, "") || (x.h ? "portfolio" : "home")) + "\">" + esc(en ? x.en : x.ar) + "</a></li>";
       }).join("");
       var home = HOME.map(function (x) { return "<a href=\"" + u("") + x.h + "\">" + esc(en ? x.en : x.ar) + "</a>"; }).join("");
       var soc = SOCIAL.map(function (s) { return "<a href=\"" + esc(L[s[0]] || s[2]) + "\" target=\"_blank\" rel=\"noopener\">" + s[1] + "</a>"; }).join("");
