@@ -158,7 +158,12 @@ const DEFAULT_LANG = "ar";
 
   /* ---------- 2. Language toggle + CTA tracking ---------- */
   document.querySelectorAll("[data-lang-toggle]").forEach((b) =>
-    b.addEventListener("click", () => setLang(lang === "en" ? "ar" : "en", true))
+    b.addEventListener("click", () => {
+      const next = lang === "en" ? "ar" : "en";
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) { setLang(next, true); return; }
+      document.body.classList.add("t-lang-out");
+      setTimeout(() => { setLang(next, true); void document.body.offsetWidth; document.body.classList.remove("t-lang-out"); }, 150);
+    })
   );
   document.addEventListener("click", (e) => {
     const el = e.target.closest("[data-cta]");
@@ -262,6 +267,13 @@ const DEFAULT_LANG = "ar";
         if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
       });
     }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+    document.querySelectorAll(".head, .bs-head").forEach((h) => { if (!h.closest(".hero, .bs-hero")) h.classList.add("reveal", "t-stagger"); });
+    document.querySelectorAll(".card__img img, .proof__item img, .about__photo img").forEach((im) => {
+      if (im.complete && im.naturalWidth) return;
+      im.classList.add("t-img");
+      const done = () => im.classList.add("is-loaded");
+      im.addEventListener("load", done, { once: true }); im.addEventListener("error", done, { once: true });
+    });
     document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
   } else {
     document.querySelectorAll(".reveal").forEach((el) => el.classList.add("in"));

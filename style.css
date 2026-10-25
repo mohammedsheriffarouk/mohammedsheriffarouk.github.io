@@ -399,3 +399,15 @@ html[dir=rtl] .txtlink:hover .arrow,html[dir=rtl] .go:hover .go__ic{translate:-4
 @media (prefers-reduced-motion:reduce){
   .txtlink .arrow,.go__ic,.faq details::details-content,.t-reel>span{transition:none}
 }
+/* language switch: soft cross-blur */
+main,.hero,.bs-hero,.foot,footer{transition:opacity var(--d-fast) ease-in-out,filter var(--d-fast) ease-in-out}
+body.t-lang-out main,body.t-lang-out .hero,body.t-lang-out .bs-hero,body.t-lang-out .foot,body.t-lang-out footer{opacity:0;filter:blur(2px);transition-duration:var(--d-quick)}
+/* section headings: number, title, lead rise one after another */
+.js .t-stagger.reveal{opacity:1;transform:none}
+.js .t-stagger>*{opacity:0;transform:translateY(12px);filter:blur(3px);transition:opacity var(--d-vslow) ease-in-out,transform var(--d-vslow) var(--ease-smooth-out),filter var(--d-vslow) ease-in-out}
+.js .t-stagger.in>*{opacity:1;transform:none;filter:none}
+.js .t-stagger>:nth-child(2){transition-delay:var(--d-micro)}.js .t-stagger>:nth-child(3){transition-delay:calc(var(--d-micro)*2)}.js .t-stagger>:nth-child(4){transition-delay:calc(var(--d-micro)*3)}
+/* images: fade in from a soft blur once loaded */
+.t-img{opacity:0;filter:blur(2px);transition:opacity var(--d-slow) ease-in-out,filter var(--d-slow) ease-in-out,transform var(--d-slow) var(--ease-smooth-out)}
+.t-img.is-loaded{opacity:1;filter:none}
+@media (prefers-reduced-motion:reduce){.js .t-stagger>*,.t-img{opacity:1;transform:none;filter:none;transition:none}}
