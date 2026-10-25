@@ -7,11 +7,11 @@
 
   var PAGES = [
     { p: "",               ar: "الرئيسية",          en: "Home" },
-    { p: "brand-identity/", ar: "الهوية للشركات",    en: "Brand Identity" },
-    { p: "brand-set/",      ar: "براند سِت",         en: "BRAND-SET" },
-    { p: "mentoring/",      ar: "جلسة واحد لواحد",   en: "One : One Session" },
-    { p: "workshops/",      ar: "الورش المجانية",    en: "Workshops" },
-    { p: "mockup-builder/", ar: "صانع الموكاب",      en: "Mockup Builder" }
+    { p: "",  h: "#work",  ar: "أعمالي",            en: "Portfolio" },
+    { p: "brand-set/",      ar: "كورسات",            en: "Courses" },
+    { p: "mentoring/",      ar: "جلسة منتورينج",     en: "Mentoring Session" },
+    { p: "workshops/",      ar: "الورش المجانية",    en: "Free Workshops" },
+    { p: "mockup-builder/", ar: "منتجات رقمية",      en: "Digital Products" }
   ];
   var HOME = [
     { h: "#work",     ar: "الأعمال",      en: "Selected Work" },
@@ -73,8 +73,8 @@
       dr.setAttribute("aria-label", t("nav"));
       btn.setAttribute("aria-label", t("menu"));
       var pages = PAGES.map(function (x, i) {
-        var href = u(x.p), cur = new URL(href).pathname === here ? " aria-current=\"page\"" : "";
-        return "<li><a href=\"" + href + "\"" + cur + "" + " data-cta=\"drawer_" + (x.p.replace(/\//g, "") || "home") + "\">" + esc(en ? x.en : x.ar) + "<sup>" + ("0" + (i + 1)).slice(-2) + "</sup></a></li>";
+        var href = u(x.p) + (x.h || ""), cur = !x.h && new URL(href).pathname === here ? " aria-current=\"page\"" : "";
+        return "<li><a href=\"" + href + "\"" + cur + "" + " data-cta=\"drawer_" + (x.p.replace(/\//g, "") || (x.h ? "portfolio" : "home")) + "\">" + esc(en ? x.en : x.ar) + "<sup>" + ("0" + (i + 1)).slice(-2) + "</sup></a></li>";
       }).join("");
       var home = HOME.map(function (x) { return "<a href=\"" + u("") + x.h + "\">" + esc(en ? x.en : x.ar) + "</a>"; }).join("");
       var soc = SOCIAL.map(function (s) { return "<a href=\"" + esc(L[s[0]] || s[2]) + "\" target=\"_blank\" rel=\"noopener\">" + s[1] + "</a>"; }).join("");
