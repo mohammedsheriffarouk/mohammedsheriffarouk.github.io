@@ -49,6 +49,9 @@
   --sec:120px;
   --gap:20px;
   --ease:cubic-bezier(.28,.11,.32,1);
+  /* motion tokens (transitions.dev scale) */
+  --ease-smooth-out:cubic-bezier(.22,1,.36,1); --ease-bounce:cubic-bezier(.34,1.36,.64,1);
+  --d-stagger:40ms; --d-micro:80ms; --d-quick:150ms; --d-fast:250ms; --d-medium:350ms; --d-slow:400ms; --d-vslow:500ms;
 }
 @media (max-width:1300px){:root{--w-wide:calc(100vw - 48px)}}
 @media (max-width:1068px){:root{--t-display:64px;--lh-display:1.0625;--t-headline:40px;--lh-headline:1.1;--t-title:24px;--lh-title:1.1667;--w:692px;--sec:100px}}
@@ -189,7 +192,7 @@ html[lang=en] .lang__ar{display:inline}
 .work{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--gap)}
 .card{display:block;text-decoration:none;color:var(--ink)}
 .card__img{aspect-ratio:4/3;background:var(--grey);overflow:hidden}
-.card__img img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.card__img img{width:100%;height:100%;object-fit:cover;transition:transform var(--d-slow) var(--ease-smooth-out)}
 .card:hover .card__img img{transform:scale(1.03)}
 .card__img.is-empty img,.card__img figcaption{display:none}
 .card__t{margin-top:16px;font-size:var(--t-body);font-weight:600;line-height:1.3;text-align:center}
@@ -249,7 +252,7 @@ html[lang=en] .lang__ar{display:inline}
 .proof::-webkit-scrollbar{display:none}
 .proof li{flex:0 0 clamp(220px,22vw,290px);scroll-snap-align:start}
 .proof__item{display:block;width:100%;aspect-ratio:4/5;padding:0;border:0;background:var(--grey-2);cursor:zoom-in;overflow:hidden}
-.proof__item img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.proof__item img{width:100%;height:100%;object-fit:cover;transition:transform var(--d-slow) var(--ease-smooth-out)}
 .proof__item:hover img{transform:scale(1.02)}
 .proof__item .ph{display:none}
 .proof.is-empty{display:none}
@@ -334,19 +337,20 @@ html[dir=ltr] .drawer[open]{transform:none}
 
 /* ---------- Toast ---------- */
 .toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);opacity:0;pointer-events:none;z-index:70;
-  background:var(--ink);color:var(--white);padding:12px 18px;font-size:14px;transition:opacity .3s,transform .3s var(--ease);max-width:calc(100vw - 32px)}
-.toast.show{opacity:1;transform:translate(-50%,0)}
+  background:var(--ink);color:var(--white);padding:12px 18px;font-size:14px;transition:opacity var(--d-medium) ease-in-out,transform var(--d-medium) var(--ease-smooth-out);max-width:calc(100vw - 32px)}
+.toast.show{opacity:1;transform:translate(-50%,0);transition-duration:var(--d-slow)}
 
 /* ---------- Motion ---------- */
-.js .reveal{opacity:0;transform:translateY(24px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.js .reveal{opacity:0;transform:translateY(12px);transition:opacity var(--d-vslow) ease-in-out,transform var(--d-vslow) var(--ease-smooth-out)}
 .js .reveal.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:no-preference){
-  .hero .w>*{animation:rise 1s var(--ease) both}
+  .hero .w>*{animation:rise var(--d-vslow) var(--ease-smooth-out) both}
+  .hero .w>:nth-child(2){animation-delay:calc(var(--d-micro)*1)}.hero .w>:nth-child(3){animation-delay:calc(var(--d-micro)*2)}.hero .w>:nth-child(4){animation-delay:calc(var(--d-micro)*3)}.hero .w>:nth-child(5){animation-delay:calc(var(--d-micro)*4)}
   .hero .display{animation-delay:.08s}.hero__lead{animation-delay:.16s}.hero .ctas{animation-delay:.24s}.hero__where{animation-delay:.32s}
   .marquee__track{animation:marquee 70s linear infinite}
   .marquee:hover .marquee__track{animation-play-state:paused}
 }
-@keyframes rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@keyframes rise{from{opacity:0;transform:translateY(12px);filter:blur(3px)}to{opacity:1;transform:none;filter:none}}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}
@@ -374,3 +378,36 @@ html[lang=ar] .bs-final__t:not([lang=en]){letter-spacing:0}
 .tile__go{position:static;margin-top:8px}
 /* Feedback screenshots are white: give them an edge on white sections */
 .proof__item{border:1px solid var(--line)}
+
+/* ---------- Motion polish ---------- */
+/* arrow nudge on text links */
+.txtlink .arrow,.go__ic{transition:translate var(--d-fast) var(--ease-smooth-out)}
+.txtlink .arrow{display:inline-block}
+.txtlink:hover .arrow,.go:hover .go__ic{translate:4px 0}
+html[dir=rtl] .txtlink:hover .arrow,html[dir=rtl] .go:hover .go__ic{translate:-4px 0}
+/* FAQ answers open/close with height (browsers that support it) */
+@supports (interpolate-size:allow-keywords){
+  :root{interpolate-size:allow-keywords}
+  .faq details::details-content{block-size:0;overflow:clip;transition:block-size var(--d-medium) var(--ease-smooth-out),content-visibility var(--d-medium) allow-discrete}
+  .faq details[open]::details-content{block-size:auto;transition-duration:var(--d-slow)}
+}
+/* spinning counter reels */
+.t-reel{display:inline-block;height:1em;line-height:1;overflow:hidden;vertical-align:top}
+.t-reel>span{display:block;transition:transform 1.2s var(--ease-smooth-out),filter 1.2s ease-in-out;filter:blur(1px)}
+.t-reel>span>span{display:block;height:1em}
+.t-reel.is-on>span{filter:none}
+@media (prefers-reduced-motion:reduce){
+  .txtlink .arrow,.go__ic,.faq details::details-content,.t-reel>span{transition:none}
+}
+/* language switch: soft cross-blur */
+main,.hero,.bs-hero,.foot,footer{transition:opacity var(--d-fast) ease-in-out,filter var(--d-fast) ease-in-out}
+body.t-lang-out main,body.t-lang-out .hero,body.t-lang-out .bs-hero,body.t-lang-out .foot,body.t-lang-out footer{opacity:0;filter:blur(2px);transition-duration:var(--d-quick)}
+/* section headings: number, title, lead rise one after another */
+.js .t-stagger.reveal{opacity:1;transform:none}
+.js .t-stagger>*{opacity:0;transform:translateY(12px);filter:blur(3px);transition:opacity var(--d-vslow) ease-in-out,transform var(--d-vslow) var(--ease-smooth-out),filter var(--d-vslow) ease-in-out}
+.js .t-stagger.in>*{opacity:1;transform:none;filter:none}
+.js .t-stagger>:nth-child(2){transition-delay:var(--d-micro)}.js .t-stagger>:nth-child(3){transition-delay:calc(var(--d-micro)*2)}.js .t-stagger>:nth-child(4){transition-delay:calc(var(--d-micro)*3)}
+/* images: fade in from a soft blur once loaded */
+.t-img{opacity:0;filter:blur(2px);transition:opacity var(--d-slow) ease-in-out,filter var(--d-slow) ease-in-out,transform var(--d-slow) var(--ease-smooth-out)}
+.t-img.is-loaded{opacity:1;filter:none}
+@media (prefers-reduced-motion:reduce){.js .t-stagger>*,.t-img{opacity:1;transform:none;filter:none;transition:none}}
