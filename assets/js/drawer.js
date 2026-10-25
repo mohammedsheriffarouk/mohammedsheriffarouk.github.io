@@ -31,19 +31,20 @@
   var css = ".dr-btn{display:inline-flex;align-items:center;justify-content:center;flex:none;width:40px;height:40px;padding:0;border:0;background:none;color:inherit;cursor:pointer}" +
     ".dr-btn i{display:block;width:18px;height:8px;border-block:1.5px solid currentColor}" +
     ".dr-btn:focus-visible,.dr-x:focus-visible,.dr a:focus-visible{outline:2px solid #FB2203;outline-offset:2px}" +
-    ".dr-ov{position:fixed;inset:0;z-index:69;background:rgba(0,0,0,.5);opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}" +
-    ".dr{position:fixed;inset-block:0;inset-inline-start:0;z-index:70;width:min(380px,88vw);display:flex;flex-direction:column;background:#000;color:#fff;padding:12px 28px 28px;overflow-y:auto;visibility:hidden;transition:transform .35s cubic-bezier(.28,.11,.32,1),visibility .35s;font-family:'Noto Sans Arabic','Noto Sans',system-ui,sans-serif;line-height:1.4}" +
+    ".dr-ov{position:fixed;inset:0;z-index:69;background:rgba(0,0,0,.28);opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}" +
+    ".dr{position:fixed;inset-block:0;inset-inline-start:0;z-index:70;width:min(420px,90vw);display:flex;flex-direction:column;background:#fff;color:#111;padding:0 32px 28px;overflow-y:auto;visibility:hidden;transition:transform .35s cubic-bezier(.28,.11,.32,1),visibility .35s;font-family:'Noto Sans Arabic','Noto Sans',system-ui,sans-serif;line-height:1.4}" +
     ".dr[dir=rtl]{transform:translateX(100%)}.dr[dir=ltr]{transform:translateX(-100%)}" +
     "body.dr-open .dr{transform:none;visibility:visible}body.dr-open .dr-ov{opacity:1;visibility:visible}body.dr-open{overflow:hidden}" +
-    ".dr-top{display:flex;align-items:center;justify-content:space-between;min-height:52px}" +
-    ".dr-x{width:44px;height:44px;border:0;background:none;color:#fff;font-size:30px;line-height:1;cursor:pointer}" +
-    ".dr h2{margin:28px 0 6px;font-size:12px;font-weight:600;letter-spacing:.08em;color:rgba(255,255,255,.55);text-transform:none}" +
+    ".dr-top{display:flex;align-items:center;justify-content:space-between;min-height:56px;font-size:13px;color:#6e6e73}" +
+    ".dr-x{height:44px;padding:0;border:0;background:none;color:#111;font:inherit;font-size:13px;font-weight:600;cursor:pointer}.dr-x:hover{color:#D01A00}" +
+    ".dr h2{margin:0 0 4px;padding-top:28px;font-size:12px;font-weight:400;letter-spacing:.04em;color:#6e6e73;text-transform:none}" +
+    ".dr h2+ul{margin-bottom:28px}.dr section{border-top:1px solid #e5e5e7;margin-top:8px}.dr section:first-of-type{margin-top:0}" +
     ".dr ul{list-style:none;margin:0;padding:0}" +
-    ".dr li a{display:block;padding:9px 0;color:#fff;text-decoration:none;font-size:22px;font-weight:600;transition:color .2s}" +
-    ".dr li.sm a{font-size:17px;font-weight:400;color:rgba(255,255,255,.85)}" +
-    ".dr li a:hover,.dr li a[aria-current]{color:#FB2203}" +
-    ".dr-soc{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:auto;padding-top:36px;direction:ltr}" +
-    ".dr-soc a{font-size:14px;color:rgba(255,255,255,.7);text-decoration:none}.dr-soc a:hover{color:#FB2203}" +
+    ".dr li a{display:block;padding:8px 0;color:#111;text-decoration:none;font-size:24px;font-weight:400;transition:color .2s}" +
+    ".dr li.sm a{font-size:18px;color:#424245}" +
+    ".dr li a:hover{color:#D01A00}.dr li a[aria-current]{color:#D01A00}" +
+    ".dr-soc{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:auto;padding-top:28px;border-top:1px solid #e5e5e7;direction:ltr}" +
+    ".dr-soc a{font-size:14px;color:#6e6e73;text-decoration:none}.dr-soc a:hover{color:#D01A00}" +
     "@media (prefers-reduced-motion:reduce){.dr,.dr-ov{transition:none}}@media print{.dr,.dr-ov,.dr-btn{display:none}}";
 
   function init() {
@@ -77,8 +78,8 @@
       }).join("");
       var home = HOME.map(function (x) { return "<li class=\"sm\"><a href=\"" + u("") + x.h + "\">" + esc(en ? x.en : x.ar) + "</a></li>"; }).join("");
       var soc = SOCIAL.map(function (s) { return "<a href=\"" + esc(L[s[0]] || s[2]) + "\" target=\"_blank\" rel=\"noopener\">" + s[1] + "</a>"; }).join("");
-      dr.innerHTML = "<div class=\"dr-top\"><img src=\"" + u("assets/icons/logo-red-white.svg") + "\" alt=\"\" width=\"36\" height=\"25\"><button type=\"button\" class=\"dr-x\" aria-label=\"" + t("close") + "\">×</button></div>" +
-        "<h2>" + t("pages") + "</h2><ul>" + pages + "</ul><h2>" + t("home") + "</h2><ul>" + home + "</ul><div class=\"dr-soc\">" + soc + "</div>";
+      dr.innerHTML = "<div class=\"dr-top\"><span>" + t("menu") + "</span><button type=\"button\" class=\"dr-x\">" + t("close") + "</button></div>" +
+        "<section><h2>" + t("pages") + "</h2><ul>" + pages + "</ul></section><section><h2>" + t("home") + "</h2><ul>" + home + "</ul></section><div class=\"dr-soc\">" + soc + "</div>";
       dr.querySelector(".dr-x").addEventListener("click", function () { set(false); });
       dr.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", function () { if (a.target !== "_blank") set(false); }); });
     }
