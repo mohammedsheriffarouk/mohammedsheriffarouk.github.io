@@ -12,6 +12,7 @@
     { p: "mentoring/",      ar: "جلسة منتورينج",     en: "Mentoring Session" },
     { p: "workshops/",      ar: "الورش المجانية",    en: "Free Workshops" },
     { p: "mockup-builder/", ar: "منتجات رقمية",      en: "Digital Products" }
+    /* , { p: "blog/", ar: "المدونة", en: "Blog" }   ← enable with the first published post */
   ];
   var HOME = [
     { h: "#work",     ar: "الأعمال",      en: "Selected Work" },

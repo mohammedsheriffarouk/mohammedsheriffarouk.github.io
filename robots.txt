@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /blog/_posts/
+Disallow: /tools/
+
+Sitemap: https://mohamed-sherif.com/sitemap.xml
