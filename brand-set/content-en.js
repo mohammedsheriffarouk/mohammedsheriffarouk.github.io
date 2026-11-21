@@ -13,7 +13,7 @@ const EN = {
   "inst.idntikR": "Founder · visual identity studio",
   "ba.after": "After the course",
   "ba.before": "Before the course",
-  "faq.a7": "You can register and pay from any country with a Visa card through Nzmly; the price is in Egyptian pounds. Lectures are online on Cairo time: the first week (25 and 27 October) at 7:30 pm Saudi time (8:30 pm UAE), and from 1 November at 8:30 pm Saudi time (9:30 pm UAE), after Egypt’s daylight saving time ends. Every lecture is recorded if you miss one.",
+  "faq.a7": "You can register and pay from any country with a Visa card through Nzmly; the price is in Egyptian pounds. Lectures are online on Cairo time; the exact schedule (and the time difference with Saudi Arabia and the UAE) is announced with the cohort date. Every lecture is recorded if you miss one.",
   "faq.q7": "I’m outside Egypt — how do I pay and attend?",
   "faq.a6": "Yes. In the lectures we review students’ work together at every stage of the project, and on your final project you get individual feedback on your own work.",
   "faq.q6": "Will I get feedback on my project?",
