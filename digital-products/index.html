@@ -29,7 +29,7 @@
   if(l!=="en"&&l!=="ar"){try{l=localStorage.getItem("ms-lang")}catch(e){}}
   if(l==="en"){document.documentElement.lang="en";document.documentElement.dir="ltr"}})();
   </script>
-  <link rel="stylesheet" href="../style.css?v=20261121a">
+  <link rel="stylesheet" href="../style.css?v=20261121m">
   <link rel="stylesheet" href="../assets/service.css?v=20261025h">
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://mohamed-sherif.com/"}, {"@type": "ListItem", "position": 2, "name": "منتجات رقمية", "item": "https://mohamed-sherif.com/digital-products/"}]}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": 1, "item": {"@type": "SoftwareApplication", "name": "Mockup Builder", "url": "https://mohamed-sherif.com/mockup-builder/", "description": "أداة تحوّل أي شعار إلى موكابات احترافية على كل نقاط التواصل، ببرومبتات جاهزة لـ ChatGPT وGemini وMidjourney.", "applicationCategory": "DesignApplication", "operatingSystem": "Web", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EGP"}, "author": {"@type": "Person", "name": "Mohamed Sherif", "url": "https://mohamed-sherif.com/"}}}, {"@type": "ListItem", "position": 2, "item": {"@type": "SoftwareApplication", "name": "Dieline Lab", "url": "https://mohamed-sherif.com/dieline-lab/", "description": "قوالب طباعة جاهزة بمقاساتك لمطبوعات الهوية والتغليف، مع موكابات ولوحات مواصفات.", "applicationCategory": "DesignApplication", "operatingSystem": "Web", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EGP"}, "author": {"@type": "Person", "name": "Mohamed Sherif", "url": "https://mohamed-sherif.com/"}}}]}</script>
@@ -83,7 +83,7 @@
       </div>
       <div class="bs-final__buy ctas">
         <a class="btn btn--primary btn--lg" href="../workshops/" data-cta="dp_final_workshop"><span data-i18n="fin.cta1">الورشة المجانية</span><span class="btn__en" lang="en">Free Workshop</span></a>
-        <a class="txtlink" href="../blog/" data-cta="dp_final_blog"><span data-i18n="fin.cta2">المدونة</span><span class="arrow" aria-hidden="true">←</span></a>
+        <a class="txtlink" href="../blog/" data-cta="dp_final_blog"><span data-i18n="fin.cta2">المدونة</span><span class="arrow" aria-hidden="true"><i class="ms ms--arrow-left ms--flip-ltr" aria-hidden="true"></i></span></a>
       </div>
     </div>
   </section>
@@ -147,12 +147,12 @@ window.TOOLS = [
     return '<article class="dp-card" id="' + esc(t.id) + '">' +
       '<a class="dp-card__img" href="' + esc(t.url) + '" tabindex="-1" aria-hidden="true"><img src="' + esc(t.img) + '" alt="" width="1280" height="800" loading="lazy"></a>' +
       '<div class="dp-card__body">' +
-        '<p class="dp-card__top"><span class="dp-free">' + (en ? "Free" : "مجانًا") + '</span><span class="dp-kind">' + esc(v(t.kind, l)) + '</span></p>' +
+        '<p class="dp-card__top"><span class="dp-free ms-b ms--gift">' + (en ? "Free" : "مجانًا") + '</span><span class="dp-kind">' + esc(v(t.kind, l)) + '</span></p>' +
         '<h3 class="dp-card__t" lang="en" dir="ltr">' + esc(t.name) + '</h3>' +
         '<p class="dp-card__d">' + esc(v(t.desc, l)) + '</p>' +
         (t.stats ? '<dl class="dp-stats">' + t.stats.map(function (s) { return '<div><dt dir="ltr">' + esc(s.n) + '</dt><dd>' + esc(v(s, l)) + '</dd></div>'; }).join("") + '</dl>' : "") +
         (t.steps ? '<ol class="dp-steps">' + t.steps.map(function (s) { return '<li>' + esc(v(s, l)) + '</li>'; }).join("") + '</ol>' : "") +
-        (t.works ? '<p class="dp-works"><span>' + (en ? "Works with" : "يعمل مع") + '</span> <bdi>' + esc(v(t.works, l)) + '</bdi></p>' : "") +
+        (t.works ? '<p class="dp-works"><i class="ms ms--website" aria-hidden="true"></i><span>' + (en ? "Works with" : "يعمل مع") + '</span> <bdi>' + esc(v(t.works, l)) + '</bdi></p>' : "") +
         '<div class="dp-act"><a class="btn btn--primary" href="' + esc(t.url) + '" data-pixel="Lead" data-pixel-name="' + esc(t.name) + '" data-cta="dp_open_' + esc(t.id) + '"><span>' + (en ? "Open the tool — free" : "افتح الأداة مجانًا") + '</span></a></div>' +
       '</div></article>';
   }

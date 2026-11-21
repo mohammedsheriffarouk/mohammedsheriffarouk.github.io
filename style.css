@@ -121,9 +121,8 @@ html[lang=ar] .caption:not([lang=en]){font-size:13px}
 /* "Learn more ›" link (Apple's text link, in red) */
 .go{display:inline-flex;align-items:center;gap:6px;min-height:44px;text-decoration:none;color:var(--red-text);font-size:var(--t-body);font-weight:500;cursor:pointer}
 .go:hover span:first-child{text-decoration:underline;text-underline-offset:4px}
-.go__ic{display:inline-block;width:8px;height:14px;flex:none;background:currentColor;
-  -webkit-mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 14'><path d='M1 1l6 6-6 6' fill='none' stroke='black' stroke-width='1.6'/></svg>") center/contain no-repeat;
-          mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 14'><path d='M1 1l6 6-6 6' fill='none' stroke='black' stroke-width='1.6'/></svg>") center/contain no-repeat}
+.go__ic{display:inline-block;width:18px;height:18px;flex:none;background:currentColor;
+  -webkit-mask:url(/assets/icons/ms/chevron-right.svg) center/contain no-repeat;mask:url(/assets/icons/ms/chevron-right.svg) center/contain no-repeat}
 html[dir=rtl] .go__ic{transform:scaleX(-1)}
 .go--light{color:var(--white)}
 .txtlink{display:inline-flex;align-items:center;gap:6px;min-height:44px;font-weight:500;color:var(--red-text);text-decoration:none;cursor:pointer}
@@ -260,9 +259,8 @@ html[lang=en] .lang__ar{display:inline}
 .proof__nav{display:flex;gap:10px}
 .proof__btn{width:44px;height:44px;display:grid;place-items:center;border:0;background:var(--grey-2);color:var(--ink);cursor:pointer;transition:background .2s,color .2s}
 .proof__btn:hover{background:var(--ink);color:var(--white)}
-.arw{display:block;width:8px;height:14px;background:currentColor;
-  -webkit-mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 14'><path d='M1 1l6 6-6 6' fill='none' stroke='black' stroke-width='1.6'/></svg>") center/contain no-repeat;
-          mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 14'><path d='M1 1l6 6-6 6' fill='none' stroke='black' stroke-width='1.6'/></svg>") center/contain no-repeat}
+.arw{display:block;width:20px;height:20px;background:currentColor;
+  -webkit-mask:url(/assets/icons/ms/chevron-right.svg) center/contain no-repeat;mask:url(/assets/icons/ms/chevron-right.svg) center/contain no-repeat}
 .arw--l{transform:scaleX(-1)}
 @media (max-width:734px){.proof li{flex-basis:74%}}
 
@@ -416,3 +414,196 @@ body.t-lang-out main,body.t-lang-out .hero,body.t-lang-out .bs-hero,body.t-lang-
 .foot__nav{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:var(--t-small)}
 .foot__nav a{color:inherit;opacity:.75;text-decoration:none}
 .foot__nav a:hover{opacity:1;color:#fff}
+
+/* ===== MS Iconography (24 grid · 2px stroke · square caps). Files: assets/icons/ms/<name>.svg
+   Use: <i class="ms ms--NAME" aria-hidden="true"></i>  or add "ms-b ms--NAME" to any element for a leading icon. */
+.ms,.ms-b::before{display:inline-block;flex:none;width:var(--ms-size,24px);height:var(--ms-size,24px);background:currentColor;-webkit-mask:var(--ms) center/contain no-repeat;mask:var(--ms) center/contain no-repeat;vertical-align:middle}
+.ms-b::before{content:"";margin-inline-end:8px}
+html[dir=rtl] .ms--flip-rtl,html[dir=ltr] .ms--flip-ltr{transform:scaleX(-1)}
+.ms--profile{--ms:url(/assets/icons/ms/profile.svg)}
+.ms--identity-designer{--ms:url(/assets/icons/ms/identity-designer.svg)}
+.ms--educator{--ms:url(/assets/icons/ms/educator.svg)}
+.ms--experience{--ms:url(/assets/icons/ms/experience.svg)}
+.ms--expertise{--ms:url(/assets/icons/ms/expertise.svg)}
+.ms--markets{--ms:url(/assets/icons/ms/markets.svg)}
+.ms--location{--ms:url(/assets/icons/ms/location.svg)}
+.ms--brand-strategy{--ms:url(/assets/icons/ms/brand-strategy.svg)}
+.ms--positioning{--ms:url(/assets/icons/ms/positioning.svg)}
+.ms--brand-architecture{--ms:url(/assets/icons/ms/brand-architecture.svg)}
+.ms--brand-discovery{--ms:url(/assets/icons/ms/brand-discovery.svg)}
+.ms--brand-personality{--ms:url(/assets/icons/ms/brand-personality.svg)}
+.ms--brand-purpose{--ms:url(/assets/icons/ms/brand-purpose.svg)}
+.ms--brand-values{--ms:url(/assets/icons/ms/brand-values.svg)}
+.ms--brand-naming{--ms:url(/assets/icons/ms/brand-naming.svg)}
+.ms--brand-identity{--ms:url(/assets/icons/ms/brand-identity.svg)}
+.ms--visual-identity{--ms:url(/assets/icons/ms/visual-identity.svg)}
+.ms--logo-design{--ms:url(/assets/icons/ms/logo-design.svg)}
+.ms--typography{--ms:url(/assets/icons/ms/typography.svg)}
+.ms--color-system{--ms:url(/assets/icons/ms/color-system.svg)}
+.ms--brand-guidelines{--ms:url(/assets/icons/ms/brand-guidelines.svg)}
+.ms--brand-applications{--ms:url(/assets/icons/ms/brand-applications.svg)}
+.ms--touchpoints{--ms:url(/assets/icons/ms/touchpoints.svg)}
+.ms--brand-consistency{--ms:url(/assets/icons/ms/brand-consistency.svg)}
+.ms--brand-communication{--ms:url(/assets/icons/ms/brand-communication.svg)}
+.ms--creative-direction{--ms:url(/assets/icons/ms/creative-direction.svg)}
+.ms--design-thinking{--ms:url(/assets/icons/ms/design-thinking.svg)}
+.ms--rebrand{--ms:url(/assets/icons/ms/rebrand.svg)}
+.ms--brand-system{--ms:url(/assets/icons/ms/brand-system.svg)}
+.ms--idea{--ms:url(/assets/icons/ms/idea.svg)}
+.ms--research{--ms:url(/assets/icons/ms/research.svg)}
+.ms--inspiration{--ms:url(/assets/icons/ms/inspiration.svg)}
+.ms--brainstorm{--ms:url(/assets/icons/ms/brainstorm.svg)}
+.ms--sketch{--ms:url(/assets/icons/ms/sketch.svg)}
+.ms--concept{--ms:url(/assets/icons/ms/concept.svg)}
+.ms--exploration{--ms:url(/assets/icons/ms/exploration.svg)}
+.ms--design-process{--ms:url(/assets/icons/ms/design-process.svg)}
+.ms--geometry{--ms:url(/assets/icons/ms/geometry.svg)}
+.ms--composition{--ms:url(/assets/icons/ms/composition.svg)}
+.ms--grid-system{--ms:url(/assets/icons/ms/grid-system.svg)}
+.ms--prototype{--ms:url(/assets/icons/ms/prototype.svg)}
+.ms--refinement{--ms:url(/assets/icons/ms/refinement.svg)}
+.ms--presentation{--ms:url(/assets/icons/ms/presentation.svg)}
+.ms--feedback{--ms:url(/assets/icons/ms/feedback.svg)}
+.ms--revision{--ms:url(/assets/icons/ms/revision.svg)}
+.ms--final-delivery{--ms:url(/assets/icons/ms/final-delivery.svg)}
+.ms--quality-control{--ms:url(/assets/icons/ms/quality-control.svg)}
+.ms--visual-thinking{--ms:url(/assets/icons/ms/visual-thinking.svg)}
+.ms--logo-validation{--ms:url(/assets/icons/ms/logo-validation.svg)}
+.ms--brand-identity-service{--ms:url(/assets/icons/ms/brand-identity-service.svg)}
+.ms--consultation{--ms:url(/assets/icons/ms/consultation.svg)}
+.ms--brand-audit{--ms:url(/assets/icons/ms/brand-audit.svg)}
+.ms--project-brief{--ms:url(/assets/icons/ms/project-brief.svg)}
+.ms--quotation{--ms:url(/assets/icons/ms/quotation.svg)}
+.ms--design-supervision{--ms:url(/assets/icons/ms/design-supervision.svg)}
+.ms--brand-development{--ms:url(/assets/icons/ms/brand-development.svg)}
+.ms--client-meeting{--ms:url(/assets/icons/ms/client-meeting.svg)}
+.ms--collaboration{--ms:url(/assets/icons/ms/collaboration.svg)}
+.ms--project-delivery{--ms:url(/assets/icons/ms/project-delivery.svg)}
+.ms--brand-set{--ms:url(/assets/icons/ms/brand-set.svg)}
+.ms--online-course{--ms:url(/assets/icons/ms/online-course.svg)}
+.ms--live-session{--ms:url(/assets/icons/ms/live-session.svg)}
+.ms--recorded-lesson{--ms:url(/assets/icons/ms/recorded-lesson.svg)}
+.ms--webinar{--ms:url(/assets/icons/ms/webinar.svg)}
+.ms--workshop{--ms:url(/assets/icons/ms/workshop.svg)}
+.ms--mentoring{--ms:url(/assets/icons/ms/mentoring.svg)}
+.ms--one-to-one{--ms:url(/assets/icons/ms/one-to-one.svg)}
+.ms--learning{--ms:url(/assets/icons/ms/learning.svg)}
+.ms--student{--ms:url(/assets/icons/ms/student.svg)}
+.ms--community{--ms:url(/assets/icons/ms/community.svg)}
+.ms--certificate{--ms:url(/assets/icons/ms/certificate.svg)}
+.ms--assignment{--ms:url(/assets/icons/ms/assignment.svg)}
+.ms--practical-project{--ms:url(/assets/icons/ms/practical-project.svg)}
+.ms--portfolio-development{--ms:url(/assets/icons/ms/portfolio-development.svg)}
+.ms--skill-assessment{--ms:url(/assets/icons/ms/skill-assessment.svg)}
+.ms--skill-level{--ms:url(/assets/icons/ms/skill-level.svg)}
+.ms--seats{--ms:url(/assets/icons/ms/seats.svg)}
+.ms--curriculum{--ms:url(/assets/icons/ms/curriculum.svg)}
+.ms--resources{--ms:url(/assets/icons/ms/resources.svg)}
+.ms--selected-work{--ms:url(/assets/icons/ms/selected-work.svg)}
+.ms--case-study{--ms:url(/assets/icons/ms/case-study.svg)}
+.ms--project-overview{--ms:url(/assets/icons/ms/project-overview.svg)}
+.ms--industry{--ms:url(/assets/icons/ms/industry.svg)}
+.ms--client{--ms:url(/assets/icons/ms/client.svg)}
+.ms--deliverables{--ms:url(/assets/icons/ms/deliverables.svg)}
+.ms--mockup{--ms:url(/assets/icons/ms/mockup.svg)}
+.ms--moodboard{--ms:url(/assets/icons/ms/moodboard.svg)}
+.ms--timeline{--ms:url(/assets/icons/ms/timeline.svg)}
+.ms--portfolio-showcase{--ms:url(/assets/icons/ms/portfolio-showcase.svg)}
+.ms--testimonial{--ms:url(/assets/icons/ms/testimonial.svg)}
+.ms--rating{--ms:url(/assets/icons/ms/rating.svg)}
+.ms--satisfaction{--ms:url(/assets/icons/ms/satisfaction.svg)}
+.ms--survey{--ms:url(/assets/icons/ms/survey.svg)}
+.ms--success{--ms:url(/assets/icons/ms/success.svg)}
+.ms--achievement{--ms:url(/assets/icons/ms/achievement.svg)}
+.ms--statistics{--ms:url(/assets/icons/ms/statistics.svg)}
+.ms--growth{--ms:url(/assets/icons/ms/growth.svg)}
+.ms--years{--ms:url(/assets/icons/ms/years.svg)}
+.ms--milestone{--ms:url(/assets/icons/ms/milestone.svg)}
+.ms--contact{--ms:url(/assets/icons/ms/contact.svg)}
+.ms--email{--ms:url(/assets/icons/ms/email.svg)}
+.ms--message{--ms:url(/assets/icons/ms/message.svg)}
+.ms--send{--ms:url(/assets/icons/ms/send.svg)}
+.ms--start-project{--ms:url(/assets/icons/ms/start-project.svg)}
+.ms--share{--ms:url(/assets/icons/ms/share.svg)}
+.ms--book-meeting{--ms:url(/assets/icons/ms/book-meeting.svg)}
+.ms--video-call{--ms:url(/assets/icons/ms/video-call.svg)}
+.ms--notify{--ms:url(/assets/icons/ms/notify.svg)}
+.ms--website{--ms:url(/assets/icons/ms/website.svg)}
+.ms--phone{--ms:url(/assets/icons/ms/phone.svg)}
+.ms--home{--ms:url(/assets/icons/ms/home.svg)}
+.ms--menu{--ms:url(/assets/icons/ms/menu.svg)}
+.ms--close{--ms:url(/assets/icons/ms/close.svg)}
+.ms--arrow-right{--ms:url(/assets/icons/ms/arrow-right.svg)}
+.ms--arrow-left{--ms:url(/assets/icons/ms/arrow-left.svg)}
+.ms--arrow-up{--ms:url(/assets/icons/ms/arrow-up.svg)}
+.ms--arrow-down{--ms:url(/assets/icons/ms/arrow-down.svg)}
+.ms--arrow-up-right{--ms:url(/assets/icons/ms/arrow-up-right.svg)}
+.ms--chevron-right{--ms:url(/assets/icons/ms/chevron-right.svg)}
+.ms--chevron-left{--ms:url(/assets/icons/ms/chevron-left.svg)}
+.ms--chevron-down{--ms:url(/assets/icons/ms/chevron-down.svg)}
+.ms--chevron-up{--ms:url(/assets/icons/ms/chevron-up.svg)}
+.ms--external-link{--ms:url(/assets/icons/ms/external-link.svg)}
+.ms--search{--ms:url(/assets/icons/ms/search.svg)}
+.ms--filter{--ms:url(/assets/icons/ms/filter.svg)}
+.ms--view-more{--ms:url(/assets/icons/ms/view-more.svg)}
+.ms--language{--ms:url(/assets/icons/ms/language.svg)}
+.ms--play{--ms:url(/assets/icons/ms/play.svg)}
+.ms--pause{--ms:url(/assets/icons/ms/pause.svg)}
+.ms--loading{--ms:url(/assets/icons/ms/loading.svg)}
+.ms--success-state{--ms:url(/assets/icons/ms/success-state.svg)}
+.ms--error-state{--ms:url(/assets/icons/ms/error-state.svg)}
+.ms--warning{--ms:url(/assets/icons/ms/warning.svg)}
+.ms--info{--ms:url(/assets/icons/ms/info.svg)}
+.ms--question{--ms:url(/assets/icons/ms/question.svg)}
+.ms--calendar{--ms:url(/assets/icons/ms/calendar.svg)}
+.ms--clock{--ms:url(/assets/icons/ms/clock.svg)}
+.ms--swipe{--ms:url(/assets/icons/ms/swipe.svg)}
+.ms--enlarge{--ms:url(/assets/icons/ms/enlarge.svg)}
+.ms--read-time{--ms:url(/assets/icons/ms/read-time.svg)}
+.ms--file{--ms:url(/assets/icons/ms/file.svg)}
+.ms--document{--ms:url(/assets/icons/ms/document.svg)}
+.ms--folder{--ms:url(/assets/icons/ms/folder.svg)}
+.ms--image{--ms:url(/assets/icons/ms/image.svg)}
+.ms--video{--ms:url(/assets/icons/ms/video.svg)}
+.ms--slides{--ms:url(/assets/icons/ms/slides.svg)}
+.ms--pdf{--ms:url(/assets/icons/ms/pdf.svg)}
+.ms--link{--ms:url(/assets/icons/ms/link.svg)}
+.ms--upload{--ms:url(/assets/icons/ms/upload.svg)}
+.ms--download{--ms:url(/assets/icons/ms/download.svg)}
+.ms--settings{--ms:url(/assets/icons/ms/settings.svg)}
+.ms--check{--ms:url(/assets/icons/ms/check.svg)}
+.ms--plus{--ms:url(/assets/icons/ms/plus.svg)}
+.ms--minus{--ms:url(/assets/icons/ms/minus.svg)}
+.ms--edit{--ms:url(/assets/icons/ms/edit.svg)}
+.ms--delete{--ms:url(/assets/icons/ms/delete.svg)}
+.ms--copy{--ms:url(/assets/icons/ms/copy.svg)}
+.ms--lock{--ms:url(/assets/icons/ms/lock.svg)}
+.ms--unlock{--ms:url(/assets/icons/ms/unlock.svg)}
+.ms--price{--ms:url(/assets/icons/ms/price.svg)}
+.ms--payment{--ms:url(/assets/icons/ms/payment.svg)}
+.ms--duration{--ms:url(/assets/icons/ms/duration.svg)}
+.ms--gift{--ms:url(/assets/icons/ms/gift.svg)}
+/* placements */
+.nav__cta::after{content:"";width:16px;height:16px;margin-inline-start:8px;background:currentColor;-webkit-mask:url(/assets/icons/ms/arrow-right.svg) center/contain no-repeat;mask:url(/assets/icons/ms/arrow-right.svg) center/contain no-repeat}
+html[dir=rtl] .nav__cta::after{transform:scaleX(-1)}
+.lang{display:inline-flex;align-items:center;gap:6px}.lang::before{content:"";width:16px;height:16px;background:currentColor;-webkit-mask:url(/assets/icons/ms/language.svg) center/contain no-repeat;mask:url(/assets/icons/ms/language.svg) center/contain no-repeat}
+.eyebrow .ms{--ms-size:16px;margin-top:-2px;color:var(--ink)}.eyebrow .ms:first-child{margin-inline-end:8px}.eyebrow .ms:last-child{margin-inline-start:8px}
+.hero__where.ms-b::before{--ms-size:18px;margin-top:-3px}
+.stats .ms{display:block;--ms-size:28px;margin-bottom:14px;color:var(--ink)}.stats--center .ms{margin-inline:auto}
+.tile__ic{--ms-size:32px;margin-bottom:8px;color:var(--ink)}.tile:hover .tile__ic{color:var(--red-text)}
+@media (min-width:735px){.tiles .tile__ic{margin-inline:auto}}
+.facts .ms-b::before{--ms-size:18px;margin-top:-2px}
+.row__go .ms,.arrow--out .ms{--ms-size:18px}
+.drawer__x .ms,.zoom__x .ms{--ms-size:22px}
+.bs-cur__top .ms,.bs-ic{--ms-size:28px;color:var(--ink)}.bs-cur__top .ms{margin-inline-start:auto}.bs-cur__top:has(.ms){align-items:center}
+.bs-chips .ms{--ms-size:16px;margin-inline-end:6px;margin-top:-2px}
+.go .ms-lead{--ms-size:18px}
+.bs-fit__ic .ms{--ms-size:20px}
+.bs-ticket__facts .ms-b::before,.bs-det .ms-b::before,.wb-facts .ms-b::before{--ms-size:18px;margin-top:-2px}
+.bs-stats .ms{display:block;--ms-size:28px;margin-bottom:14px;color:var(--ink)}
+.bs-sec--dark .ms,.bs-sec--dark .ms-b::before{color:var(--white)}
+.dp-free.ms-b::before{--ms-size:14px;margin-inline-end:6px;margin-top:-2px}
+.dp-works .ms{--ms-size:16px;margin-inline-end:6px;margin-top:-2px}
+.bl-meta .ms{--ms-size:15px;margin-inline-end:4px;margin-top:-2px;opacity:.8}
+.arrow .ms{--ms-size:18px}
+.bs-cur .bs-cur__top .ms{margin-inline-start:12px;--ms-size:22px}

@@ -29,7 +29,7 @@
   if(l!=="en"&&l!=="ar"){try{l=localStorage.getItem("ms-lang")}catch(e){}}
   if(l==="en"){document.documentElement.lang="en";document.documentElement.dir="ltr"}})();
   </script>
-  <link rel="stylesheet" href="../style.css?v=20261121a">
+  <link rel="stylesheet" href="../style.css?v=20261121m">
   <link rel="stylesheet" href="../assets/service.css?v=20261025h">
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://mohamed-sherif.com/"}, {"@type": "ListItem", "position": 2, "name": "الورش المجانية", "item": "https://mohamed-sherif.com/workshops/"}]}</script>
 </head>
@@ -106,9 +106,9 @@
         </div>
       </header>
       <dl class="bs-stats wb-stats">
-        <div><dt class="stat" dir="ltr">+<span data-count="850">850</span></dt><dd data-i18n="inst.s1">طالب ومصمم تعلّموا معه</dd></div>
-        <div><dt class="stat" dir="ltr"><span data-count="98.6" data-decimals="1">98.6</span>%</dt><dd data-i18n="inst.s2">قيّموا معرفة المحاضر ومهاراته بـ «ممتاز»*</dd></div>
-        <div><dt class="stat" dir="ltr">+<span data-count="90">90</span></dt><dd data-i18n="inst.s3">عميل وعلامة تجارية</dd></div>
+        <div><i class="ms ms--student" aria-hidden="true"></i><dt class="stat" dir="ltr">+<span data-count="850">850</span></dt><dd data-i18n="inst.s1">طالب ومصمم تعلّموا معه</dd></div>
+        <div><i class="ms ms--rating" aria-hidden="true"></i><dt class="stat" dir="ltr"><span data-count="98.6" data-decimals="1">98.6</span>%</dt><dd data-i18n="inst.s2">قيّموا معرفة المحاضر ومهاراته بـ «ممتاز»*</dd></div>
+        <div><i class="ms ms--client" aria-hidden="true"></i><dt class="stat" dir="ltr">+<span data-count="90">90</span></dt><dd data-i18n="inst.s3">عميل وعلامة تجارية</dd></div>
       </dl>
       <div class="proof-wrap">
         <ul class="proof" data-proof dir="ltr">
@@ -206,14 +206,14 @@ window.CATALOG = {
 
   function feature(w, l) {
     var ag = (w.agenda || []).length ? '<ol class="wb-agenda">' + w.agenda.map(function (a, i) { return '<li><span class="bs-cur__n num" dir="ltr">' + ("0" + (i + 1)).slice(-2) + "</span><span>" + esc(v(a, l)) + "</span></li>"; }).join("") + "</ol>" : "";
-    var f = w.file ? '<a class="txtlink" href="' + esc(w.file.href || "#") + '"' + ext(w.file.href || "") + ' data-pixel="Lead" data-pixel-name="Workshop file" data-cta="wb_file"><span>' + esc(v(w.file, l)) + '</span><span class="arrow" aria-hidden="true">' + (l === "en" ? "→" : "←") + "</span></a>" : "";
+    var f = w.file ? '<a class="txtlink" href="' + esc(w.file.href || "#") + '"' + ext(w.file.href || "") + ' data-pixel="Lead" data-pixel-name="Workshop file" data-cta="wb_file"><span>' + esc(v(w.file, l)) + '</span><span class="arrow" aria-hidden="true"><i class="ms ms--arrow-left ms--flip-ltr" aria-hidden="true"></i></span></a>' : "";
     return '<article class="wb-feat">' +
       '<figure class="wb-feat__cover"><img src="' + esc(w.cover) + '" alt="' + esc(w.title) + '" width="1600" height="902" loading="lazy"></figure>' +
       '<div class="wb-feat__body">' + tag(w, l) +
       '<p class="bs-cur__phase caps" lang="en" dir="ltr">' + esc(v(w.meta, "en")) + ' · ' + esc(v(w.price, "en")) + "</p>" +
       '<h3 class="wb-feat__t" lang="en" dir="ltr">' + esc(w.title) + "</h3>" +
       '<p class="wb-feat__d">' + esc(v(w.desc, l)) + "</p>" + ag +
-      '<dl class="wb-facts"><div><dt>' + (l === "en" ? "Length" : "المدة") + "</dt><dd>" + esc(v(w.meta, l)) + "</dd></div><div><dt>" + (l === "en" ? "Price" : "السعر") + "</dt><dd>" + esc(v(w.price, l)) + "</dd></div></dl>" +
+      '<dl class="wb-facts"><div><dt class="ms-b ms--duration">' + (l === "en" ? "Length" : "المدة") + "</dt><dd>" + esc(v(w.meta, l)) + "</dd></div><div><dt class=\"ms-b ms--price\">" + (l === "en" ? "Price" : "السعر") + "</dt><dd>" + esc(v(w.price, l)) + "</dd></div></dl>" +
       '<div class="wb-feat__act"><a class="btn btn--primary btn--lg" href="' + esc(href(w.link)) + '"' + ext(href(w.link)) + ' data-pixel="Lead" data-pixel-name="' + esc(w.title) + '" data-cta="wb_watch_' + esc(w.id) + '"><span>' + esc(v(w.cta, l)) + '</span><span class="btn__en" lang="en">Watch Free</span></a>' + f + "</div>" +
       "</div></article>";
   }
@@ -235,7 +235,7 @@ window.CATALOG = {
       '<p class="pc__note">' + esc(v(p.note, l)) + "</p>" +
       (p.price ? '<div class="pc__price"><span class="pc__now"><span class="num" dir="ltr">' + fmt(p.price) + "</span> " + (l === "en" ? "EGP" : "جنيه") + "</span>" + was + "</div>" : "") +
       '<div class="pc__act"><a class="btn btn--primary" href="' + esc(p.url || href(p.link)) + '"' + ext(p.url || href(p.link)) + (p.price ? ' data-pixel="InitiateCheckout" data-value="' + p.price + '"' : ' data-pixel="Lead"') + ' data-pixel-name="' + esc(p.title) + '" data-cta="pc_buy_' + esc(p.id) + '"><span>' + esc(v(p.cta, l)) + "</span></a>" +
-      (p.details ? '<a class="txtlink" href="' + esc(p.details) + '" data-cta="pc_more_' + esc(p.id) + '"><span>' + esc(v(p.more, l)) + '</span><span class="arrow" aria-hidden="true">' + (l === "en" ? "→" : "←") + "</span></a>" : "") + "</div></article>";
+      (p.details ? '<a class="txtlink" href="' + esc(p.details) + '" data-cta="pc_more_' + esc(p.id) + '"><span>' + esc(v(p.more, l)) + '</span><span class="arrow" aria-hidden="true"><i class="ms ms--arrow-left ms--flip-ltr" aria-hidden="true"></i></span></a>' : "") + "</div></article>";
   }
   window.renderCatalog = function () {
     var l = L(), W = C.webinars || [], P = C.products || [];
