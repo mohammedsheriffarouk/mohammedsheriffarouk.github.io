@@ -598,3 +598,12 @@ html[dir=rtl] .nav__cta::after{transform:scaleX(-1)}
 .bs-cur__top .ms,.bs-ic{--ms-size:28px;color:var(--ink)}.bs-cur__top .ms{margin-inline-start:auto}.bs-cur__top:has(.ms){align-items:center}
 .bs-chips .ms{--ms-size:16px;margin-inline-end:6px;margin-top:-2px}
 .go .ms-lead{--ms-size:18px}
+.bs-fit__ic .ms{--ms-size:20px}
+.bs-ticket__facts .ms-b::before,.bs-det .ms-b::before,.wb-facts .ms-b::before{--ms-size:18px;margin-top:-2px}
+.bs-stats .ms{display:block;--ms-size:28px;margin-bottom:14px;color:var(--ink)}
+.bs-sec--dark .ms,.bs-sec--dark .ms-b::before{color:var(--white)}
+.dp-free.ms-b::before{--ms-size:14px;margin-inline-end:6px;margin-top:-2px}
+.dp-works .ms{--ms-size:16px;margin-inline-end:6px;margin-top:-2px}
+.bl-meta .ms{--ms-size:15px;margin-inline-end:4px;margin-top:-2px;opacity:.8}
+.arrow .ms{--ms-size:18px}
+.bs-cur .bs-cur__top .ms{margin-inline-start:12px;--ms-size:22px}

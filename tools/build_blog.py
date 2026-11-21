@@ -183,7 +183,7 @@ def card(p, pre, big=False):
     mins = f"{p['min_ar']} دقائق قراءة" if 2 < p['min_ar'] < 11 else f"{p['min_ar']} دقيقة قراءة"
     return f'''<article class="bl-card" data-cat="{esc(p['category_ar'])}">
   <a class="bl-card__link" href="{url}">{cover}<span class="bl-card__body">{draft}
-    <span class="bl-meta">{bi(date_ar(p['d']), date_en(p['d']), 'time')}<span aria-hidden="true">·</span>{bi(mins, f"{p['min_en']} min read")}</span>
+    <span class="bl-meta"><i class="ms ms--calendar" aria-hidden="true"></i>{bi(date_ar(p['d']), date_en(p['d']), 'time')}<span aria-hidden="true">·</span><i class="ms ms--read-time" aria-hidden="true"></i>{bi(mins, f"{p['min_en']} min read")}</span>
     {bi(esc(p['title_ar']), esc(p['title_en']), 'h2' if big else 'h3', 'bl-card__t')}
     {bi(esc(p['desc_ar']), esc(p['desc_en']), 'p', 'bl-card__d')}
     <span class="go">{bi('اقرأ المقال', 'Read article')}<span class="go__ic" aria-hidden="true"></span></span>
@@ -251,7 +251,7 @@ def build():
   <article class="bl-post">
     <header class="bl-post__head bs-wrap">
       <a class="bl-back" href="{pre}blog/">{bi('→ المدونة', '← Blog')}</a>
-      <p class="bl-meta">{bi(esc(p['category_ar']), esc(p['category_en']), cls='bl-meta__cat')}<span aria-hidden="true">·</span><time datetime="{p['date']}">{bi(date_ar(p['d']), date_en(p['d']))}</time><span aria-hidden="true">·</span>{bi(f"{p['min_ar']} دقائق قراءة" if p['min_ar'] > 2 else f"{p['min_ar']} دقيقة قراءة", f"{p['min_en']} min read")}</p>
+      <p class="bl-meta">{bi(esc(p['category_ar']), esc(p['category_en']), cls='bl-meta__cat')}<span aria-hidden="true">·</span><i class="ms ms--calendar" aria-hidden="true"></i><time datetime="{p['date']}">{bi(date_ar(p['d']), date_en(p['d']))}</time><span aria-hidden="true">·</span><i class="ms ms--read-time" aria-hidden="true"></i>{bi(f"{p['min_ar']} دقائق قراءة" if p['min_ar'] > 2 else f"{p['min_ar']} دقيقة قراءة", f"{p['min_en']} min read")}</p>
       <h1 class="bl-post__t"><span class="l-ar">{esc(p['title_ar'])}</span><span class="l-en" lang="en" dir="ltr">{esc(p['title_en'])}</span></h1>
       {bi(esc(p['desc_ar']), esc(p['desc_en']), 'p', 'bl-post__lead')}
     </header>
