@@ -11,6 +11,7 @@
 - [Free Workshops](https://mohamed-sherif.com/workshops/): free recorded workshops, starting with "Branding The Big Picture".
 
 ## Tools
+- [Free Digital Products](https://mohamed-sherif.com/digital-products/): every free tool by Mohamed Sherif in one place.
 - [Mockup Builder](https://mohamed-sherif.com/mockup-builder/): a free tool that turns any logo into mockup prompts for ChatGPT, Gemini and Midjourney across every brand touch point.
 
 ## More

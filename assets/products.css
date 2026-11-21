@@ -1,0 +1,24 @@
+/* ===== digital products ===== */
+.dp-list{display:grid;gap:32px;margin-top:40px}
+.dp-card{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);border:1px solid var(--line);background:#fff}
+.dp-card__img{display:flex;align-items:flex-start;padding:32px;background:#F5F5F7;overflow:hidden;border-inline-end:1px solid var(--line)}
+.dp-card__img img{display:block;width:100%;height:auto;border:1px solid var(--line);transition:transform var(--d-slow) var(--ease-smooth-out)}
+.dp-card:hover .dp-card__img img{transform:scale(1.02)}
+.dp-card__body{display:flex;flex-direction:column;align-items:flex-start;gap:16px;padding:40px}
+.dp-card__top{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
+.dp-free{background:var(--red);color:#fff;font-size:var(--t-small);font-weight:600;padding:3px 12px}
+.dp-kind{font-size:var(--t-small);color:var(--body)}
+.dp-card__t{font-size:var(--t-headline);line-height:var(--lh-headline);font-weight:300;text-transform:uppercase}
+.dp-card__d{color:var(--body);max-width:56ch}
+.dp-stats{display:flex;flex-wrap:wrap;gap:12px 36px;margin:4px 0}
+.dp-stats dt{font-size:var(--t-headline);line-height:1;font-weight:300}
+.dp-stats dd{font-size:var(--t-small);color:var(--body);margin-top:4px}
+.dp-steps{margin:0;padding:0;list-style:none;counter-reset:s;width:100%;border-top:1px solid var(--line)}
+.dp-steps li{counter-increment:s;display:grid;grid-template-columns:32px minmax(0,1fr);padding:12px 0;border-bottom:1px solid var(--line);font-size:var(--t-small);line-height:1.7}
+.dp-steps li::before{content:counter(s);color:var(--red-text);font-weight:600}
+.dp-works{font-size:var(--t-small);color:var(--body)}
+.dp-works span{font-weight:600;color:var(--ink)}
+.dp-act{margin-top:8px}
+@media (max-width:1068px){.dp-card{grid-template-columns:minmax(0,1fr)}.dp-card__img{border-inline-end:0;border-bottom:1px solid var(--line);padding:20px}}
+@media (max-width:734px){.dp-card__body{padding:24px}.dp-act,.dp-act .btn{width:100%}}
+@media (prefers-reduced-motion:reduce){.dp-card__img img{transition:none}}
