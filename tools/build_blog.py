@@ -96,7 +96,7 @@ def head(title, desc, canonical, pre, og_type="website", image=None, extra=""):
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="{pre}assets/js/pixel.js?v=20261009px"></script>
+  <script src="{pre}assets/js/pixel.js?v=20261121a" defer></script>
   <title>{esc(title)}</title>
   <meta name="description" content="{esc(desc)}">
   <meta name="author" content="Mohamed Sherif">
@@ -121,7 +121,7 @@ def head(title, desc, canonical, pre, og_type="website", image=None, extra=""):
   if(l!=="en"&&l!=="ar"){{try{{l=localStorage.getItem("ms-lang")}}catch(e){{}}}}
   if(l==="en"){{document.documentElement.lang="en";document.documentElement.dir="ltr"}}}})();
   </script>
-  <link rel="stylesheet" href="{pre}style.css?v=20261025i">
+  <link rel="stylesheet" href="{pre}style.css?v=20261121a">
   <link rel="stylesheet" href="{pre}assets/service.css?v=20261025h">
   <link rel="stylesheet" href="{pre}assets/blog.css?v={V}">{extra}
 </head>
@@ -145,11 +145,14 @@ def foot(pre, en_dict, extra_js=""):
     <span class="caps foot__name">Mohamed Sherif</span>
   </a>
   <p class="foot__role">Blog · Brand Identity Designer · Branding Educator</p>
+  <nav class="foot__nav" aria-label="Site">
+    <a href="{pre}">Home</a><a href="{pre}brand-identity/">Brand Identity</a><a href="{pre}brand-set/">BRAND-SET</a><a href="{pre}mentoring/">Mentoring</a><a href="{pre}workshops/">Free Workshops</a><a href="{pre}mockup-builder/">Mockup Builder</a>
+  </nav>
   <p class="caps foot__copy">© {datetime.date.today().year}</p>
 </footer>
 <div class="toast" role="status" aria-live="polite"></div>
 <script>const EN = {json.dumps(en_dict, ensure_ascii=False)};</script>
-<script src="{pre}script.js?v=20261025i" defer></script>{extra_js}
+<script src="{pre}script.js?v=20261121a" defer></script>{extra_js}
 <script src="{pre}assets/js/drawer.js?v=20261104b" charset="utf-8" defer></script>
 </body>
 </html>
@@ -281,7 +284,9 @@ def build():
         listing = card(posts[0], pre, big=True) + (f'<div class="bl-grid">{"".join(card(p, pre) for p in posts[1:])}</div>' if len(posts) > 1 else "")
     else:
         listing = f'<p class="bl-empty">{bi("أول مقال قريب.", "First article coming soon.")}</p>'
-    h = head("المدونة — محمد شريف", "مقالات تعليمية عن تصميم الهوية البصرية والبراندنج من محمد شريف: أفكار، أدوات، وأخطاء شائعة وطريقة تجنبها.", f"{SITE}/blog/", pre)
+    live_count = len([p for p in posts if not p["draft"]])
+    h = head("المدونة — محمد شريف", "مقالات تعليمية عن تصميم الهوية البصرية والبراندنج من محمد شريف: أفكار، أدوات، وأخطاء شائعة وطريقة تجنبها.", f"{SITE}/blog/", pre,
+             extra="" if live_count else '\n  <meta name="robots" content="noindex">')
     body = f'''<header class="bs-hero bl-hero" id="top">
   <div class="bs-wrap">
     <p class="bs-kicker caps" lang="en" dir="ltr">Blog</p>
@@ -303,7 +308,15 @@ def build():
     # ---------- sitemap / robots / feed ----------
     live = [p for p in posts if not p["draft"]]
     today = datetime.date.today().isoformat()
-    urls = [(f"{SITE}/{u}", today) for u in STATIC_PAGES] + [(f'{SITE}/blog/{p["slug"]}/', p.get("updated", p["date"])) for p in live]
+    import subprocess
+    def lastmod(rel):
+        try:
+            out = subprocess.run(["git", "log", "-1", "--format=%cs", "--", rel], cwd=ROOT, capture_output=True, text=True).stdout.strip()
+            return out or today
+        except Exception:
+            return today
+    pages = [u for u in STATIC_PAGES if u != "blog/" or live]
+    urls = [(f"{SITE}/{u}", lastmod((u or "") + "index.html")) for u in pages] + [(f'{SITE}/blog/{p["slug"]}/', p.get("updated", p["date"])) for p in live]
     sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(f"  <url><loc>{u}</loc><lastmod>{d}</lastmod></url>\n" for u, d in urls) + "</urlset>\n"
     open(os.path.join(ROOT, "sitemap.xml"), "w", encoding="utf-8").write(sm)
     open(os.path.join(ROOT, "robots.txt"), "w", encoding="utf-8").write(f"User-agent: *\nAllow: /\nDisallow: /blog/_posts/\nDisallow: /tools/\n\nSitemap: {SITE}/sitemap.xml\n")

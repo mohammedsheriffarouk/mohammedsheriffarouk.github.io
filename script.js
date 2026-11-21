@@ -98,7 +98,8 @@ const DEFAULT_LANG = "ar";
 
     const toggleLabel = lang === "en" ? UI_EN.toggleTo : UI_AR.toggleTo;
     document.querySelectorAll("[data-lang-toggle]").forEach((b) => {
-      b.setAttribute("aria-label", toggleLabel);
+      b.removeAttribute("aria-label");
+      b.setAttribute("title", toggleLabel);
       b.setAttribute("lang", lang === "en" ? "ar" : "en");
     });
     const nt = document.getElementById("newtab-note");

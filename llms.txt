@@ -1,0 +1,20 @@
+# Mohamed Sherif — محمد شريف
+
+> Brand identity designer and branding educator based in Cairo, Egypt. He designs visual identities for companies in Egypt and the Gulf, and teaches designers through the BRAND-SET course, one-to-one mentoring sessions and free workshops. The site is in Arabic, with an English version on the same pages (?lang=en).
+
+## Services
+- [Brand Identity for Companies](https://mohamed-sherif.com/brand-identity/): visual identity design for companies and brands in Egypt and the Gulf, from the logo to the brand guidelines.
+
+## Learning
+- [BRAND-SET](https://mohamed-sherif.com/brand-set/): an online visual identity course of six lectures that follows the steps of real projects, from the client brief to the delivery files.
+- [One : One Mentoring Session](https://mohamed-sherif.com/mentoring/): a 90-minute one-to-one session that assesses a designer's level across 8 axes, reviews one of their projects and ends with a practical plan.
+- [Free Workshops](https://mohamed-sherif.com/workshops/): free recorded workshops, starting with "Branding The Big Picture".
+
+## Tools
+- [Mockup Builder](https://mohamed-sherif.com/mockup-builder/): a free tool that turns any logo into mockup prompts for ChatGPT, Gemini and Midjourney across every brand touch point.
+
+## More
+- [Home](https://mohamed-sherif.com/): selected work, about, services and student feedback.
+- [Blog](https://mohamed-sherif.com/blog/): articles on visual identity and branding.
+- [Behance](https://www.behance.net/MohamedSherifco)
+- [LinkedIn](https://www.linkedin.com/in/mohamed-sherif-611483202/)
