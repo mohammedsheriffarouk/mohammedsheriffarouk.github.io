@@ -411,3 +411,8 @@ body.t-lang-out main,body.t-lang-out .hero,body.t-lang-out .bs-hero,body.t-lang-
 .t-img{opacity:0;filter:blur(2px);transition:opacity var(--d-slow) ease-in-out,filter var(--d-slow) ease-in-out,transform var(--d-slow) var(--ease-smooth-out)}
 .t-img.is-loaded{opacity:1;filter:none}
 @media (prefers-reduced-motion:reduce){.js .t-stagger>*,.t-img{opacity:1;transform:none;filter:none;transition:none}}
+
+/* footer site links (subpages) */
+.foot__nav{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:var(--t-small)}
+.foot__nav a{color:inherit;opacity:.75;text-decoration:none}
+.foot__nav a:hover{opacity:1;color:#fff}

@@ -7,7 +7,7 @@ const EN = {
   "nav.label": "Navigation",
   "nav.home": "Home",
   "nav.products": "Products",
-  "meta.title": "Workshops & Products — Mohamed Sherif",
+  "meta.title": "Free Visual Identity Workshops — Mohamed Sherif",
   "meta.desc": "Free workshops on identity design and branding, plus practical tools for designers from Mohamed Sherif.",
   "hero.promise": "Start with a free workshop, <em>then pick the step that fits your level.</em>",
   "hero.lead": "Open workshops on identity design and branding, and practical tools for designers that take you from understanding to doing.",
