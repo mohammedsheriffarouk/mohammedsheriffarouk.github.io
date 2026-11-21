@@ -1,7 +1,6 @@
 ---
 slug: design-brief-before-identity
 date: 2026-11-21
-draft: true
 category_ar: مهنة التصميم
 category_en: Design Practice
 title_ar: البريف: أهم صفحة يكتبها مصمم الهوية قبل أن يفتح أي برنامج

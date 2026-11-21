@@ -19,6 +19,7 @@ const EN = {
   "nav.resume": "Resume",
   "nav.workshops": "Free Workshops",
   "nav.mockup": "Digital Products",
+  "nav.blog": "Blog",
   "about.big1": "I'm Mohamed Sherif, a brand identity designer and branding lecturer based in Cairo. I work with companies and brands across Egypt and the Gulf to build their visual identities — from the logo to the brand guidelines.",
   "about.big2": "Alongside that, I share what I've learned with designers through hands-on courses and one : one sessions.",
   "work.more": "View Project",

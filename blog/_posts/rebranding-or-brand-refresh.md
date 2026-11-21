@@ -1,7 +1,6 @@
 ---
 slug: rebranding-or-brand-refresh
 date: 2026-11-21
-draft: true
 category_ar: الهوية البصرية
 category_en: Visual Identity
 title_ar: هل تحتاج شركتك Rebranding أم مجرد تجديد للهوية؟

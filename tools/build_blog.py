@@ -30,7 +30,7 @@ import markdown
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://mohamed-sherif.com"
 POSTS_DIR = os.path.join(ROOT, "blog", "_posts")
-V = "20261104c"
+V = "20261121d"
 DRAFTS = "--drafts" in sys.argv
 
 AR_MONTHS = ["يناير","فبراير","مارس","أبريل","مايو","يونيو","يوليو","أغسطس","سبتمبر","أكتوبر","نوفمبر","ديسمبر"]
@@ -147,14 +147,14 @@ def foot(pre, en_dict, extra_js=""):
   </a>
   <p class="foot__role">Blog · Brand Identity Designer · Branding Educator</p>
   <nav class="foot__nav" aria-label="Site">
-    <a href="{pre}">Home</a><a href="{pre}brand-identity/">Brand Identity</a><a href="{pre}brand-set/">BRAND-SET</a><a href="{pre}mentoring/">Mentoring</a><a href="{pre}workshops/">Free Workshops</a><a href="{pre}mockup-builder/">Mockup Builder</a>
+    <a href="{pre}">Home</a><a href="{pre}brand-identity/">Brand Identity</a><a href="{pre}brand-set/">BRAND-SET</a><a href="{pre}mentoring/">Mentoring</a><a href="{pre}workshops/">Free Workshops</a><a href="{pre}mockup-builder/">Mockup Builder</a><a href="{pre}blog/">Blog</a>
   </nav>
   <p class="caps foot__copy">© {datetime.date.today().year}</p>
 </footer>
 <div class="toast" role="status" aria-live="polite"></div>
 <script>const EN = {json.dumps(en_dict, ensure_ascii=False)};</script>
 <script src="{pre}script.js?v=20261121c" defer></script>{extra_js}
-<script src="{pre}assets/js/drawer.js?v=20261104b" charset="utf-8" defer></script>
+<script src="{pre}assets/js/drawer.js?v=20261121d" charset="utf-8" defer></script>
 </body>
 </html>
 '''
@@ -167,14 +167,23 @@ def bi(ar, en, tag="span", cls=""):
     c = f' class="{cls}"' if cls else ""
     return f'<{tag}{c}><span class="l-ar">{ar}</span><span class="l-en" lang="en" dir="ltr">{en}</span></{tag}>'
 
+CAT_TONE = {"مهنة التصميم": "red"}
+
 def card(p, pre, big=False):
     url = f'{pre}blog/{p["slug"]}/'
-    cover = f'<span class="bl-card__img"><img src="{pre}{esc(p["cover"])}" alt="" loading="lazy"></span>' if p.get("cover") else ""
+    if p.get("cover"):
+        cover = f'<span class="bl-card__img"><img src="{pre}{esc(p["cover"])}" alt="" loading="lazy"></span>'
+    else:
+        tone = CAT_TONE.get(p["category_ar"], "ink")
+        cover = (f'<span class="bl-card__img bl-card__img--{tone}" aria-hidden="true">'
+                 f'<img class="bl-card__mark" src="{pre}assets/icons/{"logo-white.svg" if tone == "red" else "logo-red-white.svg"}" alt="" width="40" height="28">'
+                 f'{bi(esc(p["category_ar"]), esc(p["category_en"]), cls="bl-card__cat")}</span>')
     draft = '<span class="bl-draft">مسودة · معاينة فقط</span>' if p["draft"] else ""
-    return f'''<article class="bl-card{' bl-card--big' if big else ''}{' has-img' if p.get('cover') else ''}" data-cat="{esc(p['category_ar'])}">
+    mins = f"{p['min_ar']} دقائق قراءة" if 2 < p['min_ar'] < 11 else f"{p['min_ar']} دقيقة قراءة"
+    return f'''<article class="bl-card" data-cat="{esc(p['category_ar'])}">
   <a class="bl-card__link" href="{url}">{cover}<span class="bl-card__body">{draft}
-    <span class="bl-meta">{bi(esc(p['category_ar']), esc(p['category_en']), cls='bl-meta__cat')}<span aria-hidden="true">·</span>{bi(date_ar(p['d']), date_en(p['d']), 'time')}<span aria-hidden="true">·</span>{bi(f"{p['min_ar']} دقائق قراءة" if p['min_ar'] > 2 else f"{p['min_ar']} دقيقة قراءة", f"{p['min_en']} min read")}</span>
-    {bi(esc(p['title_ar']), esc(p['title_en']), 'h3' if not big else 'h2', 'bl-card__t')}
+    <span class="bl-meta">{bi(date_ar(p['d']), date_en(p['d']), 'time')}<span aria-hidden="true">·</span>{bi(mins, f"{p['min_en']} min read")}</span>
+    {bi(esc(p['title_ar']), esc(p['title_en']), 'h2' if big else 'h3', 'bl-card__t')}
     {bi(esc(p['desc_ar']), esc(p['desc_en']), 'p', 'bl-card__d')}
     <span class="go">{bi('اقرأ المقال', 'Read article')}<span class="go__ic" aria-hidden="true"></span></span>
   </span></a>
@@ -234,7 +243,7 @@ def build():
         if related:
             rel_html = f'''<section class="bl-related" aria-labelledby="rel-t"><div class="bs-wrap">
     <h2 id="rel-t" class="bl-related__t">{bi('مقالات أخرى', 'More articles')}</h2>
-    <div class="bl-grid">{''.join(card(q, pre) for q in related)}</div>
+    <div class="bl-cards">{''.join(card(q, pre) for q in related)}</div>
   </div></section>'''
         body = f'''{'<p class="bl-draftbar">مسودة للمعاينة فقط — مش منشورة ومش هتظهر في جوجل</p>' if p['draft'] else ''}
 <main id="main">
@@ -282,7 +291,7 @@ def build():
         chips = '<div class="bl-chips" role="group" aria-label="التصنيفات">' + bi('الكل', 'All', 'button', 'bl-chip is-on').replace('<button class="bl-chip is-on">', '<button type="button" class="bl-chip is-on" data-f="">') + "".join(
             bi(esc(a), esc(e), 'button', 'bl-chip').replace('<button class="bl-chip">', f'<button type="button" class="bl-chip" data-f="{esc(a)}">') for a, e in cats) + "</div>"
     if posts:
-        listing = card(posts[0], pre, big=True) + (f'<div class="bl-grid">{"".join(card(p, pre) for p in posts[1:])}</div>' if len(posts) > 1 else "")
+        listing = f'<div class="bl-cards">{"".join(card(p, pre) for p in posts)}</div>'
     else:
         listing = f'<p class="bl-empty">{bi("أول مقال قريب.", "First article coming soon.")}</p>'
     live_count = len([p for p in posts if not p["draft"]])

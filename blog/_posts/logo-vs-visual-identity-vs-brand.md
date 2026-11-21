@@ -1,7 +1,6 @@
 ---
 slug: logo-vs-visual-identity-vs-brand
 date: 2026-11-21
-draft: true
 category_ar: الهوية البصرية
 category_en: Visual Identity
 title_ar: اللوجو والهوية البصرية والبراند: ما الفرق، ولماذا يهمّك كصاحب شركة؟
