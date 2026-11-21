@@ -7,6 +7,7 @@ title_ar: البريف: أهم صفحة يكتبها مصمم الهوية قب�
 title_en: The brief: the most important page an identity designer writes
 desc_ar: معظم مشاكل مشاريع الهوية لا تبدأ في التصميم، بل قبله. ما الفرق بين بريف العميل والبريف الإبداعي، وكيف تكتب بريفًا يحميك من «ده مش اللي في بالي».
 desc_en: Most identity project problems start before the design. The client brief vs the creative brief, and how to write one that protects you.
+cover: assets/blog/design-brief-before-identity.jpg
 cta: brandSet
 ---
 <!-- ar -->
