@@ -42,7 +42,7 @@ CTAS = {
   "mockup":    {"ar": ("شاهد هويتك على كل نقطة تواصل قبل التنفيذ", "Mockup Builder أداة مجانية تحوّل أي شعار إلى موكابات احترافية عبر برومبتات جاهزة لـ ChatGPT وGemini وMidjourney."), "en": ("See your identity on every touch point first", "Mockup Builder is a free tool that turns any logo into mockup prompts for ChatGPT, Gemini and Midjourney."), "href": "mockup-builder/", "btn": ("جرّب الأداة", "Try the tool")},
   "mentoring": {"ar": ("تحتاج من يراجع عملك؟", "جلسة منتورينج فردية تعرف فيها مستواك وتخرج بخطة عملية."), "en": ("Need someone to review your work?", "A one-to-one mentoring session to see where you stand and leave with a plan."), "href": "mentoring/", "btn": ("احجز جلستك", "Book your session")},
 }
-STATIC_PAGES = ["", "brand-set/", "mentoring/", "workshops/", "brand-identity/", "digital-products/", "mockup-builder/", "blog/"]
+STATIC_PAGES = ["", "brand-set/", "mentoring/", "workshops/", "brand-identity/", "digital-products/", "mockup-builder/", "dieline-lab/", "blog/"]
 
 def esc(s): return html.escape(str(s or ""), quote=True)
 

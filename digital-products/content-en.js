@@ -8,7 +8,7 @@ const EN = {
   "nav.home": "Home",
   "nav.tools": "Tools",
   "meta.title": "Free Digital Products for Designers — Mohamed Sherif",
-  "meta.desc": "Free tools by Mohamed Sherif for visual identity designers, starting with Mockup Builder.",
+  "meta.desc": "Free tools by Mohamed Sherif for visual identity designers, including Mockup Builder and Dieline Lab.",
   "hero.promise": "Free tools for designers, <em>built to cut production time.</em>",
   "hero.lead": "Tools I built from my own identity projects, completely free. No subscription, no payment.",
   "hero.cta": "Browse tools",

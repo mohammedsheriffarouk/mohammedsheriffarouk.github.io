@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="../assets/js/pixel.js?v=20261121a" defer></script>
   <title>منتجات رقمية مجانية للمصممين — محمد شريف</title>
-  <meta name="description" content="أدوات مجانية من محمد شريف لمصممي الهوية البصرية: Mockup Builder وأدوات أخرى تختصر وقت التنفيذ في مشاريع الهوية.">
+  <meta name="description" content="أدوات مجانية من محمد شريف لمصممي الهوية البصرية: Mockup Builder لموكابات الذكاء الاصطناعي وDieline Lab لقوالب الطباعة والتغليف.">
   <meta name="author" content="Mohamed Sherif">
   <meta name="theme-color" content="#FFFFFF">
   <link rel="canonical" href="https://mohamed-sherif.com/digital-products/">
@@ -32,7 +32,7 @@
   <link rel="stylesheet" href="../style.css?v=20261121a">
   <link rel="stylesheet" href="../assets/service.css?v=20261025h">
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://mohamed-sherif.com/"}, {"@type": "ListItem", "position": 2, "name": "منتجات رقمية", "item": "https://mohamed-sherif.com/digital-products/"}]}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": 1, "item": {"@type": "SoftwareApplication", "name": "Mockup Builder", "url": "https://mohamed-sherif.com/mockup-builder/", "description": "أداة تحوّل أي شعار إلى موكابات احترافية على كل نقاط التواصل، ببرومبتات جاهزة لـ ChatGPT وGemini وMidjourney.", "applicationCategory": "DesignApplication", "operatingSystem": "Web", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EGP"}, "author": {"@type": "Person", "name": "Mohamed Sherif", "url": "https://mohamed-sherif.com/"}}}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": 1, "item": {"@type": "SoftwareApplication", "name": "Mockup Builder", "url": "https://mohamed-sherif.com/mockup-builder/", "description": "أداة تحوّل أي شعار إلى موكابات احترافية على كل نقاط التواصل، ببرومبتات جاهزة لـ ChatGPT وGemini وMidjourney.", "applicationCategory": "DesignApplication", "operatingSystem": "Web", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EGP"}, "author": {"@type": "Person", "name": "Mohamed Sherif", "url": "https://mohamed-sherif.com/"}}}, {"@type": "ListItem", "position": 2, "item": {"@type": "SoftwareApplication", "name": "Dieline Lab", "url": "https://mohamed-sherif.com/dieline-lab/", "description": "قوالب طباعة جاهزة بمقاساتك لمطبوعات الهوية والتغليف، مع موكابات ولوحات مواصفات.", "applicationCategory": "DesignApplication", "operatingSystem": "Web", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EGP"}, "author": {"@type": "Person", "name": "Mohamed Sherif", "url": "https://mohamed-sherif.com/"}}}]}</script>
   <link rel="stylesheet" href="../assets/products.css?v=20261121b">
 </head>
 <body class="bs">
@@ -124,7 +124,19 @@ window.TOOLS = [
              { ar: "ولّد الموكابات، وعدّل أي لقطة بأمر قصير.", en: "Generate the mockups and adjust any shot with a short command." } ],
     works: "ChatGPT · Gemini · Midjourney",
     img: "../assets/images/tool-mockup-builder.jpg",
-    url: "../mockup-builder/" }
+    url: "../mockup-builder/" },
+  { id: "dieline-lab",
+    name: "Dieline Lab",
+    kind: { ar: "قوالب طباعة وموكابات", en: "Dielines & mockups" },
+    desc: { ar: "قوالب طباعة جاهزة بمقاساتك لمطبوعات الهوية والتغليف: كروت، وأظرف، وفولدرات، وعلب، وأكياس، وملصقات. ومعها موكابات للمنتج، ولوحات مواصفات لنقاط التواصل، تصدّرها كلها بصيغ جاهزة للمطبعة.",
+            en: "Print-ready dielines sized to your specs for identity and packaging items: cards, envelopes, folders, boxes, bags and labels. Plus product mockups and spec boards, all exported in print-ready formats." },
+    stats: [ { n: "22", ar: "نوع قالب قابل للتعديل", en: "editable template families" }, { n: "52", ar: "موكاب", en: "mockups" }, { n: "18", ar: "لوحة مواصفات", en: "spec boards" } ],
+    steps: [ { ar: "اختر القالب من المكتبة، واضبط المقاسات وهوامش القص والأمان.", en: "Pick a template from the library and set the size, bleed and safe margins." },
+             { ar: "ارفع تصميمك لترى الموكاب أو لوحة المواصفات.", en: "Upload your artwork to see the mockup or the spec board." },
+             { ar: "صدّر الملف بصيغة SVG أو PDF أو EPS أو DXF أو PNG، أو كحزمة إنتاج كاملة.", en: "Export as SVG, PDF, EPS, DXF or PNG, or as a complete production pack." } ],
+    works: { ar: "أي متصفح، بلا تثبيت · الواجهة بالإنجليزية", en: "any browser, no install · English interface" },
+    img: "../assets/images/tool-dieline-lab.jpg",
+    url: "../dieline-lab/" }
 ];
 (function () {
   var L = function () { return document.documentElement.lang === "en" ? "en" : "ar"; };
@@ -140,7 +152,7 @@ window.TOOLS = [
         '<p class="dp-card__d">' + esc(v(t.desc, l)) + '</p>' +
         (t.stats ? '<dl class="dp-stats">' + t.stats.map(function (s) { return '<div><dt dir="ltr">' + esc(s.n) + '</dt><dd>' + esc(v(s, l)) + '</dd></div>'; }).join("") + '</dl>' : "") +
         (t.steps ? '<ol class="dp-steps">' + t.steps.map(function (s) { return '<li>' + esc(v(s, l)) + '</li>'; }).join("") + '</ol>' : "") +
-        (t.works ? '<p class="dp-works"><span>' + (en ? "Works with" : "يعمل مع") + '</span> <bdi dir="ltr">' + esc(t.works) + '</bdi></p>' : "") +
+        (t.works ? '<p class="dp-works"><span>' + (en ? "Works with" : "يعمل مع") + '</span> <bdi>' + esc(v(t.works, l)) + '</bdi></p>' : "") +
         '<div class="dp-act"><a class="btn btn--primary" href="' + esc(t.url) + '" data-pixel="Lead" data-pixel-name="' + esc(t.name) + '" data-cta="dp_open_' + esc(t.id) + '"><span>' + (en ? "Open the tool — free" : "افتح الأداة مجانًا") + '</span></a></div>' +
       '</div></article>';
   }

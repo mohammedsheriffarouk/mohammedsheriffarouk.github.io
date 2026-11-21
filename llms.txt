@@ -13,6 +13,7 @@
 ## Tools
 - [Free Digital Products](https://mohamed-sherif.com/digital-products/): every free tool by Mohamed Sherif in one place.
 - [Mockup Builder](https://mohamed-sherif.com/mockup-builder/): a free tool that turns any logo into mockup prompts for ChatGPT, Gemini and Midjourney across every brand touch point.
+- [Dieline Lab](https://mohamed-sherif.com/dieline-lab/): a free tool for print-ready dielines (stationery and packaging), product mockups and spec boards, exported as SVG, PDF, EPS, DXF and PNG.
 
 ## More
 - [Home](https://mohamed-sherif.com/): selected work, about, services and student feedback.
