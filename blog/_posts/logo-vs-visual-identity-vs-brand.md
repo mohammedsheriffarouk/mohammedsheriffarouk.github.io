@@ -7,6 +7,7 @@ title_ar: اللوجو والهوية البصرية والبراند: ما ال
 title_en: Logo, visual identity and brand: what's the difference?
 desc_ar: ثلاث كلمات تُستخدم كأنها شيء واحد، لكن كل واحدة منها تعني ميزانية ووقتًا ونتيجة مختلفة. فهم الفرق يوفّر عليك قرارات تدفع ثمنها مرتين.
 desc_en: Three words used as if they meant the same thing, though each means a different budget, timeline and result.
+cover: assets/blog/logo-vs-visual-identity-vs-brand.jpg
 cta: identity
 ---
 <!-- ar -->

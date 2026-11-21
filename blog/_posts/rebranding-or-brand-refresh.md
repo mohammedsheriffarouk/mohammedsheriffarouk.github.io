@@ -7,6 +7,7 @@ title_ar: هل تحتاج شركتك Rebranding أم مجرد تجديد لله�
 title_en: Does your company need a rebrand or a brand refresh?
 desc_ar: ليس كل شعار قديم يحتاج تغييرًا جذريًا. الفرق بين إعادة بناء العلامة وتجديدها، وعلامات تساعدك تعرف أيهما يناسب شركتك.
 desc_en: Not every old logo needs a radical change. The difference between a rebrand and a refresh, and the signs that tell you which one you need.
+cover: assets/blog/rebranding-or-brand-refresh.jpg
 cta: identity
 ---
 <!-- ar -->

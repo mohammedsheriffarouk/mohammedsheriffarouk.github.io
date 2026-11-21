@@ -30,7 +30,7 @@ import markdown
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://mohamed-sherif.com"
 POSTS_DIR = os.path.join(ROOT, "blog", "_posts")
-V = "20261121d"
+V = "20261121e"
 DRAFTS = "--drafts" in sys.argv
 
 AR_MONTHS = ["يناير","فبراير","مارس","أبريل","مايو","يونيو","يوليو","أغسطس","سبتمبر","أكتوبر","نوفمبر","ديسمبر"]
@@ -39,6 +39,7 @@ CTAS = {
   "brandSet":  {"ar": ("تريد تطبيق هذا على مشروع هوية كامل؟", "كورس BRAND-SET يأخذك خطوة بخطوة من ملخص العميل حتى ملفات التسليم."), "en": ("Want to apply this to a full identity?", "BRAND-SET takes you step by step from the client brief to the final identity delivery."), "href": "brand-set/", "btn": ("اعرف أكتر عن BRAND-SET", "Explore BRAND-SET")},
   "workshop":  {"ar": ("ابدأ بالورشة المجانية", "ساعتان تغيّران طريقتك في النظر إلى العلامة التجارية."), "en": ("Start with the free workshop", "Two hours that change how you look at a brand."), "href": "workshops/", "btn": ("شاهد الورشة مجانًا", "Watch free")},
   "identity":  {"ar": ("تحتاج هوية تعبّر عن شركتك فعلًا؟", "أصمم هويات بصرية للشركات في مصر والخليج، تبدأ من فهم النشاط والجمهور قبل أي تصميم."), "en": ("Need an identity that really fits your company?", "I design visual identities for companies in Egypt and the Gulf, starting from the business and its audience."), "href": "brand-identity/", "btn": ("اعرف أكتر", "Learn more")},
+  "mockup":    {"ar": ("شاهد هويتك على كل نقطة تواصل قبل التنفيذ", "Mockup Builder أداة مجانية تحوّل أي شعار إلى موكابات احترافية عبر برومبتات جاهزة لـ ChatGPT وGemini وMidjourney."), "en": ("See your identity on every touch point first", "Mockup Builder is a free tool that turns any logo into mockup prompts for ChatGPT, Gemini and Midjourney."), "href": "mockup-builder/", "btn": ("جرّب الأداة", "Try the tool")},
   "mentoring": {"ar": ("تحتاج من يراجع عملك؟", "جلسة منتورينج فردية تعرف فيها مستواك وتخرج بخطة عملية."), "en": ("Need someone to review your work?", "A one-to-one mentoring session to see where you stand and leave with a plan."), "href": "mentoring/", "btn": ("احجز جلستك", "Book your session")},
 }
 STATIC_PAGES = ["", "brand-set/", "mentoring/", "workshops/", "brand-identity/", "mockup-builder/", "blog/"]
@@ -171,8 +172,8 @@ CAT_TONE = {"مهنة التصميم": "red"}
 
 def card(p, pre, big=False):
     url = f'{pre}blog/{p["slug"]}/'
-    if p.get("cover"):
-        cover = f'<span class="bl-card__img"><img src="{pre}{esc(p["cover"])}" alt="" loading="lazy"></span>'
+    if False:  # covers carry the title, so cards use the category block and covers go to social sharing
+        cover = f'<span class="bl-card__img bl-card__img--photo"><img src="{pre}{esc(p["cover"])}" alt="" loading="lazy" width="1200" height="630"></span>'
     else:
         tone = CAT_TONE.get(p["category_ar"], "ink")
         cover = (f'<span class="bl-card__img bl-card__img--{tone}" aria-hidden="true">'
@@ -230,7 +231,7 @@ def build():
         extra = f'\n  <meta property="article:published_time" content="{p["date"]}">\n  <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>\n  <script type="application/ld+json">{json.dumps(crumbs, ensure_ascii=False)}</script>'
         if p["draft"]: extra += '\n  <meta name="robots" content="noindex">'
         h = head(f'{p["title_ar"]} — محمد شريف', p["desc_ar"], url, pre, "article", img, extra)
-        cover = f'<figure class="bl-cover"><img src="{pre}{esc(p["cover"])}" alt="{esc(p["title_ar"])}"></figure>' if p.get("cover") else ""
+        cover = ""  # covers are used for cards and social sharing; the post page leads with its own title
         only_ar = "" if p["has_en"] else '<p class="bl-note l-en" lang="en" dir="ltr">This article is available in Arabic only for now.</p>'
         share_txt = esc(p["title_ar"])
         cta_html = ""
