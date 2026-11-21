@@ -36,9 +36,10 @@ DRAFTS = "--drafts" in sys.argv
 AR_MONTHS = ["يناير","فبراير","مارس","أبريل","مايو","يونيو","يوليو","أغسطس","سبتمبر","أكتوبر","نوفمبر","ديسمبر"]
 EN_MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"]
 CTAS = {
-  "brandSet":  {"ar": ("عايز تطبّق ده على هوية كاملة؟", "كورس BRAND-SET بياخدك خطوة بخطوة من ملخص العميل لحد تسليم الهوية."), "en": ("Want to apply this to a full identity?", "BRAND-SET takes you step by step from the client brief to the final identity delivery."), "href": "brand-set/", "btn": ("اعرف أكتر عن BRAND-SET", "Explore BRAND-SET")},
-  "workshop":  {"ar": ("ابدأ بالورشة المجانية", "ساعتان تغيّر طريقتك في النظر إلى العلامة التجارية."), "en": ("Start with the free workshop", "Two hours that change how you look at a brand."), "href": "workshops/", "btn": ("شاهد الورشة مجانًا", "Watch free")},
-  "mentoring": {"ar": ("محتاج حد يراجع شغلك؟", "جلسة منتورينج فردية تعرف فيها مستواك وتخرج بخطة عملية."), "en": ("Need someone to review your work?", "A one-to-one mentoring session to see where you stand and leave with a plan."), "href": "mentoring/", "btn": ("احجز جلستك", "Book your session")},
+  "brandSet":  {"ar": ("تريد تطبيق هذا على مشروع هوية كامل؟", "كورس BRAND-SET يأخذك خطوة بخطوة من ملخص العميل حتى ملفات التسليم."), "en": ("Want to apply this to a full identity?", "BRAND-SET takes you step by step from the client brief to the final identity delivery."), "href": "brand-set/", "btn": ("اعرف أكتر عن BRAND-SET", "Explore BRAND-SET")},
+  "workshop":  {"ar": ("ابدأ بالورشة المجانية", "ساعتان تغيّران طريقتك في النظر إلى العلامة التجارية."), "en": ("Start with the free workshop", "Two hours that change how you look at a brand."), "href": "workshops/", "btn": ("شاهد الورشة مجانًا", "Watch free")},
+  "identity":  {"ar": ("تحتاج هوية تعبّر عن شركتك فعلًا؟", "أصمم هويات بصرية للشركات في مصر والخليج، تبدأ من فهم النشاط والجمهور قبل أي تصميم."), "en": ("Need an identity that really fits your company?", "I design visual identities for companies in Egypt and the Gulf, starting from the business and its audience."), "href": "brand-identity/", "btn": ("اعرف أكتر", "Learn more")},
+  "mentoring": {"ar": ("تحتاج من يراجع عملك؟", "جلسة منتورينج فردية تعرف فيها مستواك وتخرج بخطة عملية."), "en": ("Need someone to review your work?", "A one-to-one mentoring session to see where you stand and leave with a plan."), "href": "mentoring/", "btn": ("احجز جلستك", "Book your session")},
 }
 STATIC_PAGES = ["", "brand-set/", "mentoring/", "workshops/", "brand-identity/", "mockup-builder/", "blog/"]
 
