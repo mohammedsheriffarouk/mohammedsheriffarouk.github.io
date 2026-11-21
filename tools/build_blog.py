@@ -42,7 +42,7 @@ CTAS = {
   "mockup":    {"ar": ("شاهد هويتك على كل نقطة تواصل قبل التنفيذ", "Mockup Builder أداة مجانية تحوّل أي شعار إلى موكابات احترافية عبر برومبتات جاهزة لـ ChatGPT وGemini وMidjourney."), "en": ("See your identity on every touch point first", "Mockup Builder is a free tool that turns any logo into mockup prompts for ChatGPT, Gemini and Midjourney."), "href": "mockup-builder/", "btn": ("جرّب الأداة", "Try the tool")},
   "mentoring": {"ar": ("تحتاج من يراجع عملك؟", "جلسة منتورينج فردية تعرف فيها مستواك وتخرج بخطة عملية."), "en": ("Need someone to review your work?", "A one-to-one mentoring session to see where you stand and leave with a plan."), "href": "mentoring/", "btn": ("احجز جلستك", "Book your session")},
 }
-STATIC_PAGES = ["", "brand-set/", "mentoring/", "workshops/", "brand-identity/", "mockup-builder/", "blog/"]
+STATIC_PAGES = ["", "brand-set/", "mentoring/", "workshops/", "brand-identity/", "digital-products/", "mockup-builder/", "blog/"]
 
 def esc(s): return html.escape(str(s or ""), quote=True)
 
@@ -148,14 +148,14 @@ def foot(pre, en_dict, extra_js=""):
   </a>
   <p class="foot__role">Blog · Brand Identity Designer · Branding Educator</p>
   <nav class="foot__nav" aria-label="Site">
-    <a href="{pre}">Home</a><a href="{pre}brand-identity/">Brand Identity</a><a href="{pre}brand-set/">BRAND-SET</a><a href="{pre}mentoring/">Mentoring</a><a href="{pre}workshops/">Free Workshops</a><a href="{pre}mockup-builder/">Mockup Builder</a><a href="{pre}blog/">Blog</a>
+    <a href="{pre}">Home</a><a href="{pre}brand-identity/">Brand Identity</a><a href="{pre}brand-set/">BRAND-SET</a><a href="{pre}mentoring/">Mentoring</a><a href="{pre}workshops/">Free Workshops</a><a href="{pre}digital-products/">Digital Products</a><a href="{pre}blog/">Blog</a>
   </nav>
   <p class="caps foot__copy">© {datetime.date.today().year}</p>
 </footer>
 <div class="toast" role="status" aria-live="polite"></div>
 <script>const EN = {json.dumps(en_dict, ensure_ascii=False)};</script>
 <script src="{pre}script.js?v=20261121c" defer></script>{extra_js}
-<script src="{pre}assets/js/drawer.js?v=20261121d" charset="utf-8" defer></script>
+<script src="{pre}assets/js/drawer.js?v=20261121f" charset="utf-8" defer></script>
 </body>
 </html>
 '''
