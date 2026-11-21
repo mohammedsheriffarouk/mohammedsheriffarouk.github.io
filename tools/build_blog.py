@@ -123,7 +123,7 @@ def head(title, desc, canonical, pre, og_type="website", image=None, extra=""):
   if(l!=="en"&&l!=="ar"){{try{{l=localStorage.getItem("ms-lang")}}catch(e){{}}}}
   if(l==="en"){{document.documentElement.lang="en";document.documentElement.dir="ltr"}}}})();
   </script>
-  <link rel="stylesheet" href="{pre}style.css?v=20261121a">
+  <link rel="stylesheet" href="{pre}style.css?v=20261121m">
   <link rel="stylesheet" href="{pre}assets/service.css?v=20261025h">
   <link rel="stylesheet" href="{pre}assets/blog.css?v={V}">{extra}
 </head>
