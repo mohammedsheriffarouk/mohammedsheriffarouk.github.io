@@ -29,7 +29,7 @@ const EN = {
   "nav.home": "Home",
   "nav.start": "Starts",
 
-  "cta.register": "Register Now",
+  "cta.register": "Join the Waitlist",
   "cta.curriculum": "See the Curriculum",
 
   "hero.promise": "Build a complete visual identity — <em>the way real projects run.</em>",
@@ -108,7 +108,7 @@ const EN = {
   "det.seats.k": "Seats",
   "det.seats.v": "seats only for this cohort",
 
-  "pr.lead": "Your seat in the cohort starting",
+  "pr.lead": "The next cohort starts",
   "pr.i1": "6 online lectures × 3 hours",
   "pr.i2": "Recordings of every lecture",
   "pr.i3": "A complete identity project for your portfolio",
@@ -117,7 +117,7 @@ const EN = {
   "pr.tag": "Launch price — this cohort only",
   "pr.instead": "instead of",
   "pr.until": "until",
-  "pr.note": "Registration and payment are handled through Nzmly.",
+  "pr.note": "Join the waitlist and we’ll send you the date and details as soon as registration opens.",
 
   "faq.lead": "The questions I'm asked most before people register.",
   "faq.q1": "How much experience do I need?",
@@ -131,7 +131,7 @@ const EN = {
   "faq.q5": "Is there a certificate?",
   "faq.a5": "Yes — a certificate of completion once you submit your final project. The best student projects are also featured on my Behance.",
 
-  "fin.t": "seats only in this cohort.",
+  "fin.t": "seats only in the next cohort.",
   "fin.p": "Start the identity project you'll be proud to show in your portfolio.",
   "fin.early": "launch price until"
 };
