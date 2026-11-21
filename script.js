@@ -7,6 +7,7 @@
 const LINKS = {
   // Nzmly — commerce, booking, course delivery
   brandSet:    "https://mohamed-sherifco.nzmly.com/l/ghCedQwHEs",
+  brandSetInterest: "https://tally.so/r/8NZLyx?utm_source=website",
   mentoring:   "https://mohamed-sherifco.nzmly.com/l/sRnheGhJRh",
 
   // Free intro session (Nzmly free product, Luma, or Calendly)

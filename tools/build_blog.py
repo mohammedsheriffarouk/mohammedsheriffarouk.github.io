@@ -152,7 +152,7 @@ def foot(pre, en_dict, extra_js=""):
 </footer>
 <div class="toast" role="status" aria-live="polite"></div>
 <script>const EN = {json.dumps(en_dict, ensure_ascii=False)};</script>
-<script src="{pre}script.js?v=20261121a" defer></script>{extra_js}
+<script src="{pre}script.js?v=20261121c" defer></script>{extra_js}
 <script src="{pre}assets/js/drawer.js?v=20261104b" charset="utf-8" defer></script>
 </body>
 </html>
