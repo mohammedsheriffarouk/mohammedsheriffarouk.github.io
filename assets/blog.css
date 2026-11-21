@@ -80,3 +80,24 @@ html[lang=en] .bl-prose{line-height:1.65}
 @media (max-width:734px){.bl-grid{grid-template-columns:minmax(0,1fr)}.bl-cta{flex-direction:column;align-items:flex-start;padding:24px}.bl-cta .btn{width:100%}.bl-prose{font-size:17px}}
 @media (prefers-reduced-motion:reduce){.bl-card__img img,.bl-chip,.bl-card__t{transition:none}}
 .bl-prose ul{list-style:disc}.bl-prose ol,.bl-toc ol{list-style:decimal}
+
+/* ===== cards grid (index + related) ===== */
+.bl-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.bl-cards .bl-card__link{display:flex;flex-direction:column;height:100%;gap:0;padding:0;border:1px solid var(--line);background:#fff;transition:border-color var(--d-fast) ease-in-out}
+.bl-cards .bl-card__link:hover{border-color:var(--ink)}
+.bl-cards .bl-card__img{aspect-ratio:16/10;margin:0;display:flex;flex-direction:column;justify-content:space-between;padding:20px;background:#F5F5F7;position:relative}
+.bl-card__img--ink{background:#000!important;color:#fff}
+.bl-card__img--red{background:var(--red)!important;color:#fff}
+.bl-card__img .bl-card__mark{width:40px;height:auto;object-fit:contain;flex:none;transition:transform var(--d-slow) var(--ease-smooth-out)}
+.bl-card__cat{font-size:var(--t-title);line-height:var(--lh-title);font-weight:300}
+.bl-cards .bl-card__link:hover .bl-card__mark{transform:translateX(-4px)}
+html[dir=ltr] .bl-cards .bl-card__link:hover .bl-card__mark{transform:translateX(4px)}
+.bl-cards .bl-card__body{flex:1;padding:24px;gap:10px}
+.bl-cards .bl-card__t{font-size:21px;line-height:1.45}
+.bl-cards .bl-card__d{font-size:var(--t-small);line-height:1.7;flex:1}
+.bl-cards .go{margin-top:6px}
+.bl-related .bl-cards{margin-top:24px}
+.bl-related .bl-cards .bl-card__link{background:#fff}
+@media (max-width:1068px){.bl-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:734px){.bl-cards{grid-template-columns:minmax(0,1fr)}.bl-cards .bl-card__img{aspect-ratio:16/8}}
+@media (prefers-reduced-motion:reduce){.bl-card__mark,.bl-cards .bl-card__link{transition:none}}
